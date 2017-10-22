@@ -1,0 +1,62 @@
+<% include partials/header.ejs %>
+
+
+<!-- Container - Streams -->
+<div class="row">
+    <h3 class="text-center">STREAM</h3>
+    <p class="text-center">Livestreaming games on a high level<br> Remember to subscribe!</p>
+</div>
+<div class="row">
+    <div class="col-sm-6">
+        <div id="fjnalta"></div>
+        <script type="text/javascript">
+            var options = {
+                width: "100%",
+                height: "300",
+                channel: "svn1337",
+            };
+            var player = new Twitch.Player("svn1337", options);
+            player.setVolume(0);
+        </script>
+    </div>
+    <div class="col-sm-6">
+        <div id="doctornagger"></div>
+        <script type="text/javascript">
+            var options = {
+                width: "100%",
+                height: "300",
+                channel: "doctornagger",
+            };
+            var player = new Twitch.Player("doctornagger", options);
+            player.setVolume(0);
+        </script>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-6">
+        <div id="eisbert88"></div>
+        <script type="text/javascript">
+            var options = {
+                width: "100%",
+                height: "300",
+                channel: "eisbert88",
+            };
+            var player = new Twitch.Player("eisbert88", options);
+            player.setVolume(0);
+        </script>
+    </div>
+    <div class="col-sm-6">
+        <div id="svn1337"></div>
+        <script type="text/javascript">
+            var options = {
+                width: "100%",
+                height: "300",
+                channel: "fjnalta",
+            };
+            var player = new Twitch.Player("fjnalta", options);
+            player.setVolume(0);
+        </script>
+    </div>
+</div>
+
+<% include partials/footer.ejs %>

@@ -1,14 +1,9 @@
 function loadStreams() {
-
-    $("#streamMenu").load("content/rightNavigation/streamMenu.html");
-
-
     generateStreamMenuEntry("svn1337");
     generateStreamMenuEntry("doctornagger");
     generateStreamMenuEntry("eisbert88");
     generateStreamMenuEntry("fjnalta");
 }
-
 
 
 function generateStreamMenuEntry(name) {
@@ -51,7 +46,7 @@ function getLogoFromChannel(name, title, status, logo, bg) {
             },
             success: function(data) {
                 if(data["logo"] == null) {
-                    createEntry(name, title, status, "../img/ezlife/logo.jpg", bg);
+                    createEntry(name, title, status, "img/ezlife/logo.jpg", bg);
                 } else {
                     createEntry(name, title, status, data["logo"], bg);
                 }
@@ -71,7 +66,7 @@ function createEntry(name, title, status, logo, background) {
     if(background != null) {
         panelBody.style.backgroundImage = "url(" + background + ")";
     } else {
-        panelBody.style.backgroundImage = "url(../img/twitch/stream_offline.png)";
+        panelBody.style.backgroundImage = "url(img/twitch/stream_offline.png)";
     }
 
     panelBody.style.backgroundSize = "cover";
@@ -112,9 +107,9 @@ function createEntry(name, title, status, logo, background) {
     var pic2 = document.createElement("img");
     pic2.className = "img-responsive";
     if(status == "off") {
-        pic2.setAttribute("src", "../img/twitch/icon_offline.png");
+        pic2.setAttribute("src", "img/twitch/icon_offline.png");
     } else {
-        pic2.setAttribute("src", "../img/twitch/icon_online.png");
+        pic2.setAttribute("src", "img/twitch/icon_online.png");
     }
     col3.appendChild(pic2);
 
@@ -125,11 +120,4 @@ function createEntry(name, title, status, logo, background) {
     row.appendChild(link);
     panelBody.appendChild(row);
     document.getElementById("stream-panel").appendChild(panelBody);
-}
-
-
-
-
-function generateStatusMenu() {
-    $("#statusMenu").load("content/rightNavigation/statusMenu.html");
 }
