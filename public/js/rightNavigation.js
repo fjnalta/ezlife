@@ -71,8 +71,8 @@ function createEntry(name, title, status, logo, background) {
 
     panelBody.style.backgroundSize = "cover";
     panelBody.style.backgroundPosition = "center";
-    panelBody.style.maxHeight = "180";
-    panelBody.style.minHeight = "180";
+    panelBody.style.maxHeight = "100";
+    panelBody.style.minHeight = "100";
     panelBody.style.backgroundRepeat = "no-repeat";
 
     var row = document.createElement("div");
@@ -105,7 +105,7 @@ function createEntry(name, title, status, logo, background) {
 
     // Status
     var pic2 = document.createElement("img");
-    pic2.className = "img-responsive";
+    pic2.className = "img";
     if(status == "off") {
         pic2.setAttribute("src", "img/twitch/icon_offline.png");
     } else {
