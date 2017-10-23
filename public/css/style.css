@@ -40,7 +40,7 @@ body {
     border: 1px solid #000;
 }
 
-#status-panel {
+#web-status-panel, #app-status-panel {
     margin-top: 15px;
     border-top-left-radius:1px;
     border-top-right-radius:1px;

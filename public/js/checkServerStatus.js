@@ -17,7 +17,7 @@ function checkServerStatus(url, name) {
 }
 
 function createServerEntry(name, status) {
-    var statusPanel = document.getElementById("status-panel");
+    var statusPanel = document.getElementById("web-status-panel");
 
     var div = document.createElement("div");
     div.className = "panel-body img-responsive";
