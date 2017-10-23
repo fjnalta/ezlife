@@ -7,7 +7,8 @@ function createEntry(link, title, date, id) {
     myFeed.appendChild(document.createTextNode(date));
     myFeed.appendChild(document.createTextNode(" - "));
     myFeed.appendChild(mylink);
-    document.getElementById(id).appendChild(myFeed);
+    document.getElementById(id + "RSS").appendChild(myFeed);
+    console.log(id + "RSS");
 }
 
 function loadRSS(feed) {
@@ -16,12 +17,21 @@ function loadRSS(feed) {
     
     switch (feed) {
     case "ezlife":
-        twitchFeed = "https://ezlife.eu/apps/gitlab/philippm/ezlife.eu/commits/master.atom";
+        twitchFeed = "https://ezlife.eu/apps/gitlab/philippm/ezlife-3.0/commits/master?format=atom";
+        break;
+    case "ezchat":
+        twitchFeed = "https://ezlife.eu/apps/gitlab/philippm/ezChat/commits/master?format=atom";
+        break;
+    case "ezchatpush":
+        twitchFeed = "https://ezlife.eu/apps/gitlab/philippm/ezChatPush/commits/master?format=atom";
+        break;
+    case "ezchatpc":
+        twitchFeed = "https://ezlife.eu/apps/gitlab/philippm/ezChat-PC/commits/master?format=atom";
         break;
     default:
         break;
     }
-    
+
     $.ajax(twitchFeed, {
         accepts: {
             xml: "application/xml"

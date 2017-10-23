@@ -1,23 +1,34 @@
 <% include partials/header.ejs %>
 
+<script language="javascript" type="text/javascript" src="js/loadRSS.js"></script>
+
+
 <div class="row">
-    <h3 class="text-center">DEVELOPMENT</h3>
+    <h3 class="text-center">DEVELOPMENT</h3><br>
 </div>
 <div class="row">
     <ul class="nav nav-tabs">
         <li class="active"><a data-toggle="tab" href="#ezlife">ezlife.eu</a></li>
-        <li><a data-toggle="tab" href="#wiki">wiki.ezlife.eu</a></li>
+        <li><a data-toggle="tab" href="#ezchat">ezChat-Android</a></li>
+        <li><a data-toggle="tab" href="#ezchatpush">ezChat-REST</a></li>
+        <li><a data-toggle="tab" href="#ezchatpc">ezChat-PC</a></li>
     </ul>
     <div class="tab-content">
         <div id="ezlife" class="tab-pane fade in active">
             <p><b>Latest commits</b></p>
-            <div id="ezlifeRSS"></div>
+            <div id="ezlifeRSS"><script>loadRSS("ezlife");</script></div>
         </div>
-        <div id="wiki" class="tab-pane fade">
+        <div id="ezchat" class="tab-pane fade">
             <p><b>Latest commits</b></p>
-            <div id="wikiRSS">
-                <!-- Wiki RSS here -->
-            </div>
+            <div id="ezchatRSS"><script>loadRSS("ezchat");</script></div>
+        </div>
+        <div id="ezchatpush" class="tab-pane fade">
+            <p><b>Latest commits</b></p>
+            <div id="ezchatpushRSS"><script>loadRSS("ezchatpush");</script></div>
+        </div>
+        <div id="ezchatpc" class="tab-pane fade">
+            <p><b>Latest commits</b></p>
+            <div id="ezchatpcRSS"><script>loadRSS("ezchatpc");</script></div>
         </div>
     </div>
 </div>
