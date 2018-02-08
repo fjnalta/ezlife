@@ -2,31 +2,39 @@
 
 <script language="javascript" type="text/javascript" src="js/loadRSS.js"></script>
 
+<div class="container">
+    <br>
+    <h3 class="text-center">Development</h3>
 
-<div class="row">
-    <h3 class="text-center">DEVELOPMENT</h3><br>
-</div>
-<div class="row">
-    <ul class="nav nav-tabs">
-        <li class="active"><a data-toggle="tab" href="#ezlife">ezlife.eu</a></li>
-        <li><a data-toggle="tab" href="#ezchat">ezChat-Android</a></li>
-        <li><a data-toggle="tab" href="#ezchatpush">ezChat-REST</a></li>
-        <li><a data-toggle="tab" href="#ezchatpc">ezChat-PC</a></li>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="ezlife-tab" data-toggle="tab" href="#ezlife" role="tab" aria-controls="ezlife" aria-selected="true">ezlife.eu</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="ezchat-tab" data-toggle="tab" href="#ezchat" role="tab" aria-controls="ezchat" aria-selected="false">ezChat Android Client</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="ezchatpush-tab" data-toggle="tab" href="#ezchatpush" role="tab" aria-controls="ezchatpush" aria-selected="false">ezChat REST Services</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="ezchatpc-tab" data-toggle="tab" href="#ezchatpc" role="tab" aria-controls="ezchatpc" aria-selected="false">ezChat PC Client</a>
+        </li>
     </ul>
+
     <div class="tab-content">
-        <div id="ezlife" class="tab-pane fade in active">
+        <div id="ezlife" class="tab-pane fade show active" role="tabpanel" aria-labelledby="ezlife-tab" id="ezlife">
             <p><b>Latest commits</b></p>
             <div id="ezlifeRSS"><script>loadRSS("ezlife");</script></div>
         </div>
-        <div id="ezchat" class="tab-pane fade">
+        <div id="ezchat" class="tab-pane fade" aria-labelledby="ezchat-tab" id="ezchat">
             <p><b>Latest commits</b></p>
             <div id="ezchatRSS"><script>loadRSS("ezchat");</script></div>
         </div>
-        <div id="ezchatpush" class="tab-pane fade">
+        <div id="ezchatpush" class="tab-pane fade" aria-labelledby="ezchatpush-tab" id="ezchatpush">
             <p><b>Latest commits</b></p>
             <div id="ezchatpushRSS"><script>loadRSS("ezchatpush");</script></div>
         </div>
-        <div id="ezchatpc" class="tab-pane fade">
+        <div id="ezchatpc" class="tab-pane fade" aria-labelledby="ezchatpc-tab" id="ezchatpc">
             <p><b>Latest commits</b></p>
             <div id="ezchatpcRSS"><script>loadRSS("ezchatpc");</script></div>
         </div>
