@@ -13,6 +13,16 @@ p, h1, h2, h3, h4 {
 .container {
     background-color: #121212;
     border: 1px solid #000;
+    color: white;
+}
+
+.card, .list-group-item {
+    background-color: #121212;
+    border: 1px solid #000;
+}
+
+.card-header {
+    background-color: #363d42;
 }
 
 /* List style*/
