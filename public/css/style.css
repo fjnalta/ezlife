@@ -1,29 +1,33 @@
 body {
-    background-image: url("../img/header-cloud2.jpg");
+    background-color: #f2f2f2;
+/*    background-image: url("../img/header-cloud2.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    */
 }
-
+/*
 p, h1, h2, h3, h4 {
     color: white;
-}
+} */
 
 /* Basic Container */
 .container {
-    background-color: #121212;
-    border: 1px solid #000;
-    color: white;
+    background-color: white;
+/*    background-color: #363d42; */
+    border: 2px solid #eeeeee;
+/*    color: white; */
 }
 
-.card, .list-group-item {
-    background-color: #121212;
-    border: 1px solid #000;
+.card, .list-group-item .img-thumbnail {
+/*    background-color: #363d42; */
+    border: 2px solid #eeeeee;
 }
-
+/*
 .card-header {
-    background-color: #363d42;
+   background-color: #121212;
 }
+*/
 
 /* List style*/
 ul {
