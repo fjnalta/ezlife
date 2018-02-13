@@ -3,22 +3,41 @@
 <div class="container">
     <br>
     <h1 class="text-center">Status</h1>
-    <div class="row">
-        <div class="col-lg-6 text-center">
-            <br>
-            <h2>Teamspeak 3</h2>
-            <p>Status: <b style="color:green">ONLINE</b></p>
-            <p><span id="its97514"><a href="https://www.teamspeak3.com/">teamspeak</a> Hosting by TeamSpeak3.com</span><script type="text/javascript" src="https://view.light-speed.com/teamspeak3.php?IP=ezlife.eu&PORT=9987&QUERY=10011&UID=97514&display=block&font=11px&background=transparent&server_info_background=transparent&server_info_text=%23000000&server_name_background=transparent&server_name_text=%23000000&info_background=transparent&channel_background=transparent&channel_text=%23000000&username_background=transparent&username_text=%23000000"></script></p>
-        </div>
-        <div class="col-lg-6 text-center">
-            <br>
-            <h2>Discord</h2>
-            <p>Status: <b style="color:green">ONLINE</b></p>
-            <iframe src="https://discordapp.com/widget?id=322492651184324609&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0"></iframe>
+
+    <!-- loading spinner -->
+    <div class="sk-circle" id="loadingSpinner">
+        <div class="sk-circle1 sk-child"></div>
+        <div class="sk-circle2 sk-child"></div>
+        <div class="sk-circle3 sk-child"></div>
+        <div class="sk-circle4 sk-child"></div>
+        <div class="sk-circle5 sk-child"></div>
+        <div class="sk-circle6 sk-child"></div>
+        <div class="sk-circle7 sk-child"></div>
+        <div class="sk-circle8 sk-child"></div>
+        <div class="sk-circle9 sk-child"></div>
+        <div class="sk-circle10 sk-child"></div>
+        <div class="sk-circle11 sk-child"></div>
+        <div class="sk-circle12 sk-child"></div>
+    </div>
+
+    <!-- external content -->
+    <div id="content" hidden>
+        <div class="row">
+            <div class="col-lg-6 text-center">
+                <br>
+                <h2>Teamspeak 3</h2>
+                <p>Status: <b style="color:green">ONLINE</b></p>
+                <p><span id="its97514"><a href="https://www.teamspeak3.com/">teamspeak</a> Hosting by TeamSpeak3.com</span><script type="text/javascript" src="https://view.light-speed.com/teamspeak3.php?IP=ezlife.eu&PORT=9987&QUERY=10011&UID=97514&display=block&font=11px&background=transparent&server_info_background=transparent&server_info_text=%23000000&server_name_background=transparent&server_name_text=%23000000&info_background=transparent&channel_background=transparent&channel_text=%23000000&username_background=transparent&username_text=%23000000"></script></p>
+            </div>
+            <div class="col-lg-6 text-center">
+                <br>
+                <h2>Discord</h2>
+                <p>Status: <b style="color:green">ONLINE</b></p>
+                <iframe src="https://discordapp.com/widget?id=322492651184324609&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0"></iframe>
+            </div>
         </div>
     </div>
     <br>
 </div>
-
 
 <% include partials/footer.ejs %>
