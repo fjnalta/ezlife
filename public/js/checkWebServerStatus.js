@@ -1,21 +1,3 @@
-function checkServerStatus(url, name) {
-    $.ajax({url: url,
-        type: "HEAD",
-        timeout:1000,
-        statusCode: {
-            200: function (response) {
-                createServerEntry(name, true);
-            },
-            400: function (response) {
-                createServerEntry(name, false);
-            },
-            0: function (response) {
-                createServerEntry(name, false);
-            }
-        }
-    });
-}
-
 function createServerEntry(name, status) {
     var statusPanel = document.getElementById("web-status-panel");
 
