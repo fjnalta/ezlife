@@ -1,104 +1,101 @@
 <% include partials/header.ejs %>
 
-<div class="row">
-    <h3>CHAT.EZLIFE.EU</h3>
+<div class="container">
+    <br>
+    <h1 class="text-center">Chat</h1>
+    <br>
+    <p class="text-center"><b style="color:red">SERVICE OFFLINE</b></p>
+    <!-- Registration -->
+    <h2 class="text-center">Registration</h2>
+    <form>
+        <label for="username">Username*</label>
+        <input type="text" id="username" name="username">
+        <label for="nickname">Nickname*</label><br>
+        <input type="text" id="nickname" name="nickname"><br>
+
+        <label for="password">Password*</label><br>
+        <input type="password" id="password" name="password" onchange="checkPasswordMatch();"><br>
+        <i>Password needs to be at least 8 letters.</i>
+        <label for="password">Repeat Password*</label><br>
+        <input type="password" id="password2" name="password2"><br>
+        <div class="registrationFormAlert" id="divCheckPasswordMatch">---</div>
+        <br>
+        <label for="email">E-Mail</label><br>
+        <input type="text" id="email" name="email"><br>
+    </form>
+    <i>* are required fields </i>
+    <br>
+    <button onclick="registerUser()" margin-top="50px" type="submit" name="submit">Send</button>
+    <div class="registrationAlert" id="divCheckRegistration">---</div>
+
+    <!-- Howto -->
+    <h2 class="text-center">HOWTO</h2>
+    <br>
+    <h4 class="text-center">1. Download XMPP Chat Client</h4>
+    <br>
+    <h5 class="text-center">Desktop</h5>
     <div class="row">
-        <div class="col-sm-12">
-            <p class="text-center"><strong>Registration</strong></p><br>
-            <form>
-                <div class="col-sm-12 text-center">
-                    <p>
-                        <label for="username">Username*</label><br>
-                        <input type="text" id="username" name="username"><br>
-                    </p>
-                    <p>
-                        <label for="nickname">Nickname*</label><br>
-                        <input type="text" id="nickname" name="nickname"><br>
-                    </p>
-                    <p>
-                        <label for="password">Password*</label><br>
-                        <input type="password" id="password" name="password" onchange="checkPasswordMatch();"><br>
-                        <i>Password needs to be at least 8 letters.</i>
-                    </p>
-                    <p>
-                        <label for="password">Repeat Password*</label><br>
-                        <input type="password" id="password2" name="password2"><br>
-                    </p>
-                    <div class="registrationFormAlert" id="divCheckPasswordMatch">---</div>
-                    <p>
-                        <label for="email">E-Mail</label><br>
-                        <input type="text" id="email" name="email"><br>
-                    </p>
-                    <!-- Captcha -->
-                    <div align="center" id="captcha"></div>
-                </div>
-            </form>
-            <p><i>* are required fields </i></p>
-            <button onclick="registerUser()" margin-top="50px" type="submit" name="submit">Send</button>
-            <p></p>
-            <div class="registrationAlert" id="divCheckRegistration">---</div>
+        <div class="col-sm-4 text-center">
+            <a href="#linux-logo" data-toggle="collapse">
+                <img src="../../img/logos/ezchat/linux-logo.jpg" class="img-circle person" alt="linux-logo" width="255"
+                     height="255">
+            </a>
+            <div id="linux-logo" class="collapse">
+                <h2>Clients</h2>
+                <a href="https://wiki.gnome.org/Apps/Empathy"><p>Empathy</p></a>
+                <a href="http://kopete.kde.org/"><p>Kopete</p></a>
+                <a href="http://pidgin.im/"><p>Pidgin</p></a>
+            </div>
+        </div>
+        <div class="col-sm-4 text-center">
+            <a href="#macos-logo" data-toggle="collapse">
+                <img src="../../img/logos/ezchat/osx-logo.jpg" class="img-circle person" alt="macos-logo" width="255"
+                     height="255">
+            </a>
+            <div id="macos-logo" class="collapse">
+                <h2>Clients</h2>
+                <a href="https://adiumx.cachefly.net/Adium_1.5.10.2.dmg"><p>Adium</p></a>
+                <a href="http://www.apple.com/ios/messages/"><p>Apple Messages</p></a>
+                <a href="http://trillian.im/"><p>Trillian</p></a>
+            </div>
+        </div>
+        <div class="col-sm-4 text-center">
+            <a href="#windows-logo" data-toggle="collapse">
+                <img src="../../img/logos/ezchat/windows-logo.jpg" class="img-circle person" alt="windows-logo" width="255"
+                     height="255">
+            </a>
+            <div id="windows-logo" class="collapse">
+                <h2>Clients</h2>
+                <a href="http://miranda-im.org/"><p>Miranda IM</p></a>
+                <a href="http://pidgin.im/"><p>Pidgin</p></a>
+                <a href="http://trillian.im/"><p>Trillian</p></a>
+            </div>
         </div>
     </div>
 
-
-    <div id="howto" class="container">
-        <h3 class="text-center">HOWTO</h3>
-        <div class="row" align="center">
-            <h2 class="text-center">Download XMPP Chat Client</h2>
-            <p class="text-center">Desktop</p>
-            <div class="col-sm-4">
-                <a href="#linux-logo" data-toggle="collapse">
-                    <img src="../../img/logos/linux-logo.jpg" class="img-circle person" alt="linux-logo" width="255" height="255">
-                </a>
-                <div id="linux-logo" class="collapse">
-                    <h2>Clients</h2>
-                    <a href="https://wiki.gnome.org/Apps/Empathy"><p>Empathy</p></a>
-                    <a href="http://kopete.kde.org/"><p>Kopete</p></a>
-                    <a href="http://pidgin.im/"><p>Pidgin</p></a>
-                    <p>...</p>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <a href="#macos-logo" data-toggle="collapse">
-                    <img src="../../img/logos/osx-logo.jpg" class="img-circle person" alt="macos-logo" width="255" height="255">
-                </a>
-                <div id="macos-logo" class="collapse">
-                    <h2>Clients</h2>
-                    <a href="https://adiumx.cachefly.net/Adium_1.5.10.2.dmg"><p>Adium</p></a>
-                    <a href="http://www.apple.com/ios/messages/"><p>Apple Messages</p></a>
-                    <a href="http://trillian.im/"><p>Trillian</p></a>
-                    <p>...</p>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <a href="#windows-logo" data-toggle="collapse">
-                    <img src="../../img/logos/windows-logo.jpg" class="img-circle person" alt="windows-logo" width="255" height="255">
-                </a>
-                <div id="windows-logo" class="collapse">
-                    <h2>Clients</h2>
-                    <a href="http://miranda-im.org/"><p>Miranda IM</p></a>
-                    <a href="http://pidgin.im/"><p>Pidgin</p></a>
-                    <a href="http://trillian.im/"><p>Trillian</p></a>
-                    <p>...</p>
-                </div>
-            </div>
+    <br>
+    <h5 class="text-center">Mobile</h5>
+    <div class="row">
+        <div class="col-sm-6 text-center">
+            <a href="https://itunes.apple.com/de/app/im+-instant-messenger/id285688934?mt=8"><img border="0"
+                                                                                                  alt="appstore-logo"
+                                                                                                  src="../../img/logos/ezchat/appstore-logo.png"
+                                                                                                  width="50%"></a>
         </div>
-        <div class="row" align="center">
-            <p class="text-center">Mobile</p>
-            <div class="col-sm-6 text-center">
-                <a href="https://itunes.apple.com/de/app/im+-instant-messenger/id285688934?mt=8"><img border="0" alt="appstore-logo" src="../../img/logos/appstore-logo.png" width="80%"></a>
-            </div>
-            <div class="col-sm-6 text-center">
-                <a href="https://play.google.com/store/apps/details?id=de.shapeservices.impluslite"><img border="0" alt="playstore-logo" src="../../img/logos/playstore-logo.png" width="80%"></a>
-            </div>
-        </div>
-        <div class="row" align="center">
-            <h2 class="text-center">Configure Account</h2>
-            <p class="text-center"><b>User:</b> [USERNAME] <b>or </b> [USERNAME]@chat.ezlife.eu</p>
-            <p class="text-center"><b>Domain:</b> chat.ezlife.eu</p>
-            <p class="text-center"><b>Password:</b> [PASSWORD]</p>
+        <div class="col-sm-6 text-center">
+            <a href="https://play.google.com/store/apps/details?id=de.shapeservices.impluslite"><img border="0"
+                                                                                                     alt="playstore-logo"
+                                                                                                     src="../../img/logos/ezchat/playstore-logo.png"
+                                                                                                     width="50%"></a>
         </div>
     </div>
+    <br>
+    <h4 class="text-center">2. Configure Account</h4>
+    <br>
+    <p class="text-center"><b>User:</b> [USERNAME] <b>or </b> [USERNAME]@chat.ezlife.eu</p>
+    <p class="text-center"><b>Domain:</b> chat.ezlife.eu</p>
+    <p class="text-center"><b>Password:</b> [PASSWORD]</p>
 </div>
+
 
 <% include partials/footer.ejs %>
