@@ -3,6 +3,10 @@ body {
     font-family: 'Nunito', sans-serif;
 }
 
+a {
+    color: #7c7c7d;
+}
+
 /* Basic Container */
 .container {
     background-color: #f8f9fa;
@@ -12,11 +16,6 @@ body {
 .card, .list-group-item .img-thumbnail {
     border: 2px solid #eeeeee;
 }
-/*
-.card-header {
-   background-color: #121212;
-}
-*/
 
 /* List style*/
 ul {
