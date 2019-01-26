@@ -17,16 +17,16 @@ function loadRSS(feed) {
     
     switch (feed) {
     case "ezlife":
-        twitchFeed = "https://ezlife.eu/apps/gitlab/philippm/ezlife-3.0/commits/master?format=atom";
+        twitchFeed = "https://gitlab.ezlife.eu/ajo/ezlife-3.0/commits/master?feed_token=ZxMn5rdQeKQZbvZy55_V&format=atom";
         break;
     case "ezchat":
-        twitchFeed = "https://ezlife.eu/apps/gitlab/philippm/ezChat/commits/master?format=atom";
+        twitchFeed = "https://gitlab.ezlife.eu/ajo/ezchat/commits/master?feed_token=ZxMn5rdQeKQZbvZy55_V&format=atom";
         break;
     case "ezchatpush":
-        twitchFeed = "https://ezlife.eu/apps/gitlab/philippm/ezChatPush/commits/master?format=atom";
+        twitchFeed = "https://gitlab.ezlife.eu/ajo/ezchatpush/commits/master?feed_token=ZxMn5rdQeKQZbvZy55_V&format=atom";
         break;
     case "ezchatpc":
-        twitchFeed = "https://ezlife.eu/apps/gitlab/philippm/ezChat-PC/commits/master?format=atom";
+        twitchFeed = "https://gitlab.ezlife.eu/ajo/ezchat-pc/commits/master?feed_token=ZxMn5rdQeKQZbvZy55_V&format=atom";
         break;
     default:
         break;
