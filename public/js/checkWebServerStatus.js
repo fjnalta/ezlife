@@ -1,3 +1,9 @@
+/**
+ * Code migrated to backend
+ * TODO - remove unused code
+ */
+
+/*
 function createServerEntry(name, status) {
     var statusPanel = document.getElementById("web-status-panel");
 
@@ -37,4 +43,5 @@ function createServerEntry(name, status) {
 
     statusPanel.appendChild(div);
 }
+*/
 
