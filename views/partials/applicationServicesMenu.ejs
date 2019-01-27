@@ -1,6 +1,6 @@
 <div class="card">
     <div class="card-header">
-        Application Services
+        internal Services
     </div>
     <ul class="list-group list-group-flush">
         <li class="list-group-item">
@@ -53,6 +53,27 @@
                 </div>
             </div>
         </li>
+    </ul>
+    <div class="card-header">
+        external Services
+    </div>
+    <ul class="list-group list-group-flush">
+        <% for (var i = 0; i < webServerStatus.length; i++) { %>
+            <li class="list-group-item">
+                <div class="row align-items-center">
+                    <div class="col-10">
+                        <a href="<%= webServerStatus[i].url %>"><%= webServerStatus[i].name %></a>
+                    </div>
+                    <div class="col-2">
+                        <% if(webServerStatus[i].status == false) { %>
+                            <img src="img/twitch/icon_offline.png" class="img-fluid">
+                        <% } else { %>
+                            <img src="img/twitch/icon_online.png" class="img-fluid">
+                        <% } %>
+                    </div>
+                </div>
+            </li>
+        <% } %>
     </ul>
 </div>
 <br>
