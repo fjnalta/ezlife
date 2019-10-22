@@ -1,0 +1,14 @@
+# move files
+before_script:
+  - echo "Moving files to public directory"
+  - cp -r * /var/www/ezlife-3.0
+# install node_modules and deploy application
+deploy1:
+  stage: deploy
+  script:
+    - echo "Switch to new working directory"
+    - cd /var/www/ezlife-3.0/
+    - echo "Install node_modules"
+    - npm install --save
+    - echo "(Re)Start node app"
+    - pm2 restart app.js
