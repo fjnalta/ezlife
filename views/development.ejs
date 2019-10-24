@@ -11,6 +11,9 @@
             <a class="nav-link active" id="ezlife-tab" data-toggle="tab" href="#ezlife" role="tab" aria-controls="ezlife" aria-selected="true">ezlife.eu</a>
         </li>
         <li class="nav-item">
+            <a class="nav-link" id="ezCooking-tab" data-toggle="tab" href="#ezCooking" role="tab" aria-controls="ezCooking" aria-selected="false">ezCooking</a>
+        </li>
+        <li class="nav-item">
             <a class="nav-link" id="ezchat-tab" data-toggle="tab" href="#ezchat" role="tab" aria-controls="ezchat" aria-selected="false">ezChat Android Client</a>
         </li>
         <li class="nav-item">
@@ -22,19 +25,23 @@
     </ul>
 
     <div class="tab-content">
-        <div id="ezlife" class="tab-pane fade show active" role="tabpanel" aria-labelledby="ezlife-tab" id="ezlife">
+        <div id="ezlife" class="tab-pane fade show active" role="tabpanel" aria-labelledby="ezlife-tab">
             <p><b>Latest commits</b></p>
             <div id="ezlifeRSS"><script>loadRSS("ezlife");</script></div>
         </div>
-        <div id="ezchat" class="tab-pane fade" aria-labelledby="ezchat-tab" id="ezchat">
+        <div id="ezCooking" class="tab-pane fade" aria-labelledby="ezCooking-tab">
+            <p><b>Latest commits</b></p>
+            <div id="ezCookingRSS"><script>loadRSS("ezCooking");</script></div>
+        </div>
+        <div id="ezchat" class="tab-pane fade" aria-labelledby="ezchat-tab">
             <p><b>Latest commits</b></p>
             <div id="ezchatRSS"><script>loadRSS("ezchat");</script></div>
         </div>
-        <div id="ezchatpush" class="tab-pane fade" aria-labelledby="ezchatpush-tab" id="ezchatpush">
+        <div id="ezchatpush" class="tab-pane fade" aria-labelledby="ezchatpush-tab">
             <p><b>Latest commits</b></p>
             <div id="ezchatpushRSS"><script>loadRSS("ezchatpush");</script></div>
         </div>
-        <div id="ezchatpc" class="tab-pane fade" aria-labelledby="ezchatpc-tab" id="ezchatpc">
+        <div id="ezchatpc" class="tab-pane fade" aria-labelledby="ezchatpc-tab">
             <p><b>Latest commits</b></p>
             <div id="ezchatpcRSS"><script>loadRSS("ezchatpc");</script></div>
         </div>

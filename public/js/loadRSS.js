@@ -28,6 +28,9 @@ function loadRSS(feed) {
     case "ezchatpc":
         twitchFeed = "https://gitlab.ezlife.eu/ajo/ezchat-pc/commits/master?feed_token=ZxMn5rdQeKQZbvZy55_V&format=atom";
         break;
+    case "ezCooking":
+        twitchFeed = "https://gitlab.ezlife.eu/ajo/ezcooking/commits/master?feed_token=ZxMn5rdQeKQZbvZy55_V&format=atom";
+        break;
     default:
         break;
     }
