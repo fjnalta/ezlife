@@ -1,3 +1,4 @@
+// TODO - load in backend
 function createEntry(link, title, date, id) {
     "use strict";
     var myFeed = document.createElement("P");

@@ -3,7 +3,7 @@ const http = require('https');
 const bodyParser = require('body-parser');
 const path = require('path');
 const config = require('./lib/config.js');
-const publicRoutes = require('./lib/api/publicRouter.js');
+const router = require('./lib/api/router.js');
 const app = express();
 
 // configure webserver
@@ -16,7 +16,7 @@ app.set('view engine','ejs');
 app.set('views',path.join(__dirname, 'views'));
 
 // set public router
-app.use('/', publicRoutes);
+app.use('/', router);
 
 // start server
 app.listen(config.env.port, function () {
