@@ -3,46 +3,26 @@
         App Server
     </div>
     <ul class="list-group list-group-flush">
-        <li class="list-group-item">
-            <div class="row align-items-center">
-                <div class="col-10">
-                    <a href="/chat">Chat</a>
+        <% for (let i = 0; i < appServerStatus.length; i++) { %>
+            <li class="list-group-item">
+                <div class="row align-items-center">
+                    <div class="col-10">
+                        <% if(appServerStatus[i].status == false){ %>
+                            <%= appServerStatus[i].name %>
+                        <% } else{ %>
+                            <a href="<%= appServerStatus[i].url %>"><%= appServerStatus[i].name %></a>
+                        <% } %>
+                    </div>
+                    <div class="col-2">
+                        <% if(appServerStatus[i].status == false) { %>
+                            <img src="img/twitch/icon_offline.png" class="img-fluid">
+                        <% } else { %>
+                            <img src="img/twitch/icon_online.png" class="img-fluid">
+                        <% } %>
+                    </div>
                 </div>
-                <div class="col-2">
-                    <img src="img/twitch/icon_offline.png" class="img-fluid">
-                </div>
-            </div>
-        </li>
-        <li class="list-group-item">
-            <div class="row align-items-center">
-                <div class="col-10">
-                    Chat - Push Service
-                </div>
-                <div class="col-2">
-                    <img src="img/twitch/icon_offline.png" class="img-fluid">
-                </div>
-            </div>
-        </li>
-        <li class="list-group-item">
-            <div class="row align-items-center">
-                <div class="col-10">
-                    <a href="/services#Teamspeak">Teamspeak</a>
-                </div>
-                <div class="col-2">
-                    <img src="img/twitch/icon_online.png" class="img-fluid">
-                </div>
-            </div>
-        </li>
-        <li class="list-group-item">
-            <div class="row align-items-center">
-                <div class="col-10">
-                    <a href="/services#Discord">Discord</a>
-                </div>
-                <div class="col-2">
-                    <img src="img/twitch/icon_online.png" class="img-fluid">
-                </div>
-            </div>
-        </li>
+            </li>
+        <% } %>
     </ul>
     <div class="card-header">
         Web Server
@@ -68,19 +48,31 @@
                 </div>
             </li>
         <% } %>
-            <div class="card-header">
-                Game Server
-            </div>
+    </ul>
+    <div class="card-header">
+        Game Server
+    </div>
+    <ul>
+        <% for (var i = 0; i < gameServerStatus.length; i++) { %>
             <li class="list-group-item">
                 <div class="row align-items-center">
                     <div class="col-10">
-                        <a href="/services#Minecraft">Minecraft</a>
+                        <% if(gameServerStatus[i].status == false){ %>
+                            <%= gameServerStatus[i].name %>
+                        <% } else{ %>
+                            <a href="<%= gameServerStatus[i].url %>"><%= gameServerStatus[i].name %></a>
+                        <% } %>
                     </div>
                     <div class="col-2">
-                        <img src="img/twitch/icon_online.png" class="img-fluid">
+                        <% if(gameServerStatus[i].status == false) { %>
+                            <img src="img/twitch/icon_offline.png" class="img-fluid">
+                        <% } else { %>
+                            <img src="img/twitch/icon_online.png" class="img-fluid">
+                        <% } %>
                     </div>
                 </div>
             </li>
+        <% } %>
     </ul>
 </div>
 <br>
