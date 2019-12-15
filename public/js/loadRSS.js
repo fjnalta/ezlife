@@ -1,15 +1,21 @@
 // TODO - load in backend
+function parseISOString(s) {
+    var b = s.split(/\D+/);
+    return new Date(Date.UTC(b[0], --b[1], b[2], b[3], b[4], b[5], b[6]));
+}
+
 function createEntry(link, title, date, id) {
     "use strict";
     var myFeed = document.createElement("P");
     var mylink = document.createElement("A");
     mylink.setAttribute('href', link);
     mylink.appendChild(document.createTextNode(title));
-    myFeed.appendChild(document.createTextNode(date));
+    let myDate = parseISOString(date);
+
+    myFeed.appendChild(document.createTextNode(myDate.toLocaleString()));
     myFeed.appendChild(document.createTextNode(" - "));
     myFeed.appendChild(mylink);
     document.getElementById(id + "RSS").appendChild(myFeed);
-    console.log(id + "RSS");
 }
 
 function loadRSS(feed) {
