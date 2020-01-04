@@ -8,13 +8,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://ezlife.eu/apps/gitlab/philippm/ezlife-3.0.git"
+    "url": "https://gitlab.ezlife.eu/ajo/ezlife-3.0.git"
   },
   "author": "Philipp Minges",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.2",
-    "ejs": "^2.5.7",
-    "express": "^4.16.2"
+    "bootstrap": "^4.4.1",
+    "ejs": "^2.7.4",
+    "express": "^4.16.2",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.16.0",
+    "request": "^2.88.0",
+    "tether": "^1.4.7"
   }
 }
