@@ -1,7 +1,7 @@
 $(document).ready(function () {
     "use strict";
 
-    var fullHeight = function() {
+    let fullHeight = function() {
 
         $('.js-fullheight').css('height', $(window).height());
         $(window).resize(function(){
@@ -13,5 +13,11 @@ $(document).ready(function () {
 
     $('#sidebarCollapse').on('click', function () {
         $('#sidebar').toggleClass('active');
+
+        // if($('#sidebar').hasClass('active')) {
+        //     $('#cookbookSidebar').text('');
+        // } else {
+        //     $('#cookbookSidebar').text(' Cookbook');
+        // }
     });
 });

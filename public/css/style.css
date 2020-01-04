@@ -9970,17 +9970,35 @@ h1, h2, h3, h4, h5,
 }
 
 #sidebar {
-  min-width: 270px;
-  max-width: 270px;
+  min-width: 200px;
+  max-width: 200px;
   background: #333333;
   color: #fff;
-  text-align: center;
+  text-align: left;
   transition: all 0.3s;
 }
+#sidebar a:hover {
+  background-color: #343a40;
+}
+#sidebar .sidebarButton {
+  max-width: 35px;
+}
+#sidebar .sidebarButtonText {
+  font-size: 14px;
+}
 #sidebar.active {
-  min-width: 120px;
-  max-width: 120px;
+  min-width: 100px;
+  max-width: 100px;
   text-align: center;
+}
+#sidebar.active a:hover {
+  background-color: #343a40;
+}
+#sidebar.active .sidebarButton {
+  max-width: 80px;
+}
+#sidebar.active .sidebarButtonText {
+  font-size: 0;
 }
 #sidebar.active ul.components li {
   font-size: 14px;
