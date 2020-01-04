@@ -9972,7 +9972,7 @@ h1, h2, h3, h4, h5,
 #sidebar {
   min-width: 270px;
   max-width: 270px;
-  background: #01a0c7;
+  background: #333333;
   color: #fff;
   text-align: center;
   transition: all 0.3s;
@@ -10097,12 +10097,12 @@ a[data-toggle=collapse] {
 }
 
 .btn.btn-primary {
-  background: #01a0c7;
-  border-color: #01a0c7;
+  background: #333333;
+  border-color: #333333;
 }
 .btn.btn-primary:hover, .btn.btn-primary:focus {
-  background: #01a0c7 !important;
-  border-color: #01a0c7 !important;
+  background: #333333 !important;
+  border-color: #333333 !important;
 }
 
 /*# sourceMappingURL=style.css.map */
