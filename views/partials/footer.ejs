@@ -1,13 +1,11 @@
 <!-- Footer -->
 <div id="footer">
     <div class="container">
-        <br>
         <div class="row">
             <div class="col-sm-4">
                 <br><img src="img/ezlife/logo_new.jpg" class="img-responsive img-thumbnail img-fluid" height="35%"
                          width="35%">
                 <p>
-                    <br>
                     ezlife.eu, <%= data.postalCode%> <%= data.town %><br>
                     <%= data.country %>
                 </p>
@@ -38,17 +36,14 @@
 
 <!-- Copyright -->
 <div class="container">
-    <br>
-<div class="row">
-    <div class="col-sm-8 text-left">
-        <br>
-        <p>Created by <a href="/about"><%= data.name %></a></p>
+    <div class="row">
+        <div class="col-sm-8 text-left">
+            <p>Created by <a href="/about"><%= data.name %></a></p>
+        </div>
+        <div class="col-sm-4 text-right">
+            <p>Designed by <a href="https://<%= data.homepage %>/about"><%= data.homepage %></a></p>
+        </div>
     </div>
-    <div class="col-sm-4 text-right">
-        <br>
-        <p>Designed by <a href="https://<%= data.homepage %>/about"><%= data.homepage %></a></p>
-    </div>
-</div>
 </div>
 
 </div>
