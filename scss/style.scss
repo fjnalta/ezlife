@@ -115,39 +115,49 @@ h1, h2, h3, h4, h5,
   color: #fff;
   text-align: left;
 
-	a:hover {
-		background-color: #343a40;
-	}
+  a:hover {
+    background-color: #343a40;
+  }
 
-	.sidebarButton {
-		max-width: 35px;
-	}
-	.sidebarButtonText {
-		font-size: 14px;
-	}
+  .sidebarButton {
+    max-width: 35px;
+    @include transition(.9s);
+  }
 
-	transition: all 0.3s;
+  .sidebarButtonText {
+    font-size: 14px;
+    @include transition(.9s);
+  }
+
+  transition: all 0.3s;
 
   &.active {
 
-	  a:hover {
-		  background-color: #343a40;
-	  }
-	  .sidebarButton {
-		  max-width: 50px;
-	  }
-	  .sidebarButtonText {
-		  font-size: 0;
-	  }
+    a:hover {
+      background-color: #343a40;
+    }
+
+    .sidebarButton {
+      max-width: 50px;
+      @include transition(.8s);
+    }
+
+    .sidebarButtonText {
+      font-size: 0;
+      @include transition(.3s);
+    }
 
     min-width: 80px;
     max-width: 80px;
     text-align: center;
+
     ul.components {
       li {
         font-size: 14px;
+
         a {
           padding: 10px 0;
+
           span {
             margin-right: 0;
             display: block;

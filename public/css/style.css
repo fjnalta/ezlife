@@ -9982,9 +9982,21 @@ h1, h2, h3, h4, h5,
 }
 #sidebar .sidebarButton {
   max-width: 35px;
+  transition: 0.9s;
+}
+@media (prefers-reduced-motion: reduce) {
+  #sidebar .sidebarButton {
+    transition: none;
+  }
 }
 #sidebar .sidebarButtonText {
   font-size: 14px;
+  transition: 0.9s;
+}
+@media (prefers-reduced-motion: reduce) {
+  #sidebar .sidebarButtonText {
+    transition: none;
+  }
 }
 #sidebar.active {
   min-width: 80px;
@@ -9996,9 +10008,21 @@ h1, h2, h3, h4, h5,
 }
 #sidebar.active .sidebarButton {
   max-width: 50px;
+  transition: 0.8s;
+}
+@media (prefers-reduced-motion: reduce) {
+  #sidebar.active .sidebarButton {
+    transition: none;
+  }
 }
 #sidebar.active .sidebarButtonText {
   font-size: 0;
+  transition: 0.3s;
+}
+@media (prefers-reduced-motion: reduce) {
+  #sidebar.active .sidebarButtonText {
+    transition: none;
+  }
 }
 #sidebar.active ul.components li {
   font-size: 14px;
