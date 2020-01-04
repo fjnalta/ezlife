@@ -14,3 +14,7 @@ Execute `node app.js` to start the Application.
 *
 *
 *
+
+<h3>Snippets</h3>
+* compile css: sass scss/style.scss public/css/style.css
+
