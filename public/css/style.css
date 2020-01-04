@@ -9987,15 +9987,15 @@ h1, h2, h3, h4, h5,
   font-size: 14px;
 }
 #sidebar.active {
-  min-width: 100px;
-  max-width: 100px;
+  min-width: 80px;
+  max-width: 80px;
   text-align: center;
 }
 #sidebar.active a:hover {
   background-color: #343a40;
 }
 #sidebar.active .sidebarButton {
-  max-width: 80px;
+  max-width: 50px;
 }
 #sidebar.active .sidebarButtonText {
   font-size: 0;
