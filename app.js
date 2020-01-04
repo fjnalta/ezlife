@@ -15,6 +15,9 @@ app.use(express.static(path.join(__dirname, config.env.webContentDir)));
 app.set('view engine','ejs');
 app.set('views',path.join(__dirname, 'views'));
 
+// set static path
+app.use('/node_modules', express.static('node_modules'));
+
 // set public router
 app.use('/', router);
 
