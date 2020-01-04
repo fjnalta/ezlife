@@ -52,6 +52,7 @@ function loadRSS(feed) {
                 var el = $(this);
                 createEntry(el.find("id").text(), el.find("title").text(), el.find("updated").text(), feed);
             });
+
             $("#tabContent").fadeIn("slow", function () {
                 $("#loadingSpinner").attr("hidden",true);
                 $("#tabContent").attr("hidden",false);
