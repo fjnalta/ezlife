@@ -1,126 +1,58 @@
 <% include partials/header.ejs %>
 
-<!-- Container - Streams -->
+
+<!-- Import Twitch Player -->
+<script src= "https://player.twitch.tv/js/embed/v1.js"></script>
+<!-- include additional scripts -->
+<script src="js/handleStreams.js"></script>
+
+
+<!-- container - streams -->
 <div class="container">
     <br>
-    <h1 class="text-center">Stream</h1>
-    <h2><img src="img/logos/stream/twitch.png" style="max-height: 50px">Twitch</h2>
-    <div class="row">
-        <div class="col-sm-6">
-            <div id="ironm4n89"></div>
-            <script type="text/javascript">
-                var options = {
-                    width: "100%",
-                    height: "300",
-                    channel: "ironm4n89",
-                };
-                var player = new Twitch.Player("ironm4n89", options);
-                player.setVolume(0);
-            </script>
-        </div>
-        <div class="col-sm-6">
-            <div id="fjnalta"></div>
-            <script type="text/javascript">
-                var options = {
-                    width: "100%",
-                    height: "300",
-                    channel: "fjnalta",
-                };
-                var player = new Twitch.Player("fjnalta", options);
-                player.setVolume(0);
-            </script>
-        </div>
-    </div>
-    <br>
-    <div class="row">
-        <div class="col-sm-6">
-            <div id="borgreon"></div>
-            <script type="text/javascript">
-                var options = {
-                    width: "100%",
-                    height: "300",
-                    channel: "borgreon",
-                };
-                var player = new Twitch.Player("borgreon", options);
-                player.setVolume(0);
-            </script>
-        </div>
-        <div class="col-sm-6">
-            <div id="kneedeephxd"></div>
-            <script type="text/javascript">
-                var options = {
-                    width: "100%",
-                    height: "300",
-                    channel: "kneedeephxd",
-                };
-                var player = new Twitch.Player("kneedeephxd", options);
-                player.setVolume(0);
-            </script>
-        </div>
-    </div>
-    <br>
-    <div class="row">
-        <div class="col-sm-6">
-            <div id="svn1337"></div>
-            <script type="text/javascript">
-                var options = {
-                    width: "100%",
-                    height: "300",
-                    channel: "svn1337",
-                };
-                var player = new Twitch.Player("svn1337", options);
-                player.setVolume(0);
-            </script>
-        </div>
-        <div class="col-sm-6">
-            <div id="schwestaschwesta"></div>
-            <script type="text/javascript">
-                var options = {
-                    width: "100%",
-                    height: "300",
-                    channel: "schwestaschwesta",
-                };
-                var player = new Twitch.Player("schwestaschwesta", options);
-                player.setVolume(0);
-            </script>
-        </div>
-    </div>
-    <br>
-    <div class="row">
-        <div class="col-sm-6">
-            <div id="demnice"></div>
-            <script type="text/javascript">
-                var options = {
-                    width: "100%",
-                    height: "300",
-                    channel: "demnice",
-                };
-                var player = new Twitch.Player("demnice", options);
-                player.setVolume(0);
-            </script>
-        </div>
-        <div class="col-sm-6">
-            <div id="doctornagger"></div>
-            <script type="text/javascript">
-                var options = {
-                    width: "100%",
-                    height: "300",
-                    channel: "doctornagger",
-                };
-                var player = new Twitch.Player("doctornagger", options);
-                player.setVolume(0);
-            </script>
-        </div>
-    </div>
-    <br>
-    <h2><img src="img/logos/stream/youtube.png" style="max-height: 50px">Youtube</h2>
-    <div class="row">
-        <div class="col-sm-6">
-            <div class="embed-responsive embed-responsive-16by9">
-                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/live_stream?channel=UCRMx5sNaOZJFkYw4qquI93w"></iframe>
+    <h1 class="text-center" id="streams">Streams</h1>
+    <!-- ezlife.eu streams -->
+    <div class="list-group">
+        <div class="row">
+            <% for(let i=0; i < twitchStreams.length; i++) { %>
+            <div class="col-sm-12 col-md-6">
+                <br>
+                <a href="#currentStream" onclick="streamButtonClicked('<%= twitchStreams[i].name %>')" class="list-group-item list-group-item-action">
+                    <div class="row">
+                        <div class="col-3">
+                            <img class="img-thumbnail img-fluid" src="<%= twitchStreams[i].img %>">
+                        </div>
+                        <div class="col-9">
+                            <% if(twitchStreams[i].online) { %>
+                            <p style="text-align: right"><span class="badge badge-success">Online</span></p>
+                            <% } else { %>
+                            <p style="text-align: right"><span class="badge badge-danger">Offline</span></p>
+                            <% } %>
+                            <h5><%= twitchStreams[i].name %></h5>
+                            <small class="text-muted">currently streaming: <%= twitchStreams[i].game %></small>
+                            <div class="dropdown-divider"></div>
+                            <%= twitchStreams[i].description %>
+                        </div>
+                    </div>
+                </a>
             </div>
+            <% } %>
         </div>
-        <!-- TODO - next stream -->
+    </div>
+    <br>
+    <!-- handle dynamic content - stream + chat -->
+    <div class="row">
+        <div class="col-12">
+            <div id="current-stream-heading"></div>
+            <div id="current-stream"></div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-12">
+            <div id="current-stream-chat-heading"></div>
+            <div id="current-stream-chat"></div>
+        </div>
     </div>
     <br>
 </div>
