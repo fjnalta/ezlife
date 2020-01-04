@@ -6,46 +6,59 @@
     <br>
     <h1 class="text-center">Development</h1>
 
-    <ul class="nav nav-tabs" role="tablist">
-        <li class="nav-item">
-            <a class="nav-link active" id="ezlife-tab" data-toggle="tab" href="#ezlife" role="tab" aria-controls="ezlife" aria-selected="true">ezlife.eu</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" id="ezCooking-tab" data-toggle="tab" href="#ezCooking" role="tab" aria-controls="ezCooking" aria-selected="false">ezCooking</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" id="ezchat-tab" data-toggle="tab" href="#ezchat" role="tab" aria-controls="ezchat" aria-selected="false">ezChat Android Client</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" id="ezchatpush-tab" data-toggle="tab" href="#ezchatpush" role="tab" aria-controls="ezchatpush" aria-selected="false">ezChat REST Services</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" id="ezchatpc-tab" data-toggle="tab" href="#ezchatpc" role="tab" aria-controls="ezchatpc" aria-selected="false">ezChat PC Client</a>
-        </li>
-    </ul>
+    <div class="text-center" id="loadingSpinner">
+        <br>
+        Loading...<br>
+        <div class="spinner-grow text-info" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+        <br>
+    </div>
+    <br>
 
-    <div class="tab-content">
-        <div id="ezlife" class="tab-pane fade show active" role="tabpanel" aria-labelledby="ezlife-tab">
-            <p><b>Latest commits</b></p>
-            <div id="ezlifeRSS"><script>loadRSS("ezlife");</script></div>
-        </div>
-        <div id="ezCooking" class="tab-pane fade" aria-labelledby="ezCooking-tab">
-            <p><b>Latest commits</b></p>
-            <div id="ezCookingRSS"><script>loadRSS("ezCooking");</script></div>
-        </div>
-        <div id="ezchat" class="tab-pane fade" aria-labelledby="ezchat-tab">
-            <p><b>Latest commits</b></p>
-            <div id="ezchatRSS"><script>loadRSS("ezchat");</script></div>
-        </div>
-        <div id="ezchatpush" class="tab-pane fade" aria-labelledby="ezchatpush-tab">
-            <p><b>Latest commits</b></p>
-            <div id="ezchatpushRSS"><script>loadRSS("ezchatpush");</script></div>
-        </div>
-        <div id="ezchatpc" class="tab-pane fade" aria-labelledby="ezchatpc-tab">
-            <p><b>Latest commits</b></p>
-            <div id="ezchatpcRSS"><script>loadRSS("ezchatpc");</script></div>
+    <div id="tabContent">
+        <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="ezlife-tab" data-toggle="tab" href="#ezlife" role="tab" aria-controls="ezlife" aria-selected="true">ezlife.eu</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="ezCooking-tab" data-toggle="tab" href="#ezCooking" role="tab" aria-controls="ezCooking" aria-selected="false">ezCooking</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="ezchat-tab" data-toggle="tab" href="#ezchat" role="tab" aria-controls="ezchat" aria-selected="false">ezChat Android Client</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="ezchatpush-tab" data-toggle="tab" href="#ezchatpush" role="tab" aria-controls="ezchatpush" aria-selected="false">ezChat REST Services</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="ezchatpc-tab" data-toggle="tab" href="#ezchatpc" role="tab" aria-controls="ezchatpc" aria-selected="false">ezChat PC Client</a>
+            </li>
+        </ul>
+
+        <div class="tab-content">
+            <div id="ezlife" class="tab-pane fade show active" role="tabpanel" aria-labelledby="ezlife-tab">
+                <p><b>Latest commits</b></p>
+                <div id="ezlifeRSS"><script>loadRSS("ezlife");</script></div>
+            </div>
+            <div id="ezCooking" class="tab-pane fade" aria-labelledby="ezCooking-tab">
+                <p><b>Latest commits</b></p>
+                <div id="ezCookingRSS"><script>loadRSS("ezCooking");</script></div>
+            </div>
+            <div id="ezchat" class="tab-pane fade" aria-labelledby="ezchat-tab">
+                <p><b>Latest commits</b></p>
+                <div id="ezchatRSS"><script>loadRSS("ezchat");</script></div>
+            </div>
+            <div id="ezchatpush" class="tab-pane fade" aria-labelledby="ezchatpush-tab">
+                <p><b>Latest commits</b></p>
+                <div id="ezchatpushRSS"><script>loadRSS("ezchatpush");</script></div>
+            </div>
+            <div id="ezchatpc" class="tab-pane fade" aria-labelledby="ezchatpc-tab">
+                <p><b>Latest commits</b></p>
+                <div id="ezchatpcRSS"><script>loadRSS("ezchatpc");</script></div>
+            </div>
         </div>
     </div>
+
 </div>
 
 <% include partials/footer.ejs %>
