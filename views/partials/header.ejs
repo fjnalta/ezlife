@@ -3,25 +3,34 @@
     <!-- General Settings -->
     <title>ezlife.eu</title>
     <meta charset="utf-8">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+
     <link rel="shortcut icon" type="image/x-icon" href="img/ezlife/favicon.ico">
 
     <!-- Mobile First -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Import Font -->
     <link href='https://fonts.googleapis.com/css?family=Nunito:600' rel='stylesheet' type='text/css'>
 
+    <!-- Import Main Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+
     <!-- Import Glyphicons -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 
-    <!-- Import JQuery and Bootstrap -->
-    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Import JQuery and Bootstrap
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    -->
     <script src="/node_modules/jquery/dist/jquery.js"></script>
     <script src="/node_modules/popper.js/dist/umd/popper.min.js"></script>
-    <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.js"></script>
 
-    <!-- Import Main Stylesheet -->
-    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <!-- Handle Sidebar -->
+    <script src="js/handleSidebar.js"></script>
+
+
 
     <!-- Google AdSense -->
     <!--
@@ -32,5 +41,11 @@
 <!-- Start Body -->
 <body>
 
-<% include header/nav-top.ejs %>
-<% include header/top.ejs %>
+<!-- Start Page content -->
+<div class="wrapper d-flex align-items-stretch">
+    <% include sidebar.ejs %>
+
+    <!-- Page Content  -->
+    <div id="content" class="p-4 p-md-5">
+        <% include header/nav-top.ejs %>
+        <% include header/top.ejs %>
