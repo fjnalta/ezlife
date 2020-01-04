@@ -106,10 +106,11 @@ h1, h2, h3, h4, h5,
   max-width: 270px;
   background: $primary;
   color: #fff;
+  text-align: center;
   transition: all 0.3s;
   &.active{
-  	min-width: 80px;
-    max-width: 80px;
+  	min-width: 120px;
+    max-width: 120px;
     text-align: center;
 		ul.components{
 	    li{
@@ -125,7 +126,7 @@ h1, h2, h3, h4, h5,
 	    }
 	  }
 		.logo{
-			padding: 10px 0;
+			padding: 10px 10px;
 		}
 
 		.footer{
@@ -137,7 +138,7 @@ h1, h2, h3, h4, h5,
   	display: block;
   	color: $white;
   	font-weight: 900;
-  	padding: 10px 30px;
+  	padding: 30px 30px;
   	@include transition(.3s);
   }
   ul.components{
