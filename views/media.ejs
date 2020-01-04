@@ -1,9 +1,18 @@
 <% include partials/header.ejs %>
 
+<!-- include additional scripts -->
+<script src="js/handleMedia.js"></script>
+
 <div class="container">
     <br>
     <h1 class="text-center">Media</h1>
-    <p>TODO</p>
+
+    <% include partials/loadingSpinner.ejs %>
+
+    <div id="tabContent" hidden>
+        <p>TODO</p>
+    </div>
+
 </div>
 
 <% include partials/footer.ejs %>
