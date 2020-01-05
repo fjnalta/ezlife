@@ -24,10 +24,10 @@
                     <a href="#currentStream" onclick="streamButtonClicked('<%= twitchStreams[i].name %>')"
                        class="list-group-item list-group-item-action">
                         <div class="row">
-                            <div class="col-3">
+                            <div class="col-4">
                                 <img class="img-thumbnail img-fluid" src="<%= twitchStreams[i].img %>">
                             </div>
-                            <div class="col-9">
+                            <div class="col-8">
                                 <% if(twitchStreams[i].online) { %>
                                 <p style="text-align: right"><span class="badge badge-success">Online</span></p>
                                 <% } else { %>
