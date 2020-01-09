@@ -10145,4 +10145,9 @@ a[data-toggle=collapse] {
   border-color: #333333 !important;
 }
 
+#serviceItem {
+  margin: 10px;
+  max-height: 150px;
+}
+
 /*# sourceMappingURL=style.css.map */

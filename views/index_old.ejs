@@ -1,0 +1,60 @@
+<% include partials/header.ejs %>
+
+<div class="container">
+    <!-- Content -->
+    <br>
+    <div class="row">
+        <!-- General News - Development -->
+        <div class="col-lg-9 col-sm-12">
+            <!-- Carousel -->
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                </ol>
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="view hm-zoom">
+                            <img class="d-block w-100" src="img/carousel/gitlab.jpg">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="view hm-zoom">
+                            <img class="d-block w-100" src="img/carousel/nextcloud.jpg">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="view hm-zoom">
+                            <img class="d-block w-100" src="img/carousel/teamspeak.jpg">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="view hm-zoom">
+                            <img class="d-block w-100" src="img/carousel/discord.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p><br>
+                <a href="/services" class="btn btn-primary">view all services</a>
+            </p>
+        </div>
+
+        <div class="col-lg-3 col-sm-12">
+            <!-- Application Services Menu -->
+            <% include partials/applicationServicesMenu.ejs %>
+
+            <!-- Sponsors -->
+            <img src="img/ezlife/textmark1.svg" class="img-fluid img-thumbnail">
+        </div>
+    </div>
+    <br>
+</div>
+<!-- End Body -->
+<% include partials/footer.ejs %>
+

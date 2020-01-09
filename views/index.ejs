@@ -1,56 +1,78 @@
 <% include partials/header.ejs %>
 
 <div class="container">
-    <!-- Content -->
     <br>
     <div class="row">
-        <!-- General News - Development -->
-        <div class="col-lg-9 col-sm-12">
-            <!-- Carousel -->
-            <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                <!-- Indicators -->
-                <ol class="carousel-indicators">
-                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                    <li data-target="#myCarousel" data-slide-to="2"></li>
-                    <li data-target="#myCarousel" data-slide-to="3"></li>
-                </ol>
+        <!-- Content -->
+        <div class="col-sm-12 col-lg-9">
+            <!-- TODO - enable online twitch streams -->
+            <!-- Online Streams
+            <% for(let i=0;i< twitchStreams.length ;i++) { %>
+                <% if(i==0) { %>
+                    <h1 class="text-center">Streams</h1>
+                <% } %>
 
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="view hm-zoom">
-                            <img class="d-block w-100" src="img/carousel/gitlab.jpg">
+                <%= JSON.stringify(twitchStreams[i]) %>
+            <% } %>
+
+
+            <div class="dropdown-divider"></div>
+            -->
+
+            <!-- Visit our Services -->
+            <h1 class="text-center">Services</h1>
+            <div class="row">
+                <% for(let i=0; i < services.length; i++) { %>
+                <div class="col-sm-12 col-md-6">
+                    <a href="<%= services[i].url %>">
+                        <div class="card">
+                            <div class="row no-gutters">
+                                <div class="col-md-4">
+                                    <img src="<%= services[i].img %>" class="card-img" id="serviceItem">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title"><b><%= services[i].name %></b></h5>
+                                        <p class="card-text">This is a wider card with supporting text below as a
+                                            natural lead-in to additional content. This content is a little bit
+                                            longer.</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="view hm-zoom">
-                            <img class="d-block w-100" src="img/carousel/nextcloud.jpg">
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="view hm-zoom">
-                            <img class="d-block w-100" src="img/carousel/teamspeak.jpg">
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="view hm-zoom">
-                            <img class="d-block w-100" src="img/carousel/discord.jpg">
-                        </div>
-                    </div>
+                    </a>
+                    <br>
                 </div>
+                <% } %>
             </div>
 
-            <p><br>
-                <a href="/services" class="btn btn-primary">view all services</a>
-            </p>
+            <a href="/services" class="btn btn-primary">view all services</a>
+
+            <div class="dropdown-divider"></div>
+
+
+            <!-- EzCooking news -->
+            <!-- TODO - load ezcooking news
+
+            <h1 class="text-center">Latest Recipes</h1>
+
+            <div class="dropdown-divider"></div>
+            -->
+
+            <!-- TODO - load ezChat news -->
+
+            <!-- TODO - load ezWiki news -->
         </div>
 
         <div class="col-lg-3 col-sm-12">
-            <!-- Application Services Menu -->
-            <% include partials/applicationServicesMenu.ejs %>
+            <!-- include Latest commits -->
+            <!-- TODO - load latest commits -->
+
+            <!-- include Application Services Menu -->
+            <% include partials/index/applicationServicesMenu.ejs %>
 
             <!-- Sponsors -->
-            <img src="img/ezlife/textmark1.svg" class="img-fluid img-thumbnail">
+            <% include partials/index/sponsors.ejs %>
         </div>
     </div>
     <br>
