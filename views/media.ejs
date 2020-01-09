@@ -12,51 +12,57 @@
     <div id="tabContent" hidden>
         <!-- overview -->
         <div class="row">
-            <!-- side menu -->
+
             <div class="col-sm-12 col-md-3">
-                <div class="list-group">
-                    <!--
-                    <% for(let i=0;i < 1;i++) { %>
-                    -->
-                            <button type="button" class="list-group-item list-group-item-action"></button>
-                    <!--
+                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <% for(let i=0;i < youtubeMedia.length;i++) { %>
+                        <% if(i==0) { %>
+                            <a class="nav-link active" id="v-pills-<%= youtubeMedia[i].id %>-tab" onclick="removeVideo();" data-toggle="pill" href="#v-pills-<%= youtubeMedia[i].id %>" role="tab" aria-controls="v-pills-<%= youtubeMedia[i].id %>" aria-selected="false"><%= youtubeMedia[i].snippet.title %></a>
+                        <% } else { %>
+                            <a class="nav-link" id="v-pills-<%= youtubeMedia[i].id %>-tab" onclick="removeVideo();" data-toggle="pill" href="#v-pills-<%= youtubeMedia[i].id %>" role="tab" aria-controls="v-pills-<%= youtubeMedia[i].id %>" aria-selected="false"><%= youtubeMedia[i].snippet.title %></a>
+                        <% } %>
+
                     <% } %>
-                    -->
                 </div>
             </div>
-            <!-- video overview -->
+
             <div class="col-sm-12 col-md-9">
-                <!--
-                <% for(let i=0;i < 1;i++) { %>
-                    <% if(i!== 0 && i%2 == 0) { %>
-                        <br>
-                    <% } %>
-                    <a href="#currentStream" onclick="videoButtonClicked('')" class="list-group-item list-group-item-action">
+                <div class="tab-content" id="v-pills-tabContent">
+                    <% for(let i=0;i < youtubeMedia.length;i++) { %>
+                        <% if(i==0) { %>
+                            <div class="tab-pane fade show active" id="v-pills-<%= youtubeMedia[i].id %>" role="tabpanel" aria-labelledby="v-pills-<%= youtubeMedia[i].id %>-tab">
+                        <% } else { %>
+                            <div class="tab-pane fade" id="v-pills-<%= youtubeMedia[i].id %>" role="tabpanel" aria-labelledby="v-pills-<%= youtubeMedia[i].id %>-tab">
+                        <% } %>
+                    <% for(let j=0;j < youtubeMedia[i].videos.length; j++) { %>
+                    <a href="#currentVideo" onclick="videoButtonClicked('<%= youtubeMedia[i].videos[j].snippet.resourceId.videoId %>')">
                         <div class="row">
                             <div class="col-4">
-                                <img class="img-thumbnail img-fluid" src="">
+                                <img class="img-thumbnail img-fluid" src="<%= youtubeMedia[i].videos[j].snippet.thumbnails.high.url %>">
                             </div>
-                        <div class="col-8">
-                            <h5></h5>
-                            <div class="dropdown-divider"></div>
-                            <small class="text-muted">video Id: </small>
+                            <div class="col-8">
+                                <h5><%= youtubeMedia[i].videos[j].snippet.title %></h5>
+                                <div class="dropdown-divider"></div>
+                                <small class="text-muted"><%= youtubeMedia[i].videos[j].snippet.description %></small>
+                            </div>
                         </div>
-                    </div>
-                </a>
-
-                <% } %>
-                -->
+                    </a>
+                    <br>
+                    <% } %>
+                        </div>
+                    <% } %>
+                </div>
             </div>
         </div>
 
         <br>
 
-        <!-- TODO - implement video -->
-
         <!-- video -->
         <div class="row">
             <div class="col-12">
-
+                <div id="current-video-heading"></div>
+                <div id="current-video"></div>
+                <br>
             </div>
         </div>
     </div>
