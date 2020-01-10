@@ -1,9 +1,16 @@
+$font-primary: 'Nunito', Arial, sans-serif;
+$primary: #333333;
+
+.nav-link.active {
+  background-color: $primary;
+}
+
+
 @import '../node_modules/bootstrap/scss/bootstrap';
 @import '../node_modules/bootstrap/scss/variables';
 @import '../node_modules/bootstrap/scss/mixins';
 
-$font-primary: 'Nunito', Arial, sans-serif;
-$primary: #333333;
+
 
 /* Basic Container */
 .container {
