@@ -33,7 +33,7 @@
                 <% } %>
 
                 <% for(let j=0;j< gitFeed[i].feed.entry.length;j++) { %>
-                    <p><a href="<%= gitFeed[i].feed.entry[j].link.href %>"><%= gitFeed[i].feed.entry[j].updated %> - <%= gitFeed[i].feed.entry[j].title %></a></p>
+                    <p><%= gitFeed[i].feed.entry[j].updated %> - <a href="<%= gitFeed[i].feed.entry[j].link.href %>"><%= gitFeed[i].feed.entry[j].title %></a></p>
                     <% if(j==10) { break; } %>
                 <% } %>
                     </div>
