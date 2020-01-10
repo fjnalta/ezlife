@@ -4,20 +4,32 @@
     <br>
     <div class="row">
         <!-- Content -->
-        <div class="col-sm-12 col-lg-9">
-            <!-- TODO - enable online twitch streams -->
-            <!-- Online Streams
-            <% for(let i=0;i< twitchStreams.length ;i++) { %>
-                <% if(i==0) { %>
-                    <h1 class="text-center">Streams</h1>
+        <div class="col-12">
+            <!-- Online Streams -->
+            <div class="row">
+                <% for(let i=0;i< twitchStreams.length ;i++) { %>
+                <% if(twitchStreams[i].online) { %>
+                <div class="col-sm-12 col-md-6">
+                    <p style="color: darkred">currently streaming</p>
+                    <a href="/stream" class="list-group-item list-group-item-action">
+                        <div class="row">
+                            <div class="col-4">
+                                <img class="img-thumbnail img-fluid" src="<%= twitchStreams[i].img %>">
+                            </div>
+                            <div class="col-8">
+                                <p style="text-align: right"><span class="badge badge-success">Online</span></p>
+                                <h5><%= twitchStreams[i].name %></h5>
+                                <small class="text-muted">streaming: <%= twitchStreams[i].game %></small>
+                                <div class="dropdown-divider"></div>
+                                <%= twitchStreams[i].description %>
+                            </div>
+                        </div>
+                    </a>
+                    <br>
+                </div>
                 <% } %>
-
-                <%= JSON.stringify(twitchStreams[i]) %>
-            <% } %>
-
-
-            <div class="dropdown-divider"></div>
-            -->
+                <% } %>
+            </div>
 
             <!-- Visit our Services -->
             <div class="row">
@@ -46,32 +58,16 @@
             </div>
 
             <a href="/services" class="btn btn-primary">view all services</a>
-
             <div class="dropdown-divider"></div>
-
 
             <!-- EzCooking news -->
-            <!-- TODO - load ezcooking news
 
-            <h1 class="text-center">Latest Recipes</h1>
-
-            <div class="dropdown-divider"></div>
-            -->
+            <!-- ezGit news -->
+            <%= JSON.stringify(gitFeed[0]) %>
 
             <!-- TODO - load ezChat news -->
 
             <!-- TODO - load ezWiki news -->
-        </div>
-
-        <div class="col-lg-3 col-sm-12">
-            <!-- include Latest commits -->
-            <!-- TODO - load latest commits -->
-
-            <!-- include Application Services Menu -->
-            <% include partials/index/applicationServicesMenu.ejs %>
-
-            <!-- Sponsors -->
-            <% include partials/index/sponsors.ejs %>
         </div>
     </div>
     <br>
