@@ -1,6 +1,6 @@
 <% include partials/header.ejs %>
 
-<script language="javascript" type="text/javascript" src="js/loadRSS.js"></script>
+<script language="javascript" type="text/javascript" src="js/handleDevelopment.js"></script>
 
 <div class="container">
     <br>
@@ -10,47 +10,36 @@
 
     <div id="tabContent" hidden>
         <ul class="nav nav-tabs" role="tablist">
-            <li class="nav-item">
-                <a class="nav-link active" id="ezlife-tab" data-toggle="tab" href="#ezlife" role="tab" aria-controls="ezlife" aria-selected="true">ezlife.eu</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="ezCooking-tab" data-toggle="tab" href="#ezCooking" role="tab" aria-controls="ezCooking" aria-selected="false">ezCooking</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="ezchat-tab" data-toggle="tab" href="#ezchat" role="tab" aria-controls="ezchat" aria-selected="false">ezChat Android Client</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="ezchatpush-tab" data-toggle="tab" href="#ezchatpush" role="tab" aria-controls="ezchatpush" aria-selected="false">ezChat REST Services</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="ezchatpc-tab" data-toggle="tab" href="#ezchatpc" role="tab" aria-controls="ezchatpc" aria-selected="false">ezChat PC Client</a>
-            </li>
+            <% for(let i=0;i< gitFeed.length;i++) { %>
+                <% if(i==0) { %>
+                    <li class="nav-item">
+                        <a class="nav-link active" id="<%= gitFeed[i].id %>-tab" data-toggle="tab" href="#<%= gitFeed[i].id %>" role="tab" aria-controls="<%= gitFeed[i].id %>" aria-selected="true"><%= gitFeed[i].name %></a>
+                    </li>
+                <% } else { %>
+                    <li class="nav-item">
+                        <a class="nav-link" id="<%= gitFeed[i].id %>-tab" data-toggle="tab" href="#<%= gitFeed[i].id %>" role="tab" aria-controls="<%= gitFeed[i].id %>" aria-selected="true"><%= gitFeed[i].name %></a>
+                    </li>
+                <% } %>
+            <% } %>
         </ul>
 
         <div class="tab-content">
-            <div id="ezlife" class="tab-pane fade show active" role="tabpanel" aria-labelledby="ezlife-tab">
-                <p><b>Latest commits</b></p>
-                <div id="ezlifeRSS"><script>loadRSS("ezlife");</script></div>
-            </div>
-            <div id="ezCooking" class="tab-pane fade" aria-labelledby="ezCooking-tab">
-                <p><b>Latest commits</b></p>
-                <div id="ezCookingRSS"><script>loadRSS("ezCooking");</script></div>
-            </div>
-            <div id="ezchat" class="tab-pane fade" aria-labelledby="ezchat-tab">
-                <p><b>Latest commits</b></p>
-                <div id="ezchatRSS"><script>loadRSS("ezchat");</script></div>
-            </div>
-            <div id="ezchatpush" class="tab-pane fade" aria-labelledby="ezchatpush-tab">
-                <p><b>Latest commits</b></p>
-                <div id="ezchatpushRSS"><script>loadRSS("ezchatpush");</script></div>
-            </div>
-            <div id="ezchatpc" class="tab-pane fade" aria-labelledby="ezchatpc-tab">
-                <p><b>Latest commits</b></p>
-                <div id="ezchatpcRSS"><script>loadRSS("ezchatpc");</script></div>
-            </div>
+            <p>latest commits:</p>
+            <% for(let i=0;i< gitFeed.length;i++) { %>
+                <% if(i==0) { %>
+                    <div id="<%= gitFeed[i].id %>" class="tab-pane fade show active" role="tabpanel" aria-labelledby="<%= gitFeed[i].id %>-tab">
+                <% } else { %>
+                    <div id="<%= gitFeed[i].id %>" class="tab-pane fade show" role="tabpanel" aria-labelledby="<%= gitFeed[i].id %>-tab">
+                <% } %>
+
+                <% for(let j=0;j< gitFeed[i].feed.entry.length;j++) { %>
+                    <p><a href="<%= gitFeed[i].feed.entry[j].link.href %>"><%= gitFeed[i].feed.entry[j].updated %> - <%= gitFeed[i].feed.entry[j].title %></a></p>
+                    <% if(j==10) { break; } %>
+                <% } %>
+                    </div>
+            <% } %>
         </div>
     </div>
-
 </div>
 
 <% include partials/footer.ejs %>
