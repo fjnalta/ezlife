@@ -30,7 +30,6 @@
             </div>
 
             <div class="col-sm-12 col-md-9">
-
                 <div class="tab-content" id="v-pills-tabContent">
                     <h2 class="text-center">Videos</h2>
                     <% for(let i=0;i < youtubeMedia.length;i++) { %>
@@ -40,6 +39,7 @@
                             <div class="tab-pane fade" id="v-pills-<%= youtubeMedia[i].id %>" role="tabpanel" aria-labelledby="v-pills-<%= youtubeMedia[i].id %>-tab">
                         <% } %>
                     <% for(let j=0;j < youtubeMedia[i].videos.length; j++) { %>
+                                <div class="list-group-item list-group-item-action">
                     <a href="#currentVideo" onclick="videoButtonClicked('<%= youtubeMedia[i].videos[j].snippet.resourceId.videoId %>')">
                         <div class="row">
                             <div class="col-4">
@@ -52,6 +52,7 @@
                             </div>
                         </div>
                     </a>
+                            </div>
                     <br>
                     <% } %>
                         </div>
