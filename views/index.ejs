@@ -17,9 +17,8 @@
                                 <img class="img-thumbnail img-fluid" src="<%= twitchStreams[i].img %>">
                             </div>
                             <div class="col-8">
-                                <p style="text-align: right"><span class="badge badge-success">Online</span></p>
-                                <h5><%= twitchStreams[i].name %></h5>
-                                <small class="text-muted">streaming: <%= twitchStreams[i].game %></small>
+                                <%= twitchStreams[i].name %><br>
+                                <small class="text-muted">streaming: <%= twitchStreams[i].game %></small><br>
                                 <div class="dropdown-divider"></div>
                                 <%= twitchStreams[i].description %>
                             </div>
