@@ -1,5 +1,11 @@
 <% include partials/header.ejs %>
 
+<!-- Include Google ReCaptcha -->
+<script src="https://www.google.com/recaptcha/api.js?render=6Lc-tM4UAAAAAOFYBVnOVuClRjQN5qq0fXylRS6O"></script>
+
+<!-- Handle Google Recaptcha -->
+<script src="/js/handleContact.js"></script>
+
 <div class="container text-center">
     <br>
     <h1>Contact</h1>
@@ -22,12 +28,20 @@
             <textarea class="form-control" id="comments" name="comments" placeholder="Write your text here..." rows="5" style="height: 250px"></textarea>
             <br>
             <div class="row">
-                <div class="col-12 form-group text-right">
-                    <a href="#" class="btn btn-primary">Send</a>
+                <div class="col-10 form-group text-left">
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="ppnCheck">
+                        <label class="form-check-label" for="ppnCheck">I have read and accepted the privacy policy note</label>
+                    </div>
+                </div>
+                <div class="col-2 form-group text-right">
+                    <a href="#" class="btn btn-primary" onclick="sendMail();">Send</a>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+
 
 <% include partials/footer.ejs %>
