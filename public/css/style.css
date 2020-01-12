@@ -9921,6 +9921,10 @@ h1, h2, h3, h4, h5,
   color: #000;
 }
 
+#cookieImage {
+  max-width: 100px;
+}
+
 .ftco-section {
   padding: 7em 0;
 }
