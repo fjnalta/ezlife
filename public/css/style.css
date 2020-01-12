@@ -9925,6 +9925,10 @@ h1, h2, h3, h4, h5,
   max-width: 100px;
 }
 
+#serviceItem {
+  max-height: 150px;
+}
+
 .ftco-section {
   padding: 7em 0;
 }
@@ -10152,11 +10156,6 @@ a[data-toggle=collapse] {
 .btn.btn-primary:hover, .btn.btn-primary:focus {
   background: #333333 !important;
   border-color: #333333 !important;
-}
-
-#serviceItem {
-  margin: 10px;
-  max-height: 150px;
 }
 
 /*# sourceMappingURL=style.css.map */

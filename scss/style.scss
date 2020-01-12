@@ -58,6 +58,12 @@ h1, h2, h3, h4, h5,
   max-width: 100px;
 }
 
+// Index Settings
+#serviceItem {
+  max-height: 150px;
+}
+
+
 .ftco-section {
   padding: 7em 0;
 }
@@ -294,10 +300,4 @@ a[data-toggle="collapse"] {
       border-color: $primary !important;
     }
   }
-}
-
-// Index Settings
-#serviceItem {
-  margin: 10px;
-  max-height: 150px;
 }
