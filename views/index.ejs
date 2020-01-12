@@ -1,3 +1,6 @@
+<!-- Popups only on index page -->
+<% include partials/streamToasts.ejs %>
+
 <% include partials/header.ejs %>
 
 <div class="container">
@@ -5,32 +8,7 @@
     <div class="row">
         <!-- Content -->
         <div class="col-12">
-            <!-- Online Streams -->
-            <div class="row">
-                <% for(let i=0;i< twitchStreams.length ;i++) { %>
-                <% if(twitchStreams[i].online) { %>
-                <div class="col-sm-12 col-md-6">
-                    <p style="color: darkred">currently streaming</p>
-                    <a href="/stream" class="list-group-item list-group-item-action">
-                        <div class="row">
-                            <div class="col-4">
-                                <img class="img-thumbnail img-fluid" src="<%= twitchStreams[i].img %>">
-                            </div>
-                            <div class="col-8">
-                                <%= twitchStreams[i].name %><br>
-                                <small class="text-muted">streaming: <%= twitchStreams[i].game %></small><br>
-                                <div class="dropdown-divider"></div>
-                                <%= twitchStreams[i].description %>
-                            </div>
-                        </div>
-                    </a>
-                    <br>
-                </div>
-                <% } %>
-                <% } %>
-            </div>
-
-            <!-- Visit our Services -->
+            <!-- Services -->
             <div class="row">
                 <% for(let i=0; i < services.length; i++) { %>
                 <div class="col-sm-12 col-md-6">
@@ -44,8 +22,7 @@
                                     <div class="card-body">
                                         <h5 class="card-title"><b><%= services[i].name %></b></h5>
                                         <p class="card-text"><%= services[i].description %></p>
-                                        <br>
-                                        <p class="text-right"><small >powered by: <%= services[i].sponsor %></small></p>
+                                        <p class="text-right"><small>powered by: <%= services[i].sponsor %></small></p>
                                     </div>
                                 </div>
                             </div>
