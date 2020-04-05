@@ -16,96 +16,14 @@
 
     <div id="tabContent" hidden>
         <br>
-        <h1 class="text-center">Services</h1>
-        <h2>System Load</h2>
+        <h1>Services</h1>
+        <h2>Voice Services</h2>
         <div class="row">
             <div class="col">
-                <div class="embed-responsive embed-responsive-16by9">
-                    <iframe src="https://grafana.ezlife.eu/d-solo/rYdddlPWk/node-exporter-full?orgId=1&panelId=77"></iframe>
-                </div>
-
-            </div>
-            <div class="col">
-                <div class="embed-responsive embed-responsive-16by9">
-                    <iframe src="https://grafana.ezlife.eu/d-solo/rYdddlPWk/node-exporter-full?orgId=1&panelId=78"></iframe>
-                </div>
-            </div>
-        </div>
-        <br>
-        <div class="row">
-            <div class="col">
-                <div class="embed-responsive embed-responsive-16by9">
-                    <iframe src="https://grafana.ezlife.eu/d-solo/rYdddlPWk/node-exporter-full?orgId=1&panelId=7"></iframe>
-                </div>
-
-            </div>
-            <div class="col">
-                <div class="embed-responsive embed-responsive-16by9">
-                    <iframe src="https://grafana.ezlife.eu/d-solo/rYdddlPWk/node-exporter-full?orgId=1&panelId=9"></iframe>
-                </div>
-            </div>
-        </div>
-        <br>
-
-        <h2>Web Server</h2>
-        <h4>NGINX</h4>
-        <div class="row">
-            <div class="col">
-                <div class="embed-responsive embed-responsive-16by9">
-                    <iframe src="https://grafana.ezlife.eu/d-solo/MsjffzSZz/ezlife-eu-webserver?orgId=1&refresh=5s&panelId=10"></iframe>
-                </div>
-            </div>
-            <div class="col">
-                <div class="embed-responsive embed-responsive-16by9">
-                    <iframe src="https://grafana.ezlife.eu/d-solo/MsjffzSZz/ezlife-eu-webserver?orgId=1&refresh=5s&panelId=15"></iframe>
-                </div>
-            </div>
-        </div>
-        <br>
-        <h4>Cloud</h4>
-        <div class="row">
-            <div class="col">
-                <div class="embed-responsive embed-responsive-16by9">
-                    <iframe src="https://grafana.ezlife.eu/d-solo/Hcp20_8mz/nextcloud?orgId=1&panelId=2"></iframe>
-                </div>
-            </div>
-            <div class="col">
-                <div class="embed-responsive embed-responsive-16by9">
-                    <iframe src="https://grafana.ezlife.eu/d-solo/Hcp20_8mz/nextcloud?orgId=1&panelId=8"></iframe>
-                </div>
-            </div>
-        </div>
-        <br>
-
-        <h4>GitLab</h4>
-        <p>tbd</p>
-        <br>
-        <h4>Mail</h4>
-        <p>tbd</p>
-        <br>
-        <h2>Application Server</h2>
-        <h4>Prometheus</h4>
-        <div class="row">
-            <div class="col">
-                <div class="embed-responsive embed-responsive-16by9">
-                    <iframe src="https://grafana.ezlife.eu/d-solo/dbrlgNjZz/prometheus-2-0-stats?orgId=1&refresh=1m&panelId=38"></iframe>
-                </div>
-            </div>
-            <div class="col">
-                <div class="embed-responsive embed-responsive-16by9">
-                    <iframe src="https://grafana.ezlife.eu/d-solo/dbrlgNjZz/prometheus-2-0-stats?orgId=1&refresh=1m&panelId=14"></iframe>
-                </div>
-            </div>
-        </div>
-        <br>
-        <div class="row">
-            <div class="col">
-                <h4>Voice Server</h4>
-                <!--
                 <div class="row">
                     <div class="col">
                         <br>
-                        <h5 id="Teamspeak">Teamspeak 3</h5>
+                        <h2 id="Teamspeak">Teamspeak 3</h2>
                         <p>Status: <b style="color:green">ONLINE</b></p>
                         <p>
                         <div id="ts3viewer_1114101" style=""></div>
@@ -113,43 +31,15 @@
                     </div>
                     <div class="col">
                         <br>
-                        <h5 id="Discord">Discord</h5>
+                        <h2 id="Discord">Discord</h2>
                         <p>Status: <b style="color:green">ONLINE</b></p>
                         <iframe src="https://discordapp.com/widget?id=322492651184324609&theme=dark" width="350"
                                 height="500" allowtransparency="true" frameborder="0"></iframe>
                     </div>
                 </div>
-                -->
-                <h5>Teamspeak 3 Statistics</h5>
-                <div class="row">
-                    <div class="col">
-                        <div class="embed-responsive embed-responsive-16by9">
-                            <iframe src="https://grafana.ezlife.eu/d-solo/o7G5WqUZk/teamspeak?orgId=1&var-DS_PROMETHEUS=Prometheus&var-job=teamspeak&var-instance=127.0.0.1:8092&var-virtualserver=ezlife.eu&var-maxclients=teamspeak_virtualserver_maxclients%7Binstance%3D%22127.0.0.1:8092%22,job%3D%22teamspeak%22,virtualserver_name%3D%22ezlife.eu%22%7D%2032%201586115206000&panelId=32"></iframe>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="embed-responsive embed-responsive-16by9">
-                            <iframe src="https://grafana.ezlife.eu/d-solo/o7G5WqUZk/teamspeak?orgId=1&var-DS_PROMETHEUS=Prometheus&var-job=teamspeak&var-instance=127.0.0.1:8092&var-virtualserver=ezlife.eu&var-maxclients=teamspeak_virtualserver_maxclients%7Binstance%3D%22127.0.0.1:8092%22,job%3D%22teamspeak%22,virtualserver_name%3D%22ezlife.eu%22%7D%2032%201586115206000&panelId=20"></iframe>
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <div class="row">
-                    <div class="col">
-                        <div class="embed-responsive embed-responsive-16by9">
-                            <iframe src="https://grafana.ezlife.eu/d-solo/o7G5WqUZk/teamspeak?orgId=1&var-DS_PROMETHEUS=Prometheus&var-job=teamspeak&var-instance=127.0.0.1:8092&var-virtualserver=ezlife.eu&var-maxclients=teamspeak_virtualserver_maxclients%7Binstance%3D%22127.0.0.1:8092%22,job%3D%22teamspeak%22,virtualserver_name%3D%22ezlife.eu%22%7D%2032%201586115206000&panelId=22"></iframe>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="embed-responsive embed-responsive-16by9">
-                            <iframe src="https://grafana.ezlife.eu/d-solo/o7G5WqUZk/teamspeak?orgId=1&var-DS_PROMETHEUS=Prometheus&var-job=teamspeak&var-instance=127.0.0.1:8092&var-virtualserver=ezlife.eu&var-maxclients=teamspeak_virtualserver_maxclients%7Binstance%3D%22127.0.0.1:8092%22,job%3D%22teamspeak%22,virtualserver_name%3D%22ezlife.eu%22%7D%2032%201586115206000&panelId=18"></iframe>
-                        </div>
-                    </div>
-                </div>
-                <br>
-
             </div>
         </div>
+        <br>
     </div>
 </div>
 
