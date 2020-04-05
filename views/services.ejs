@@ -1,5 +1,8 @@
 <% include partials/header.ejs %>
 
+<!-- include additional scripts -->
+<script src="js/handleServices.js"></script>
+
 <!-- Tsviewer -->
 <script src="https://static.tsviewer.com/short_expire/js/ts3viewer_loader.js"></script>
 <script>
@@ -8,107 +11,116 @@
 </script>
 
 <div class="container text-center">
-    <br>
-    <h1 class="text-center">Services</h1>
-    <h2>System Load</h2>
-    <div class="row">
-        <div class="col">
-            <div class="embed-responsive embed-responsive-16by9">
-                <iframe src="https://grafana.ezlife.eu/d-solo/rYdddlPWk/node-exporter-full?orgId=1&panelId=77"></iframe>
-            </div>
 
-        </div>
-        <div class="col">
-            <div class="embed-responsive embed-responsive-16by9">
-                <iframe src="https://grafana.ezlife.eu/d-solo/rYdddlPWk/node-exporter-full?orgId=1&panelId=78"></iframe>
-            </div>
-        </div>
-    </div>
-    <br>
-    <div class="row">
-        <div class="col">
-            <div class="embed-responsive embed-responsive-16by9">
-                <iframe src="https://grafana.ezlife.eu/d-solo/rYdddlPWk/node-exporter-full?orgId=1&panelId=7"></iframe>
-            </div>
+    <% include partials/loadingSpinner.ejs %>
 
-        </div>
-        <div class="col">
-            <div class="embed-responsive embed-responsive-16by9">
-                <iframe src="https://grafana.ezlife.eu/d-solo/rYdddlPWk/node-exporter-full?orgId=1&panelId=9"></iframe>
-            </div>
-        </div>
-    </div>
-    <br>
+    <div id="tabContent" hidden>
+        <br>
+        <h1 class="text-center">Services</h1>
+        <h2>System Load</h2>
+        <div class="row">
+            <div class="col">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe src="https://grafana.ezlife.eu/d-solo/rYdddlPWk/node-exporter-full?orgId=1&panelId=77"></iframe>
+                </div>
 
-    <h2>Web Server</h2>
-    <h4>NGINX</h4>
-    <div class="row">
-        <div class="col">
-            <div class="embed-responsive embed-responsive-16by9">
-                <iframe src="https://grafana.ezlife.eu/d-solo/MsjffzSZz/ezlife-eu-webserver?orgId=1&refresh=5s&panelId=10"></iframe>
+            </div>
+            <div class="col">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe src="https://grafana.ezlife.eu/d-solo/rYdddlPWk/node-exporter-full?orgId=1&panelId=78"></iframe>
+                </div>
             </div>
         </div>
-        <div class="col">
-            <div class="embed-responsive embed-responsive-16by9">
-                <iframe src="https://grafana.ezlife.eu/d-solo/MsjffzSZz/ezlife-eu-webserver?orgId=1&refresh=5s&panelId=15"></iframe>
-            </div>
-        </div>
-    </div>
-    <br>
-    <h4>Cloud</h4>
-    <div class="row">
-        <div class="col">
-            <div class="embed-responsive embed-responsive-16by9">
-                <iframe src="https://grafana.ezlife.eu/d-solo/Hcp20_8mz/nextcloud?orgId=1&panelId=2"></iframe>
-            </div>
-        </div>
-        <div class="col">
-            <div class="embed-responsive embed-responsive-16by9">
-                <iframe src="https://grafana.ezlife.eu/d-solo/Hcp20_8mz/nextcloud?orgId=1&panelId=8"></iframe>
-            </div>
-        </div>
-    </div>
-    <br>
+        <br>
+        <div class="row">
+            <div class="col">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe src="https://grafana.ezlife.eu/d-solo/rYdddlPWk/node-exporter-full?orgId=1&panelId=7"></iframe>
+                </div>
 
-    <h4>GitLab</h4>
-    <p>tbd</p>
-    <br>
-    <h4>Mail</h4>
-    <p>tbd</p>
-    <br>
-    <h2>Application Server</h2>
-    <h4>Prometheus</h4>
-    <div class="row">
-        <div class="col">
-            <div class="embed-responsive embed-responsive-16by9">
-                <iframe src="https://grafana.ezlife.eu/d-solo/dbrlgNjZz/prometheus-2-0-stats?orgId=1&refresh=1m&panelId=38"></iframe>
+            </div>
+            <div class="col">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe src="https://grafana.ezlife.eu/d-solo/rYdddlPWk/node-exporter-full?orgId=1&panelId=9"></iframe>
+                </div>
             </div>
         </div>
-        <div class="col">
-            <div class="embed-responsive embed-responsive-16by9">
-                <iframe src="https://grafana.ezlife.eu/d-solo/dbrlgNjZz/prometheus-2-0-stats?orgId=1&refresh=1m&panelId=14"></iframe>
+        <br>
+
+        <h2>Web Server</h2>
+        <h4>NGINX</h4>
+        <div class="row">
+            <div class="col">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe src="https://grafana.ezlife.eu/d-solo/MsjffzSZz/ezlife-eu-webserver?orgId=1&refresh=5s&panelId=10"></iframe>
+                </div>
+            </div>
+            <div class="col">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe src="https://grafana.ezlife.eu/d-solo/MsjffzSZz/ezlife-eu-webserver?orgId=1&refresh=5s&panelId=15"></iframe>
+                </div>
             </div>
         </div>
-    </div>
-    <br>
-    <div class="row">
-        <div class="col">
-            <h4>Voice Server</h4>
+        <br>
+        <h4>Cloud</h4>
+        <div class="row">
+            <div class="col">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe src="https://grafana.ezlife.eu/d-solo/Hcp20_8mz/nextcloud?orgId=1&panelId=2"></iframe>
+                </div>
+            </div>
+            <div class="col">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe src="https://grafana.ezlife.eu/d-solo/Hcp20_8mz/nextcloud?orgId=1&panelId=8"></iframe>
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <h4>GitLab</h4>
+        <p>tbd</p>
+        <br>
+        <h4>Mail</h4>
+        <p>tbd</p>
+        <br>
+        <h2>Application Server</h2>
+        <h4>Prometheus</h4>
+        <div class="row">
+            <div class="col">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe src="https://grafana.ezlife.eu/d-solo/dbrlgNjZz/prometheus-2-0-stats?orgId=1&refresh=1m&panelId=38"></iframe>
+                </div>
+            </div>
+            <div class="col">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe src="https://grafana.ezlife.eu/d-solo/dbrlgNjZz/prometheus-2-0-stats?orgId=1&refresh=1m&panelId=14"></iframe>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col">
+                <h4>Voice Server</h4>
+                <!--
                 <div class="row">
                     <div class="col">
                         <br>
                         <h5 id="Teamspeak">Teamspeak 3</h5>
                         <p>Status: <b style="color:green">ONLINE</b></p>
-                        <p><div id="ts3viewer_1114101" style=""> </div></p>
+                        <p>
+                        <div id="ts3viewer_1114101" style=""></div>
+                        </p>
                     </div>
                     <div class="col">
                         <br>
                         <h5 id="Discord">Discord</h5>
                         <p>Status: <b style="color:green">ONLINE</b></p>
-                        <iframe src="https://discordapp.com/widget?id=322492651184324609&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0"></iframe>
+                        <iframe src="https://discordapp.com/widget?id=322492651184324609&theme=dark" width="350"
+                                height="500" allowtransparency="true" frameborder="0"></iframe>
                     </div>
                 </div>
-            <h5>Teamspeak 3 Statistics</h5>
+                -->
+                <h5>Teamspeak 3 Statistics</h5>
                 <div class="row">
                     <div class="col">
                         <div class="embed-responsive embed-responsive-16by9">
@@ -121,7 +133,7 @@
                         </div>
                     </div>
                 </div>
-            <br>
+                <br>
                 <div class="row">
                     <div class="col">
                         <div class="embed-responsive embed-responsive-16by9">
@@ -134,8 +146,9 @@
                         </div>
                     </div>
                 </div>
-            <br>
+                <br>
 
+            </div>
         </div>
     </div>
 </div>
