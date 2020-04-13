@@ -7,7 +7,7 @@ deploy1:
   stage: deploy
   script:
     - echo "Switch to new working directory"
-    - cd /var/www/ezlife-3.0/
+    - cd /var/www/ezlife/
     - echo "Install node_modules"
     - npm install --save
     - echo "(Re)Start node app"
