@@ -1,7 +1,7 @@
 # move files
 before_script:
   - echo "Moving files to public directory"
-  - cp -r * /var/www/ezlife-3.0
+  - cp -r * /var/www/ezlife
 # install node_modules and deploy application
 deploy1:
   stage: deploy
