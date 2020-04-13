@@ -25,5 +25,3 @@ app.use('/', router);
 app.listen(config.env.port, function () {
     console.log('Server started at Port 3000');
 });
-
-// Test after restore
