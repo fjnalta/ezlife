@@ -10149,6 +10149,11 @@ a[data-toggle=collapse] {
   transition: all 0.3s;
 }
 
+#myToast {
+  z-index: 3;
+  position: relative;
+}
+
 .btn.btn-primary {
   background: #333333;
   border-color: #333333;
