@@ -13,67 +13,141 @@
     <div id="tabContent" hidden>
         <!-- overview -->
         <div class="row">
-
-            <div class="col-sm-12 col-md-3">
-                <h2 class="text-center">Categories</h2>
-                <div class="card">
-                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                    <% for(let i=0;i < youtubeMedia.length;i++) { %>
-                        <% if(i==0) { %>
-                            <a class="nav-link active" id="v-pills-<%= youtubeMedia[i].id %>-tab" onclick="removeVideo();" data-toggle="pill" href="#v-pills-<%= youtubeMedia[i].id %>" role="tab" aria-controls="v-pills-<%= youtubeMedia[i].id %>" aria-selected="false"><%= youtubeMedia[i].snippet.title %></a>
-                        <% } else { %>
-                            <a class="nav-link" id="v-pills-<%= youtubeMedia[i].id %>-tab" onclick="removeVideo();" data-toggle="pill" href="#v-pills-<%= youtubeMedia[i].id %>" role="tab" aria-controls="v-pills-<%= youtubeMedia[i].id %>" aria-selected="false"><%= youtubeMedia[i].snippet.title %></a>
-                        <% } %>
-
-                    <% } %>
-                </div>
-                    </div>
-            </div>
-
-            <div class="col-sm-12 col-md-9">
-                <div class="tab-content" id="v-pills-tabContent">
-                    <h2 class="text-center">Videos</h2>
-                    <% for(let i=0;i < youtubeMedia.length;i++) { %>
-                        <% if(i==0) { %>
-                            <div class="tab-pane fade show active" id="v-pills-<%= youtubeMedia[i].id %>" role="tabpanel" aria-labelledby="v-pills-<%= youtubeMedia[i].id %>-tab">
-                        <% } else { %>
-                            <div class="tab-pane fade" id="v-pills-<%= youtubeMedia[i].id %>" role="tabpanel" aria-labelledby="v-pills-<%= youtubeMedia[i].id %>-tab">
-                        <% } %>
-                    <% for(let j=0;j < youtubeMedia[i].videos.length; j++) { %>
-                                <div class="list-group-item list-group-item-action">
-                    <a href="#currentVideo" onclick="videoButtonClicked('<%= youtubeMedia[i].videos[j].snippet.resourceId.videoId %>')">
-                        <div class="row">
-                            <div class="col-4">
-                                <img class="img-thumbnail img-fluid" src="<%= youtubeMedia[i].videos[j].snippet.thumbnails.medium.url %>">
-                            </div>
-                            <div class="col-8">
-                                <h5><%= youtubeMedia[i].videos[j].snippet.title %></h5>
-                                <div class="dropdown-divider"></div>
-                                <small class="text-muted"><%= youtubeMedia[i].videos[j].snippet.description %></small>
-                            </div>
-                        </div>
-                    </a>
-                            </div>
-                    <br>
-                    <% } %>
-                        </div>
-                    <% } %>
-                </div>
+            <div class="col-12">
+                <ul class="nav nav-pills nav-fill" id="pills-tab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="pills-youtube-tab" data-toggle="pill" href="#pills-youtube" role="tab"
+                           aria-controls="pills-youtube" aria-selected="true">Youtube Videos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="pills-clips-tab" data-toggle="pill" href="#pills-clips" role="tab"
+                           aria-controls="pills-clips" aria-selected="false">Twitch Clips</a>
+                    </li>
+                </ul>
             </div>
         </div>
 
-        <br>
-
-        <!-- video -->
         <div class="row">
             <div class="col-12">
-                <div id="current-video-heading"></div>
-                <div id="current-video"></div>
-                <br>
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-youtube" role="tabpanel"
+                         aria-labelledby="pills-youtube-tab">
+                        <br>
+                        <p>
+                            <% for(let i = 0;i < youtubeMedia.length;i++) { %>
+                                <a class="btn btn-primary" data-toggle="collapse" href="#<%= youtubeMedia[i].id %>-tab" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                    <%= youtubeMedia[i].snippet.title %>
+                                </a>
+                            <% } %>
+                        </p>
+
+                        <!-- Hide inactive tabs -->
+                        <div id="youtube-accordion">
+                        <% for(let i = 0;i < youtubeMedia.length;i++) { %>
+                            <div class="collapse" id="<%= youtubeMedia[i].id %>-tab" data-parent="#youtube-accordion">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <%= youtubeMedia[i].snippet.title %>
+                                        </div>
+                                        <div class="card-body">
+                                            <% for(let j = 0;j < youtubeMedia[i].videos.length; j++) { %>
+                                                <div class="list-group-item list-group-item-action">
+                                                    <a href="#currentVideo"
+                                                       onclick="videoButtonClicked('<%= youtubeMedia[i].videos[j].snippet.resourceId.videoId %>')">
+                                                        <div class="row">
+                                                            <div class="col-4">
+                                                                <img class="img-thumbnail img-fluid"
+                                                                     src="<%= youtubeMedia[i].videos[j].snippet.thumbnails.medium.url %>">
+                                                            </div>
+                                                            <div class="col-8">
+                                                                <h5><%= youtubeMedia[i].videos[j].snippet.title %></h5>
+                                                                <div class="dropdown-divider"></div>
+                                                                <small class="text-muted"><%= youtubeMedia[i].videos[j].snippet.description %></small>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <br>
+                                            <% } %>
+                                        </div>
+                                    </div>
+                                <br>
+                            </div>
+                        <% } %>
+                        </div>
+                    </div>
+
+                    <!-- Twitch Clips -->
+                    <div class="tab-pane fade" id="pills-clips" role="tabpanel"
+                         aria-labelledby="pills-clips-tab">
+
+                        <br>
+                        <p>
+                            <% for(let i = 0;i < twitchClips.length;i++) { %>
+                                <% if(twitchClips[i].clips[0].length > 0) { %>
+                                <a class="btn btn-primary" data-toggle="collapse" href="#<%= twitchClips[i].name %>-tab" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                    <%= twitchClips[i].name %>
+                                </a>
+                                <% } %>
+                            <% } %>
+                        </p>
+
+                        <!-- Hide inactive tabs -->
+                        <div id="clips-accordion">
+                            <% for(let i = 0;i < twitchClips.length;i++) { %>
+                                <% if(twitchClips[i].clips[0].length > 0) { %>
+                                <div class="collapse" id="<%= twitchClips[i].name %>-tab" data-parent="#clips-accordion">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <%= twitchClips[i].name %>
+                                        </div>
+                                        <div class="card-body">
+                                            <% for(let j = 0;j < twitchClips[i].clips[0].length; j++) { %>
+                                                <div class="list-group-item list-group-item-action">
+                                                    <a href="#currentVideo"
+                                                       onclick="clipButtonClicked('<%= twitchClips[i].clips[0][j].embed_url %>')">
+                                                        <div class="row">
+                                                            <div class="col-4">
+                                                                <img class="img-thumbnail img-fluid"
+                                                                     src="<%= twitchClips[i].clips[0][j].thumbnail_url %>">
+                                                            </div>
+                                                            <div class="col-8">
+                                                                <h5><%= twitchClips[i].clips[0][j].title %></h5>
+                                                                <div class="dropdown-divider"></div>
+                                                                <small class="text-muted">Views: <%= twitchClips[i].clips[0][j].view_count %></small><br>
+                                                                <small class="text-muted">Date: <%= twitchClips[i].clips[0][j].created_at %></small><br>
+                                                                <small class="text-muted">Creator: <%= twitchClips[i].clips[0][j].creator_name %></small><br>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <br>
+                                            <% } %>
+                                        </div>
+                                    </div>
+                                    <br>
+                                </div>
+                                <% } %>
+                            <% } %>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- video -->
+                <div class="row">
+                    <div class="col-12">
+                        <div id="current-video-heading"></div>
+                        <div id="current-video"></div>
+                        <br>
+                    </div>
+                </div>
+
             </div>
         </div>
+
     </div>
 
 </div>
+
 
 <% include partials/footer.ejs %>
