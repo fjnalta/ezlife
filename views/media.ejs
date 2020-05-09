@@ -83,6 +83,7 @@
 
                         <br>
                         <p>
+                            <% if(twitchClips) { %>
                             <% for(let i = 0;i < twitchClips.length;i++) { %>
                                 <% if(twitchClips[i].clips[0].length > 0) { %>
                                 <a class="btn btn-primary" data-toggle="collapse" href="#<%= twitchClips[i].name %>-tab" role="button" aria-expanded="false" aria-controls="collapseExample">
@@ -90,10 +91,12 @@
                                 </a>
                                 <% } %>
                             <% } %>
+                            <% } %>
                         </p>
 
                         <!-- Hide inactive tabs -->
                         <div id="clips-accordion">
+                            <% if(twitchClips) { %>
                             <% for(let i = 0;i < twitchClips.length;i++) { %>
                                 <% if(twitchClips[i].clips[0].length > 0) { %>
                                 <div class="collapse" id="<%= twitchClips[i].name %>-tab" data-parent="#clips-accordion">
@@ -128,6 +131,7 @@
                                     <br>
                                 </div>
                                 <% } %>
+                            <% } %>
                             <% } %>
                         </div>
                     </div>
