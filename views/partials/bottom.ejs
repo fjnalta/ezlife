@@ -1,0 +1,38 @@
+<!-- Footer -->
+<div id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 text-left">
+                <br><img src="img/ezlife/logo_new.jpg" class="img-responsive img-thumbnail img-fluid" height="35%"
+                         width="35%">
+                <p>
+                    ezlife.eu, <%= data.postalCode%> <%= data.town %><br>
+                    <%= data.country %>
+                </p>
+            </div>
+            <div class="col-sm-6 text-right">
+                <div id="footer-right">
+                    <br>
+                    <p><img src="img/ezlife/textmark1.svg" class="img-responsive img-thumbnail img-fluid" width="35%"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Copyright -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8 text-left">
+            <br>
+            <p>Created by <a href="/about"><%= data.name %></a></p>
+        </div>
+        <div class="col-sm-4 text-right">
+            <br>
+            <p>Designed by <a href="https://<%= data.homepage %>/about"><%= data.homepage %></a></p>
+        </div>
+    </div>
+</div>
+
+<!-- Include cookiealert script -->
+<script src="/js/handleCookies.js"></script>

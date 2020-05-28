@@ -10132,6 +10132,11 @@ a[data-toggle=collapse] {
   }
 }
 
+#sidebarCollapseBtn {
+  min-width: 30px;
+  max-width: 200px;
+}
+
 .footer {
   padding: 0 30px;
 }

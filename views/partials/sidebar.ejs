@@ -1,31 +1,32 @@
-<!-- Start Page content -->
-<div class="wrapper d-flex align-items-stretch">
+<!-- Sidebar -->
+<nav id="sidebar" class="active">
+    <h1><a href="/" class="logo"><img src="img/ezlife/logo_with_textmark.svg"></a></h1>
+    <div class="dropdown-divider"></div>
+    <ul class="list-unstyled components mb-5">
+        <li>
+            <a href="https://cloud.ezlife.eu" class="sidebarButtonText"><img class="img-fluid sidebarButton" src="img/ezlife/ezcloud_logo_rose_v4.svg">ezCloud</a>
+        </li>
+        <li>
+            <a href="https://cooking.ezlife.eu" class="sidebarButtonText"><img class="img-fluid sidebarButton" src="img/ezlife/ezcooking_logo.svg">ezCooking</a>
+        </li>
+        <li>
+            <a href="https://gitlab.ezlife.eu" class="sidebarButtonText"><img class="img-fluid sidebarButton" src="img/ezlife/ezgit_logo_v4.svg"> ezGit</a>
+        </li>
+        <li>
+            <a href="https://mail.ezlife.eu" class="sidebarButtonText"><img class="img-fluid sidebarButton" src="img/ezlife/ezmail_logo.svg">ezMail</a>
+        </li>
+        <li>
+            <a href="https://grafana.ezlife.eu" class="sidebarButtonText"><img class="img-fluid sidebarButton" src="img/ezlife/ezmonitoring_logo_v4.svg">ezMonitor</a>
+        </li>
 
-    <!-- Sidebar -->
-    <nav id="sidebar" class="active">
-        <h1><a href="/" class="logo"><img src="img/ezlife/logo_with_textmark.svg"></a></h1>
-        <div class="dropdown-divider"></div>
-        <ul class="list-unstyled components mb-5">
-            <li>
-                <a href="https://cloud.ezlife.eu" class="sidebarButtonText"><img class="img-fluid sidebarButton" src="img/ezlife/ezcloud_logo_rose_v4.svg"> ezCloud</a>
-            </li>
-            <li>
-                <a href="https://cooking.ezlife.eu" class="sidebarButtonText"><img class="img-fluid sidebarButton" src="img/ezlife/ezcooking_logo.svg"> ezCooking</a>
-            </li>
-            <li>
-                <a href="https://gitlab.ezlife.eu" class="sidebarButtonText"><img class="img-fluid sidebarButton" src="img/ezlife/ezgit_logo_v4.svg"> ezGit</a>
-            </li>
-            <li>
-                <a href="https://mail.ezlife.eu" class="sidebarButtonText"><img class="img-fluid sidebarButton" src="img/ezlife/ezmail_logo.svg"> ezMail</a>
-            </li>
-            <li>
-                <a href="https://grafana.ezlife.eu" class="sidebarButtonText"><img class="img-fluid sidebarButton" src="img/ezlife/ezmonitoring_logo_v4.svg"> ezMonitor</a>
-            </li>
-        </ul>
-    </nav>
 
-    <!-- Page Content -->
-    <div id="content">
+    </ul>
 
-        <% include header/nav-top.ejs %>
-        <% include header/top.ejs %>
+    <!-- TODO - move this to bottom - Collapse Sidebar -->
+    <ul class="list-unstyled components mb-5">
+        <li class="align-items-end">
+            <a href="#" class="sidebarButtonText" id="sidebarCollapse"><img class="img-fluid sidebarButton" src="img/ezlife/ezcloud_logo_camouflage.svg">Collapse Menu</a>
+        </li>
+
+    </ul>
+</nav>

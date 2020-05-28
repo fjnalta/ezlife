@@ -1,0 +1,58 @@
+<% include partials/header.ejs %>
+
+<!-- TODO - Popups only on index page -->
+<% include partials/streamToasts.ejs %>
+
+<!-- Include Sidebar -->
+<% include partials/sidebar.ejs %>
+
+<!-- Start Page Content -->
+<div id="content">
+
+    <!-- Include Navigation -->
+    <% include partials/topNav.ejs %>
+
+    <div class="container">
+        <br>
+
+        <div class="row">
+            <!-- Content -->
+            <div class="col-12">
+                <!-- Services -->
+                <div class="row">
+                    <% for(let i = 0; i < services.length; i++) { %>
+                        <div class="col-sm-12 col-md-6">
+                            <a href="<%= services[i].url %>">
+                                <div class="list-group-item list-group-item-action">
+                                    <div class="row no-gutters">
+                                        <div class="col-md-4">
+                                            <img src="<%= services[i].img %>" class="card-img" id="serviceItem">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body">
+                                                <h5 class="card-title"><b><%= services[i].name %></b></h5>
+                                                <p class="card-text"><%= services[i].description %></p>
+                                                <p class="text-right">
+                                                    <small>powered by: <%= services[i].sponsor %></small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <br>
+                        </div>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+
+    <!-- Include Bottom Content -->
+    <% include partials/bottom.ejs %>
+
+<!-- End Content -->
+</div>
+
+<% include partials/footer.ejs %>
