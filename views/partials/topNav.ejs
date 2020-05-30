@@ -1,20 +1,24 @@
 <nav class="navbar-dark navbar navbar-expand-lg">
-    <!-- Navbar Toggle Button -->
-    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="fa fa-bars"></i>
-    </button>
-
+    <!-- Brand -->
+    <a class="navbar-brand" href="#">
+        <!-- TODO - insert textmark -->
+         ezlife
+    </a>
+    <!-- Content -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <% for(let i=0; i<menu.length; i++) { %>
                 <li class="nav-item">
                     <a class="nav-link" href="<%= menu[i].url %>"><%= menu[i].name %></a>
                 </li>
-
             <% } %>
         </ul>
         <button type="button" class="btn btn-light">Sign in</button>
     </div>
+    <!-- Toggle Button -->
+    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa fa-bars"></i>
+    </button>
 </nav>
 
 <br>

@@ -1,8 +1,6 @@
 $(document).ready(function () {
     "use strict";
-
     let fullHeight = function() {
-
         $('.js-fullheight').css('height', $(window).height());
         $(window).resize(function(){
             $('.js-fullheight').css('height', $(window).height());
@@ -10,7 +8,6 @@ $(document).ready(function () {
 
     };
     fullHeight();
-
     $('#sidebarCollapse').on('click', function () {
         $('#sidebar').toggleClass('active');
 

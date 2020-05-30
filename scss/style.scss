@@ -121,8 +121,7 @@ h1, h2, h3, h4, h5,
 }
 
 #sidebar {
-  min-width: 200px;
-  max-width: 200px;
+  width: 200px;
   background: $primary;
   color: #fff;
   text-align: left;
@@ -149,16 +148,15 @@ h1, h2, h3, h4, h5,
       background-color: #343a40;
     }
     .sidebarButton {
-      max-width: 50px;
-      @include transition(.8s);
+      max-width: 35px;
+      @include transition(.3s);
     }
     .sidebarButtonText {
       font-size: 0;
-      @include transition(.3s);
+      @include transition(.1s);
     }
 
-    min-width: 80px;
-    max-width: 80px;
+    width: 60px;
     text-align: center;
 
     ul.components {

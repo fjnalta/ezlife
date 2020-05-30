@@ -10014,8 +10014,7 @@ h1, h2, h3, h4, h5,
 }
 
 #sidebar {
-  min-width: 200px;
-  max-width: 200px;
+  width: 200px;
   background: #333333;
   color: #fff;
   text-align: left;
@@ -10043,16 +10042,15 @@ h1, h2, h3, h4, h5,
   }
 }
 #sidebar.active {
-  min-width: 80px;
-  max-width: 80px;
+  width: 60px;
   text-align: center;
 }
 #sidebar.active a:hover {
   background-color: #343a40;
 }
 #sidebar.active .sidebarButton {
-  max-width: 50px;
-  transition: 0.8s;
+  max-width: 35px;
+  transition: 0.3s;
 }
 @media (prefers-reduced-motion: reduce) {
   #sidebar.active .sidebarButton {
@@ -10061,7 +10059,7 @@ h1, h2, h3, h4, h5,
 }
 #sidebar.active .sidebarButtonText {
   font-size: 0;
-  transition: 0.3s;
+  transition: 0.1s;
 }
 @media (prefers-reduced-motion: reduce) {
   #sidebar.active .sidebarButtonText {
