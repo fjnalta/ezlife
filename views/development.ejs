@@ -3,44 +3,62 @@
 
 <script language="javascript" type="text/javascript" src="js/handleDevelopment.js"></script>
 
-<div class="container">
-    <br>
-    <h1 class="text-center">Development</h1>
+<div class="content">
+    <!-- Include Navigation -->
+    <% include partials/topNav.ejs %>
 
-    <% include partials/loadingSpinner.ejs %>
+    <div class="container">
+        <br>
+        <h1 class="text-center">Development</h1>
 
-    <div id="tabContent" hidden>
-        <ul class="nav nav-tabs" role="tablist">
-            <% for(let i=0;i< gitFeed.length;i++) { %>
-                <% if(i==0) { %>
-                    <li class="nav-item">
-                        <a class="nav-link active" id="<%= gitFeed[i].id %>-tab" data-toggle="tab" href="#<%= gitFeed[i].id %>" role="tab" aria-controls="<%= gitFeed[i].id %>" aria-selected="true"><%= gitFeed[i].name %></a>
-                    </li>
-                <% } else { %>
-                    <li class="nav-item">
-                        <a class="nav-link" id="<%= gitFeed[i].id %>-tab" data-toggle="tab" href="#<%= gitFeed[i].id %>" role="tab" aria-controls="<%= gitFeed[i].id %>" aria-selected="true"><%= gitFeed[i].name %></a>
-                    </li>
+        <% include partials/loadingSpinner.ejs %>
+
+        <div id="tabContent" hidden>
+            <ul class="nav nav-tabs" role="tablist">
+                <% for(let i = 0;i < gitFeed.length;i++) { %>
+                    <% if(i == 0) { %>
+                        <li class="nav-item">
+                            <a class="nav-link active" id="<%= gitFeed[i].id %>-tab" data-toggle="tab"
+                               href="#<%= gitFeed[i].id %>" role="tab" aria-controls="<%= gitFeed[i].id %>"
+                               aria-selected="true"><%= gitFeed[i].name %></a>
+                        </li>
+                    <% } else { %>
+                        <li class="nav-item">
+                            <a class="nav-link" id="<%= gitFeed[i].id %>-tab" data-toggle="tab"
+                               href="#<%= gitFeed[i].id %>" role="tab" aria-controls="<%= gitFeed[i].id %>"
+                               aria-selected="true"><%= gitFeed[i].name %></a>
+                        </li>
+                    <% } %>
                 <% } %>
-            <% } %>
-        </ul>
+            </ul>
 
-        <div class="tab-content">
-            <p>latest commits:</p>
-            <% for(let i=0;i< gitFeed.length;i++) { %>
-                <% if(i==0) { %>
-                    <div id="<%= gitFeed[i].id %>" class="tab-pane fade show active" role="tabpanel" aria-labelledby="<%= gitFeed[i].id %>-tab">
-                <% } else { %>
-                    <div id="<%= gitFeed[i].id %>" class="tab-pane fade show" role="tabpanel" aria-labelledby="<%= gitFeed[i].id %>-tab">
-                <% } %>
+            <div class="tab-content">
+                <p>latest commits:</p>
+                <% for(let i = 0;i < gitFeed.length;i++) { %>
+                    <% if(i == 0) { %>
+                <div id="<%= gitFeed[i].id %>" class="tab-pane fade show active" role="tabpanel"
+                     aria-labelledby="<%= gitFeed[i].id %>-tab">
+                    <% } else { %>
+                    <div id="<%= gitFeed[i].id %>" class="tab-pane fade show" role="tabpanel"
+                         aria-labelledby="<%= gitFeed[i].id %>-tab">
+                        <% } %>
 
-                <% for(let j=0;j< gitFeed[i].feed.entry.length;j++) { %>
-                    <p><%= gitFeed[i].feed.entry[j].updated %> - <a href="<%= gitFeed[i].feed.entry[j].link.href %>"><%= gitFeed[i].feed.entry[j].title %></a></p>
-                    <% if(j==10) { break; } %>
-                <% } %>
+                        <% for(let j = 0;j < gitFeed[i].feed.entry.length;j++) { %>
+                            <p><%= gitFeed[i].feed.entry[j].updated %> - <a
+                                        href="<%= gitFeed[i].feed.entry[j].link.href %>"><%= gitFeed[i].feed.entry[j].title %></a>
+                            </p>
+                            <% if (j == 10) {
+                                break;
+                            } %>
+                        <% } %>
                     </div>
-            <% } %>
+                    <% } %>
+                </div>
+            </div>
         </div>
+
+        <% include partials/bottom.ejs %>
+
     </div>
-</div>
 
 <% include partials/footer.ejs %>

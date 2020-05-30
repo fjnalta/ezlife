@@ -7,40 +7,50 @@
 <!-- Handle Google Recaptcha -->
 <script src="/js/handleContact.js"></script>
 
-<div class="container text-center">
-    <br>
-    <h1>Contact</h1>
-    <p><em>Any Questions? Write us.</em></p>
+<div class="content">
+    <!-- Include Navigation -->
+    <% include partials/topNav.ejs %>
 
-    <!-- Container - Contact -->
-    <div class="row">
-        <div class="col-4">
-            <h5 class="text-left"><i class="fas fa-envelope"></i> Email: <%= data.email %></h5>
-        </div>
-        <div class="col-8">
-            <div class="row">
-                <div class="col-6 form-group">
-                    <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
-                </div>
-                <div class="col-6 form-group">
-                    <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
-                </div>
+    <div class="container text-center">
+        <br>
+        <h1>Contact</h1>
+        <p><em>Any Questions? Write us.</em></p>
+
+        <!-- Container - Contact -->
+        <div class="row">
+            <div class="col-4">
+                <h5 class="text-left"><i class="fas fa-envelope"></i> Email: <%= data.email %></h5>
             </div>
-            <textarea class="form-control" id="comments" name="comments" placeholder="Write your text here..." rows="5" style="height: 250px"></textarea>
-            <br>
-            <div class="row">
-                <div class="col-10 form-group text-left">
-                    <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="ppnCheck">
-                        <label class="form-check-label" for="ppnCheck">I have read and accepted the <a href="/privacy"><u>privacy policy note</u></a></label>
+            <div class="col-8">
+                <div class="row">
+                    <div class="col-6 form-group">
+                        <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                    </div>
+                    <div class="col-6 form-group">
+                        <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
                     </div>
                 </div>
-                <div class="col-2 form-group text-right">
-                    <a href="#" class="btn btn-primary" onclick="sendMail();">Send</a>
+                <textarea class="form-control" id="comments" name="comments" placeholder="Write your text here..."
+                          rows="5" style="height: 250px"></textarea>
+                <br>
+                <div class="row">
+                    <div class="col-10 form-group text-left">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="ppnCheck">
+                            <label class="form-check-label" for="ppnCheck">I have read and accepted the <a
+                                        href="/privacy"><u>privacy policy note</u></a></label>
+                        </div>
+                    </div>
+                    <div class="col-2 form-group text-right">
+                        <a href="#" class="btn btn-primary" onclick="sendMail();">Send</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <% include partials/bottom.ejs %>
+
 </div>
 
 <% include partials/footer.ejs %>
