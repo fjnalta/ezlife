@@ -36,3 +36,10 @@
 
 <!-- Include cookiealert script -->
 <script src="/js/handleCookies.js"></script>
+
+<!-- Show Ads only if cookies are accepted -->
+<script>
+    if (getCookie("acceptCookies")) {
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    }
+</script>

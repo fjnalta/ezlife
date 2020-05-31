@@ -14,12 +14,8 @@ $(document).ready(function () {
         // remember users choice for 1 year
         acceptCookies.addEventListener("click", function () {
             setCookie("acceptCookies", true, 365);
-            (adsbygoogle = window.adsbygoogle || []).push({});
             $("#cookieModal").modal("hide");
         });
-    } else {
-        <!-- Adsense only on cookie-enabled sites Google AdSense -->
-        (adsbygoogle = window.adsbygoogle || []).push({});
     }
 });
 
