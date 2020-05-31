@@ -1,20 +1,15 @@
 <nav class="navbar-dark navbar navbar-expand-lg py-0">
-    <!-- Brand
-    <a class="navbar-brand" href="#">
-         ezlife
-    </a>
-    -->
-    <!-- Content -->
+    <!-- Collapsible Content -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto py-0">
             <% for(let i=0; i<data.menu.length; i++) { %>
                 <li class="nav-item">
-                    <a class="nav-link btn-sm nav-btn" href="<%= data.menu[i].url %>"><%= data.menu[i].name %></a>
+                    <a class="nav-link btn-sm nav-btn ezlife-link" href="<%= data.menu[i].url %>"><%= data.menu[i].name %></a>
                 </li>
             <% } %>
         </ul>
-        <button type="button" class="btn btn-light btn-sm" id="sidebarCollapse">Toggle Sidebar</button>
-        <button type="button" class="btn btn-light btn-sm">Sign in</button>
+        <button type="button" class="btn btn-light btn-sm ezlife-link" id="sidebarCollapse">Toggle Sidebar</button>
+        <button type="button" class="btn btn-light btn-sm ezlife-link">Sign in</button>
     </div>
     <!-- Toggle Button -->
     <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

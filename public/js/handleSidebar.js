@@ -10,11 +10,5 @@ $(document).ready(function () {
     fullHeight();
     $('#sidebarCollapse').on('click', function () {
         $('#sidebar').toggleClass('active');
-
-        // if($('#sidebar').hasClass('active')) {
-        //     $('#cookbookSidebar').text('');
-        // } else {
-        //     $('#cookbookSidebar').text(' Cookbook');
-        // }
     });
 });

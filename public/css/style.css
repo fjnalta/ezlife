@@ -9965,6 +9965,7 @@ h1, h2, h3, h4, h5,
 }
 
 #sidebar {
+  z-index: 4;
   width: 60px;
   text-align: center;
   background: #333333;
@@ -10081,6 +10082,16 @@ h1, h2, h3, h4, h5,
 #myToast {
   z-index: 3;
   position: relative;
+}
+
+#loadingSpinner {
+  display: none;
+  z-index: 5;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  bottom: 50%;
+  right: 50%;
 }
 
 /*# sourceMappingURL=style.css.map */

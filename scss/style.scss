@@ -1,6 +1,5 @@
 $font-primary: 'Nunito', Arial, sans-serif;
 $primary: #333333;
-//$hover: #343a40;
 $hover: #000000;
 
 @import '../node_modules/bootstrap/scss/bootstrap';
@@ -18,7 +17,6 @@ body {
   font-size: 14px;
   font-weight: normal;
   background: #f2f2f2;
-  //color: lighten($black, 50%);
 }
 
 a {
@@ -101,13 +99,14 @@ h1, h2, h3, h4, h5,
   margin: 40px 0;
 }
 
-// content wrapper for sidebar
+// Content Wrapper for Sidebar
 .sidebar-wrapper {
   width: 100%;
 }
 
-// sidebar
+// Sidebar
 #sidebar {
+  z-index: 4;
   width: 60px;
   text-align: center;
   background: $primary;
@@ -205,13 +204,7 @@ h1, h2, h3, h4, h5,
   }
 }
 
-//.footer {
-//  padding: 0 30px;
-//  @include media-breakpoint-down(md) {
-//    display: none;
-//  }
-//}
-
+// Site Content
 #content {
   width: 100%;
   padding: 0;
@@ -219,7 +212,19 @@ h1, h2, h3, h4, h5,
   transition: all 0.3s;
 }
 
+// Stream Toasts
 #myToast {
   z-index: 3;
   position: relative;
+}
+
+// Loading Spinner
+#loadingSpinner {
+  display: none;
+  z-index: 5;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  bottom: 50%;
+  right: 50%;
 }
