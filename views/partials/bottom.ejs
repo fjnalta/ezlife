@@ -6,8 +6,8 @@
                 <br><img src="img/ezlife/logo_new.jpg" class="img-responsive img-thumbnail img-fluid" height="35%"
                          width="35%">
                 <p>
-                    ezlife.eu, <%= data.postalCode%> <%= data.town %><br>
-                    <%= data.country %>
+                    ezlife.eu, <%= data.about.postalCode%> <%= data.about.town %><br>
+                    <%= data.about.country %>
                 </p>
             </div>
             <div class="col-sm-6 text-right">
@@ -25,11 +25,11 @@
     <div class="row">
         <div class="col-sm-8 text-left">
             <br>
-            <p>Created by <a href="/about"><%= data.name %></a></p>
+            <p>Created by <a href="/about"><%= data.about.name %></a></p>
         </div>
         <div class="col-sm-4 text-right">
             <br>
-            <p>Designed by <a href="https://<%= data.homepage %>/about"><%= data.homepage %></a></p>
+            <p>Designed by <a href="https://<%= data.about.homepage %>/about"><%= data.about.homepage %></a></p>
         </div>
     </div>
 </div>

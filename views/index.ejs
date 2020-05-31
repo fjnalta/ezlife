@@ -19,20 +19,20 @@
             <div class="col-12">
                 <!-- Services -->
                 <div class="row">
-                    <% for(let i = 0; i < services.length; i++) { %>
+                    <% for(let i = 0; i < data.services.length; i++) { %>
                         <div class="col-sm-12 col-md-6">
-                            <a href="<%= services[i].url %>">
+                            <a href="<%= data.services[i].url %>">
                                 <div class="list-group-item list-group-item-action">
                                     <div class="row no-gutters">
                                         <div class="col-md-4">
-                                            <img src="<%= services[i].img %>" class="card-img" id="serviceItem">
+                                            <img src="<%= data.services[i].img %>" class="card-img" id="serviceItem">
                                         </div>
                                         <div class="col-md-8">
                                             <div class="card-body">
-                                                <h5 class="card-title"><b><%= services[i].name %></b></h5>
-                                                <p class="card-text"><%= services[i].description %></p>
+                                                <h5 class="card-title"><b><%= data.services[i].name %></b></h5>
+                                                <p class="card-text"><%= data.services[i].description %></p>
                                                 <p class="text-right">
-                                                    <small>powered by: <%= services[i].sponsor %></small>
+                                                    <small>powered by: <%= data.services[i].sponsor %></small>
                                                 </p>
                                             </div>
                                         </div>

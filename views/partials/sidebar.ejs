@@ -6,22 +6,10 @@
         <li class="sidebar-separator">
             <small>Services</small>
         </li>
-        <% for (let i=0;i<) %>
-        <!-- TODO - load this from config -->
-        <li>
-            <a href="https://cloud.ezlife.eu" class="sidebarButtonText"><img class="img-fluid sidebarButton" src="img/ezlife/ezcloud_logo_rose_v4.svg"> ezCloud</a>
-        </li>
-        <li>
-            <a href="https://cooking.ezlife.eu" class="sidebarButtonText"><img class="img-fluid sidebarButton" src="img/ezlife/ezcooking_logo.svg"> ezCooking</a>
-        </li>
-        <li>
-            <a href="https://gitlab.ezlife.eu" class="sidebarButtonText"><img class="img-fluid sidebarButton" src="img/ezlife/ezgit_logo_v4.svg"> ezGit</a>
-        </li>
-        <li>
-            <a href="https://mail.ezlife.eu" class="sidebarButtonText"><img class="img-fluid sidebarButton" src="img/ezlife/ezmail_logo.svg"> ezMail</a>
-        </li>
-        <li>
-            <a href="https://grafana.ezlife.eu" class="sidebarButtonText"><img class="img-fluid sidebarButton" src="img/ezlife/ezmonitoring_logo_v4.svg"> ezMonitor</a>
-        </li>
+        <% for (let i=0;i<data.services.length; i++) { %>
+            <li>
+                <a href="<%= data.services[i].url %>" class="sidebarButtonText"><img class="img-fluid sidebarButton" src="<%= data.services[i].ico %>"> <%= data.services[i].name %></a>
+            </li>
+        <% } %>
     </ul>
 </nav>

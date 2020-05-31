@@ -7,9 +7,9 @@
     <!-- Content -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto py-0">
-            <% for(let i=0; i<menu.length; i++) { %>
+            <% for(let i=0; i<data.menu.length; i++) { %>
                 <li class="nav-item">
-                    <a class="nav-link btn-sm nav-btn" href="<%= menu[i].url %>"><%= menu[i].name %></a>
+                    <a class="nav-link btn-sm nav-btn" href="<%= data.menu[i].url %>"><%= data.menu[i].name %></a>
                 </li>
             <% } %>
         </ul>

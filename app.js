@@ -2,7 +2,7 @@ const express = require('express');
 const http = require('https');
 const bodyParser = require('body-parser');
 const path = require('path');
-const config = require('./lib/config.js');
+const config = require('./lib/config');
 const router = require('./lib/api/router.js');
 const app = express();
 
