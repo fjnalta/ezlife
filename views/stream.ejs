@@ -17,62 +17,57 @@
             <br>
             <h1 class="text-center" id="streams">Streams</h1>
 
-            <% include partials/loadingSpinner.ejs %>
-
-            <div id="tabContent" hidden>
-                <!-- ezlife.eu streams -->
-                <div class="list-group">
-                    <div class="row">
-                        <% for(let i = 0; i < data.twitchStreams.length; i++) { %>
-                            <div class="col-sm-12 col-md-6">
-                                <br>
-                                <a href="#currentStream" onclick="streamButtonClicked('<%= data.twitchStreams[i].name %>')"
-                                   class="list-group-item list-group-item-action">
-                                    <div class="row">
-                                        <div class="col-4">
-                                            <img class="img-thumbnail img-fluid" src="<%= data.twitchStreams[i].img %>">
-                                        </div>
-                                        <div class="col-8">
-                                            <%= data.twitchStreams[i].name %>
-                                            <% if(data.twitchStreams[i].online) { %>
-                                                <span class="badge badge-success float-right">Online</span>
-                                            <% } else { %>
-                                                <span class="badge badge-danger float-right">Offline</span>
-                                            <% } %>
-                                            <br>
-                                            <small class="text-muted">streaming: <%= data.twitchStreams[i].game %></small>
-                                            <div class="dropdown-divider"></div>
-                                            <%= data.twitchStreams[i].description %>
-                                        </div>
+            <!-- ezlife.eu streams -->
+            <div class="list-group">
+                <div class="row">
+                    <% for(let i = 0; i < data.twitchStreams.length; i++) { %>
+                        <div class="col-sm-12 col-md-6">
+                            <br>
+                            <a href="#currentStream" onclick="streamButtonClicked('<%= data.twitchStreams[i].name %>')"
+                               class="list-group-item list-group-item-action">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <img class="img-thumbnail img-fluid" src="<%= data.twitchStreams[i].img %>">
                                     </div>
-                                </a>
-                            </div>
-                        <% } %>
-                    </div>
+                                    <div class="col-8">
+                                        <%= data.twitchStreams[i].name %>
+                                        <% if(data.twitchStreams[i].online) { %>
+                                            <span class="badge badge-success float-right">Online</span>
+                                        <% } else { %>
+                                            <span class="badge badge-danger float-right">Offline</span>
+                                        <% } %>
+                                        <br>
+                                        <small class="text-muted">streaming: <%= data.twitchStreams[i].game %></small>
+                                        <div class="dropdown-divider"></div>
+                                        <%= data.twitchStreams[i].description %>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    <% } %>
                 </div>
-                <br>
-                <!-- handle dynamic content - stream + chat -->
-                <div class="row">
-                    <div class="col-12">
-                        <div id="current-stream-heading"></div>
-                        <div id="current-stream"></div>
-                    </div>
-                </div>
-                <br>
-                <div class="row">
-                    <div class="col-12">
-                        <div id="current-stream-chat-heading"></div>
-                        <div id="current-stream-chat"></div>
-                    </div>
-                </div>
-                <br>
-
             </div>
+            <br>
+            <!-- handle dynamic content - stream + chat -->
+            <div class="row">
+                <div class="col-12">
+                    <div id="current-stream-heading"></div>
+                    <div id="current-stream"></div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-12">
+                    <div id="current-stream-chat-heading"></div>
+                    <div id="current-stream-chat"></div>
+                </div>
+            </div>
+            <br>
+
         </div>
 
         <% include partials/bottom.ejs %>
     </div>
-
 
 
 </div>
