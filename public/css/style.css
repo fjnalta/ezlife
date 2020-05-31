@@ -10098,4 +10098,19 @@ h1, h2, h3, h4, h5,
   right: 50%;
 }
 
+.resp-iframe {
+  position: absolute;
+  top: 0;
+  left: 55px;
+  width: 97%;
+  height: 100%;
+  border: 0;
+}
+@media (max-width: 991.98px) {
+  .resp-iframe {
+    width: 100%;
+    left: 0;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */

@@ -8,7 +8,7 @@
         </li>
         <% for (let i=0;i<data.services.length; i++) { %>
             <li>
-                <a href="<%= data.services[i].url %>" class="sidebarButtonText ezlife-link"><img class="img-fluid sidebarButton" src="<%= data.services[i].ico %>"> <%= data.services[i].name %></a>
+                <a href="<%= data.services[i].uri %>" class="sidebarButtonText ezlife-link"><img class="img-fluid sidebarButton" src="<%= data.services[i].ico %>"> <%= data.services[i].name %></a>
             </li>
         <% } %>
     </ul>

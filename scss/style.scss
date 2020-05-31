@@ -232,3 +232,18 @@ h1, h2, h3, h4, h5,
   bottom: 50%;
   right: 50%;
 }
+
+.resp-iframe {
+  position: absolute;
+  top: 0;
+  left: 55px;
+  width: 97%;
+  height: 100%;
+  border: 0;
+
+  // move to left border if sidebar is disabled
+  @include media-breakpoint-down(md) {
+    width: 100%;
+    left: 0;
+  }
+}
