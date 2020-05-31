@@ -54,10 +54,12 @@
 
     <!-- Show Ads only if cookies are accepted -->
     <script>
-        if (getCookie("acceptCookies")) {
-            // Load Ads after page is fully faded in and all divs are visible
-            setTimeout(function(){ (adsbygoogle = window.adsbygoogle || []).push({}); }, 1000);
-        }
+        $(document).ready(function () {
+            if (getCookie("acceptCookies")) {
+                // Load Ads after page is fully faded in and all divs are visible
+                setTimeout(function(){ (adsbygoogle = window.adsbygoogle || []).push({}); }, 1000);
+            }
+        });
     </script>
 </div>
 
