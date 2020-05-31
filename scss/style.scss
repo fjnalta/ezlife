@@ -2,10 +2,6 @@ $font-primary: 'Nunito', Arial, sans-serif;
 $primary: #333333;
 $hover: #343a40;
 
-.nav-link.active {
-  background-color: $primary;
-}
-
 @import '../node_modules/bootstrap/scss/bootstrap';
 @import '../node_modules/bootstrap/scss/variables';
 @import '../node_modules/bootstrap/scss/mixins';
@@ -58,51 +54,29 @@ h1, h2, h3, h4, h5,
   max-width: 100px;
 }
 
-// Index Settings
+// Index Banners
 #serviceItem {
   max-height: 150px;
 }
 
-.ftco-section {
-  padding: 7em 0;
-}
-
-.ftco-no-pt {
-  padding-top: 0;
-}
-
-.ftco-no-pb {
-  padding-bottom: 0;
-}
-
-//HEADING SECTION
-.heading-section {
-  font-size: 28px;
-  color: $black;
-
-  small {
-    font-size: 18px;
-  }
-}
-
-//COVER BG
-.img {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
+// NavBar
 .navbar {
-  padding: 15px 10px;
+  padding: 3px 10px;
   background: $primary;
   border: none;
   border-radius: 0;
 }
 
-.navbar-btn {
-  box-shadow: none;
-  outline: none !important;
-  border: none;
+.navbar-nav > button {
+  margin: 5px;
+}
+
+.navbar-collapse {
+  text-align: center;
+}
+
+.nav-link.active {
+  background-color: $primary;
 }
 
 .line {
@@ -216,37 +190,12 @@ h1, h2, h3, h4, h5,
   }
 }
 
-a[data-toggle="collapse"] {
-  position: relative;
-}
-
-.dropdown-toggle::after {
-  display: block;
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-}
-
-#sidebarCollapse {
-  span {
-    @include media-breakpoint-down(md) {
-      display: none;
-    }
-  }
-}
-
-#sidebarCollapseBtn {
-  min-width: 30px;
-  max-width: 200px;
-}
-
-.footer {
-  padding: 0 30px;
-  @include media-breakpoint-down(md) {
-    display: none;
-  }
-}
+//.footer {
+//  padding: 0 30px;
+//  @include media-breakpoint-down(md) {
+//    display: none;
+//  }
+//}
 
 #content {
   width: 100%;
@@ -258,16 +207,4 @@ a[data-toggle="collapse"] {
 #myToast {
   z-index: 3;
   position: relative;
-}
-
-.btn {
-  &.btn-primary {
-    background: $primary;
-    border-color: $primary;
-
-    &:hover, &:focus {
-      background: $primary !important;
-      border-color: $primary !important;
-    }
-  }
 }

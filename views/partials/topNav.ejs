@@ -6,7 +6,6 @@
     </a>
     <!-- Content -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <a href="#" id="sidebarCollapse">Collapse Menu</a>
         <ul class="navbar-nav mr-auto">
             <% for(let i=0; i<menu.length; i++) { %>
                 <li class="nav-item">
@@ -14,7 +13,10 @@
                 </li>
             <% } %>
         </ul>
-        <button type="button" class="btn btn-light">Sign in</button>
+        <div class="navbar-nav">
+            <button type="button" class="btn btn-light" id="sidebarCollapse">Toggle Menu</button>
+            <button type="button" class="btn btn-light">Sign in</button>
+        </div>
     </div>
     <!-- Toggle Button -->
     <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

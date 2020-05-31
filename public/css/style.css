@@ -1,8 +1,4 @@
 @charset "UTF-8";
-.nav-link.active {
-  background-color: #333333;
-}
-
 /*!
  * Bootstrap v4.5.0 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors
@@ -9963,43 +9959,23 @@ h1, h2, h3, h4, h5,
   max-height: 150px;
 }
 
-.ftco-section {
-  padding: 7em 0;
-}
-
-.ftco-no-pt {
-  padding-top: 0;
-}
-
-.ftco-no-pb {
-  padding-bottom: 0;
-}
-
-.heading-section {
-  font-size: 28px;
-  color: #000;
-}
-.heading-section small {
-  font-size: 18px;
-}
-
-.img {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
 .navbar {
-  padding: 15px 10px;
+  padding: 3px 10px;
   background: #333333;
   border: none;
   border-radius: 0;
 }
 
-.navbar-btn {
-  box-shadow: none;
-  outline: none !important;
-  border: none;
+.navbar-nav > button {
+  margin: 5px;
+}
+
+.navbar-collapse {
+  text-align: center;
+}
+
+.nav-link.active {
+  background-color: #333333;
 }
 
 .line {
@@ -10120,38 +10096,6 @@ h1, h2, h3, h4, h5,
   }
 }
 
-a[data-toggle=collapse] {
-  position: relative;
-}
-
-.dropdown-toggle::after {
-  display: block;
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-}
-
-@media (max-width: 991.98px) {
-  #sidebarCollapse span {
-    display: none;
-  }
-}
-
-#sidebarCollapseBtn {
-  min-width: 30px;
-  max-width: 200px;
-}
-
-.footer {
-  padding: 0 30px;
-}
-@media (max-width: 991.98px) {
-  .footer {
-    display: none;
-  }
-}
-
 #content {
   width: 100%;
   padding: 0;
@@ -10162,15 +10106,6 @@ a[data-toggle=collapse] {
 #myToast {
   z-index: 3;
   position: relative;
-}
-
-.btn.btn-primary {
-  background: #333333;
-  border-color: #333333;
-}
-.btn.btn-primary:hover, .btn.btn-primary:focus {
-  background: #333333 !important;
-  border-color: #333333 !important;
 }
 
 /*# sourceMappingURL=style.css.map */
