@@ -32,14 +32,16 @@
             <p>Designed by <a href="https://<%= data.about.homepage %>/about"><%= data.about.homepage %></a></p>
         </div>
     </div>
+
+
+    <!-- Include cookiealert script -->
+    <script src="/js/handleCookies.js"></script>
+
+    <!-- Show Ads only if cookies are accepted -->
+    <script>
+        if (getCookie("acceptCookies")) {
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        }
+    </script>
 </div>
 
-<!-- Include cookiealert script -->
-<script src="/js/handleCookies.js"></script>
-
-<!-- Show Ads only if cookies are accepted -->
-<script>
-    if (getCookie("acceptCookies")) {
-        (adsbygoogle = window.adsbygoogle || []).push({});
-    }
-</script>
