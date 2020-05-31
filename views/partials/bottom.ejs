@@ -58,12 +58,10 @@
         $(document).ready(function () {
             if (getCookie("acceptCookies")) {
                 // Load Ads after page is fully faded in and all divs are visible
-                setTimeout(function () {
-                    //console.log('Loading Ads');
-                    [].forEach.call(document.querySelectorAll('.adsbygoogle'), function () {
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                    });
-                }, 1500);
+                //console.log('Loading Ads');
+                [].forEach.call(document.querySelectorAll('.adsbygoogle'), function () {
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                });
             }
         });
     </script>
