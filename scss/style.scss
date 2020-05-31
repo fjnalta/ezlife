@@ -1,5 +1,6 @@
 $font-primary: 'Nunito', Arial, sans-serif;
 $primary: #333333;
+$hover: #343a40;
 
 .nav-link.active {
   background-color: $primary;
@@ -8,7 +9,6 @@ $primary: #333333;
 @import '../node_modules/bootstrap/scss/bootstrap';
 @import '../node_modules/bootstrap/scss/variables';
 @import '../node_modules/bootstrap/scss/mixins';
-
 
 /* Basic Container */
 .container {
@@ -63,7 +63,6 @@ h1, h2, h3, h4, h5,
   max-height: 150px;
 }
 
-
 .ftco-section {
   padding: 7em 0;
 }
@@ -93,7 +92,6 @@ h1, h2, h3, h4, h5,
   background-position: center center;
 }
 
-
 .navbar {
   padding: 15px 10px;
   background: $primary;
@@ -114,104 +112,87 @@ h1, h2, h3, h4, h5,
   margin: 40px 0;
 }
 
-
-//SIDEBAR
-.wrapper {
+// content wrapper for sidebar
+.sidebar-wrapper {
   width: 100%;
 }
 
+// sidebar
 #sidebar {
-  width: 200px;
+  width: 60px;
+  text-align: center;
   background: $primary;
   color: #fff;
-  text-align: left;
+
+  // sidebar logo
+  .logo {
+    display: block;
+    padding: 10px;
+    @include transition(.3s);
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+  }
+
+  ul {
+    // list items
+    li {
+      a {
+        padding: 10px 0;
+        display: block;
+        border-bottom: 1px solid rgba(255, 255, 255, .1);
+      }
+    }
+  }
+
+  // sidebar footer
+  .footer {
+    display: none;
+  }
+
+  // enable transitions
+  transition: all 0.3s;
 
   a:hover {
-    background-color: #343a40;
+    background-color: $hover;
   }
 
   .sidebarButton {
     max-width: 35px;
-    @include transition(.9s);
+    @include transition(.3s);
   }
 
   .sidebarButtonText {
-    font-size: 14px;
-    @include transition(.9s);
+    font-size: 0;
+    @include transition(.3s);
   }
 
-  transition: all 0.3s;
+  .sidebar-separator {
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+  }
 
+  // expanded sidebar
   &.active {
+    width: 200px;
 
-    a:hover {
-      background-color: #343a40;
-    }
     .sidebarButton {
       max-width: 35px;
       @include transition(.3s);
     }
-    .sidebarButtonText {
-      font-size: 0;
-      @include transition(.1s);
-    }
 
-    width: 60px;
-    text-align: center;
+    .sidebarButtonText {
+      font-size: 13px;
+      text-align: left;
+      @include transition(.3s);
+    }
 
     ul.components {
-      li {
-        font-size: 14px;
-        a {
-          padding: 10px 0;
+      padding: 0;
+      @include transition(.3s);
 
-          span {
-            margin-right: 0;
-            display: block;
-            font-size: 24px;
-          }
-        }
-      }
-    }
-
-    .logo {
-      padding: 10px 10px;
-    }
-
-    .footer {
-      display: none;
-    }
-  }
-
-  .logo {
-    display: block;
-    color: $white;
-    font-weight: 900;
-    padding: 30px 30px;
-    @include transition(.3s);
-  }
-
-  ul.components {
-    padding: 0;
-    @include transition(.3s);
-  }
-
-  ul {
-    li {
-      font-size: 16px;
-
-      > ul {
-        margin-left: 10px;
-
-        li {
-          font-size: 14px;
-        }
-      }
-
-      a {
+      li > a {
         padding: 10px 30px;
         display: block;
-        color: rgba(255, 255, 255, 1);
+        color: $white;
         border-bottom: 1px solid rgba(255, 255, 255, .1);
 
         span {
@@ -220,33 +201,20 @@ h1, h2, h3, h4, h5,
             display: block;
           }
         }
-
-        &:hover {
-          color: $white;
-        }
-      }
-
-      &.active {
-        > a {
-          background: transparent;
-          color: $white;
-        }
       }
     }
   }
 
-
+  // disable sidebar by default on small devices
   @include media-breakpoint-down(md) {
-    min-width: 80px;
-    max-width: 80px;
+    width: 60px;
     text-align: center;
-    margin-left: -80px !important;
+    margin-left: -60px !important;
     &.active {
       margin-left: 0 !important;
     }
   }
 }
-
 
 a[data-toggle="collapse"] {
   position: relative;
@@ -289,9 +257,8 @@ a[data-toggle="collapse"] {
 
 #myToast {
   z-index: 3;
-  position:relative;
+  position: relative;
 }
-
 
 .btn {
   &.btn-primary {

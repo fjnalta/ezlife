@@ -1,8 +1,13 @@
 <!-- Sidebar -->
-<nav id="sidebar" class="active">
+<nav id="sidebar">
     <h1><a href="/" class="logo"><img src="img/ezlife/logo.svg"></a></h1>
-    <div class="dropdown-divider"></div>
     <ul class="list-unstyled components mb-5">
+        <!-- Separator with title -->
+        <li class="sidebar-separator">
+            <small>Services</small>
+        </li>
+
+        <!-- TODO - load this from config -->
         <li>
             <a href="https://cloud.ezlife.eu" class="sidebarButtonText"><img class="img-fluid sidebarButton" src="img/ezlife/ezcloud_logo_rose_v4.svg"> ezCloud</a>
         </li>
@@ -18,13 +23,5 @@
         <li>
             <a href="https://grafana.ezlife.eu" class="sidebarButtonText"><img class="img-fluid sidebarButton" src="img/ezlife/ezmonitoring_logo_v4.svg"> ezMonitor</a>
         </li>
-    </ul>
-
-    <!-- TODO - move this to bottom - Collapse Sidebar -->
-    <ul class="list-unstyled components mb-5">
-        <li class="align-items-end">
-            <a href="#" class="sidebarButtonText" id="sidebarCollapse"><img class="img-fluid sidebarButton" src="img/ezlife/ezcloud_logo_camouflage.svg">Collapse Menu</a>
-        </li>
-
     </ul>
 </nav>

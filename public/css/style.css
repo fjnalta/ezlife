@@ -10009,23 +10009,42 @@ h1, h2, h3, h4, h5,
   margin: 40px 0;
 }
 
-.wrapper {
+.sidebar-wrapper {
   width: 100%;
 }
 
 #sidebar {
-  width: 200px;
+  width: 60px;
+  text-align: center;
   background: #333333;
   color: #fff;
-  text-align: left;
   transition: all 0.3s;
+}
+#sidebar .logo {
+  display: block;
+  padding: 10px;
+  transition: 0.3s;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+@media (prefers-reduced-motion: reduce) {
+  #sidebar .logo {
+    transition: none;
+  }
+}
+#sidebar ul li a {
+  padding: 10px 0;
+  display: block;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+#sidebar .footer {
+  display: none;
 }
 #sidebar a:hover {
   background-color: #343a40;
 }
 #sidebar .sidebarButton {
   max-width: 35px;
-  transition: 0.9s;
+  transition: 0.3s;
 }
 @media (prefers-reduced-motion: reduce) {
   #sidebar .sidebarButton {
@@ -10033,20 +10052,20 @@ h1, h2, h3, h4, h5,
   }
 }
 #sidebar .sidebarButtonText {
-  font-size: 14px;
-  transition: 0.9s;
+  font-size: 0;
+  transition: 0.3s;
 }
 @media (prefers-reduced-motion: reduce) {
   #sidebar .sidebarButtonText {
     transition: none;
   }
 }
-#sidebar.active {
-  width: 60px;
+#sidebar .sidebar-separator {
   text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
-#sidebar.active a:hover {
-  background-color: #343a40;
+#sidebar.active {
+  width: 200px;
 }
 #sidebar.active .sidebarButton {
   max-width: 35px;
@@ -10058,88 +10077,43 @@ h1, h2, h3, h4, h5,
   }
 }
 #sidebar.active .sidebarButtonText {
-  font-size: 0;
-  transition: 0.1s;
+  font-size: 13px;
+  text-align: left;
+  transition: 0.3s;
 }
 @media (prefers-reduced-motion: reduce) {
   #sidebar.active .sidebarButtonText {
     transition: none;
   }
 }
-#sidebar.active ul.components li {
-  font-size: 14px;
-}
-#sidebar.active ul.components li a {
-  padding: 10px 0;
-}
-#sidebar.active ul.components li a span {
-  margin-right: 0;
-  display: block;
-  font-size: 24px;
-}
-#sidebar.active .logo {
-  padding: 10px 10px;
-}
-#sidebar.active .footer {
-  display: none;
-}
-#sidebar .logo {
-  display: block;
-  color: #fff;
-  font-weight: 900;
-  padding: 30px 30px;
-  transition: 0.3s;
-}
-@media (prefers-reduced-motion: reduce) {
-  #sidebar .logo {
-    transition: none;
-  }
-}
-#sidebar ul.components {
+#sidebar.active ul.components {
   padding: 0;
   transition: 0.3s;
 }
 @media (prefers-reduced-motion: reduce) {
-  #sidebar ul.components {
+  #sidebar.active ul.components {
     transition: none;
   }
 }
-#sidebar ul li {
-  font-size: 16px;
-}
-#sidebar ul li > ul {
-  margin-left: 10px;
-}
-#sidebar ul li > ul li {
-  font-size: 14px;
-}
-#sidebar ul li a {
+#sidebar.active ul.components li > a {
   padding: 10px 30px;
   display: block;
-  color: white;
+  color: #fff;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
-#sidebar ul li a span {
+#sidebar.active ul.components li > a span {
   margin-right: 15px;
 }
 @media (max-width: 991.98px) {
-  #sidebar ul li a span {
+  #sidebar.active ul.components li > a span {
     display: block;
   }
 }
-#sidebar ul li a:hover {
-  color: #fff;
-}
-#sidebar ul li.active > a {
-  background: transparent;
-  color: #fff;
-}
 @media (max-width: 991.98px) {
   #sidebar {
-    min-width: 80px;
-    max-width: 80px;
+    width: 60px;
     text-align: center;
-    margin-left: -80px !important;
+    margin-left: -60px !important;
   }
   #sidebar.active {
     margin-left: 0 !important;
