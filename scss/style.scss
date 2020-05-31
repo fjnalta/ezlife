@@ -1,6 +1,7 @@
 $font-primary: 'Nunito', Arial, sans-serif;
 $primary: #333333;
-$hover: #343a40;
+//$hover: #343a40;
+$hover: #000000;
 
 @import '../node_modules/bootstrap/scss/bootstrap';
 @import '../node_modules/bootstrap/scss/variables';
@@ -15,10 +16,9 @@ $hover: #343a40;
 body {
   font-family: $font-primary;
   font-size: 14px;
-  line-height: 1.8;
   font-weight: normal;
   background: #f2f2f2;
-  color: lighten($black, 50%);
+  //color: lighten($black, 50%);
 }
 
 a {
@@ -65,10 +65,25 @@ h1, h2, h3, h4, h5,
   background: $primary;
   border: none;
   border-radius: 0;
-}
 
-.navbar-nav > button {
-  margin: 5px;
+  .nav-btn {
+    border-radius: 4px;
+    padding: 6px 8px;
+    margin: 0 2px;
+    color: white !important;
+  }
+
+  .nav-btn:hover {
+    background: $hover;
+  }
+
+  .btn-dark {
+    background: $primary;
+  }
+
+  .btn-sm {
+    margin: 3px 3px 3px 0;
+  }
 }
 
 .navbar-collapse {

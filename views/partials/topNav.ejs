@@ -1,22 +1,20 @@
-<nav class="navbar-dark navbar navbar-expand-lg">
-    <!-- Brand -->
+<nav class="navbar-dark navbar navbar-expand-lg py-0">
+    <!-- Brand
     <a class="navbar-brand" href="#">
-        <!-- TODO - insert textMark -->
          ezlife
     </a>
+    -->
     <!-- Content -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav mr-auto py-0">
             <% for(let i=0; i<menu.length; i++) { %>
                 <li class="nav-item">
-                    <a class="nav-link" href="<%= menu[i].url %>"><%= menu[i].name %></a>
+                    <a class="nav-link btn-sm nav-btn" href="<%= menu[i].url %>"><%= menu[i].name %></a>
                 </li>
             <% } %>
         </ul>
-        <div class="navbar-nav">
-            <button type="button" class="btn btn-light" id="sidebarCollapse">Toggle Menu</button>
-            <button type="button" class="btn btn-light">Sign in</button>
-        </div>
+        <button type="button" class="btn btn-light btn-sm" id="sidebarCollapse">Toggle Menu</button>
+        <button type="button" class="btn btn-light btn-sm">Sign in</button>
     </div>
     <!-- Toggle Button -->
     <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
