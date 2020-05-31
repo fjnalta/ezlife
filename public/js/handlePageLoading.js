@@ -1,10 +1,9 @@
 $(document).ready(function () {
     "use strict";
-
     // Fade in content if ready
-    $('#main-content').fadeIn('slow', function () {
-        $('#signature').fadeIn('slow');
-    });
+    $('#main-content').fadeIn('slow');
+    $('#footer').fadeIn('slow');
+    $('#signature').fadeIn('slow');
 
     // Fades out page on user input
     $('.ezlife-link').click(function(e) {

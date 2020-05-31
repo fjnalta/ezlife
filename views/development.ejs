@@ -8,55 +8,59 @@
     <% include partials/topNav.ejs %>
     <% include partials/loadingSpinner.ejs %>
 
-    <div class="container" id="main-content">
-        <br>
-        <h1 class="text-center">Development</h1>
+    <div id="main-content">
+        <div class="container">
+            <br>
+            <h1 class="text-center">Development</h1>
 
-        <div id="tabContent" hidden>
-            <ul class="nav nav-tabs" role="tablist">
-                <% for(let i = 0;i < data.gitFeed.length;i++) { %>
-                    <% if(i == 0) { %>
-                        <li class="nav-item">
-                            <a class="nav-link active" id="<%= data.gitFeed[i].id %>-tab" data-toggle="tab"
-                               href="#<%= data.gitFeed[i].id %>" role="tab" aria-controls="<%= data.gitFeed[i].id %>"
-                               aria-selected="true"><%= data.gitFeed[i].name %></a>
-                        </li>
-                    <% } else { %>
-                        <li class="nav-item">
-                            <a class="nav-link" id="<%= data.gitFeed[i].id %>-tab" data-toggle="tab"
-                               href="#<%= data.gitFeed[i].id %>" role="tab" aria-controls="<%= data.gitFeed[i].id %>"
-                               aria-selected="true"><%= data.gitFeed[i].name %></a>
-                        </li>
-                    <% } %>
-                <% } %>
-            </ul>
-
-            <div class="tab-content">
-                <p>latest commits:</p>
-                <% for(let i = 0;i < data.gitFeed.length;i++) { %>
-                    <% if(i == 0) { %>
-                <div id="<%= data.gitFeed[i].id %>" class="tab-pane fade show active" role="tabpanel"
-                     aria-labelledby="<%= data.gitFeed[i].id %>-tab">
-                    <% } else { %>
-                    <div id="<%= data.gitFeed[i].id %>" class="tab-pane fade show" role="tabpanel"
-                         aria-labelledby="<%= data.gitFeed[i].id %>-tab">
+            <div id="tabContent" hidden>
+                <ul class="nav nav-tabs" role="tablist">
+                    <% for(let i = 0;i < data.gitFeed.length;i++) { %>
+                        <% if(i == 0) { %>
+                            <li class="nav-item">
+                                <a class="nav-link active" id="<%= data.gitFeed[i].id %>-tab" data-toggle="tab"
+                                   href="#<%= data.gitFeed[i].id %>" role="tab"
+                                   aria-controls="<%= data.gitFeed[i].id %>"
+                                   aria-selected="true"><%= data.gitFeed[i].name %></a>
+                            </li>
+                        <% } else { %>
+                            <li class="nav-item">
+                                <a class="nav-link" id="<%= data.gitFeed[i].id %>-tab" data-toggle="tab"
+                                   href="#<%= data.gitFeed[i].id %>" role="tab"
+                                   aria-controls="<%= data.gitFeed[i].id %>"
+                                   aria-selected="true"><%= data.gitFeed[i].name %></a>
+                            </li>
                         <% } %>
+                    <% } %>
+                </ul>
 
-                        <% for(let j = 0;j < data.gitFeed[i].feed.entry.length;j++) { %>
-                            <p><%= data.gitFeed[i].feed.entry[j].updated %> - <a
-                                        href="<%= data.gitFeed[i].feed.entry[j].link.href %>"><%= data.gitFeed[i].feed.entry[j].title %></a>
-                            </p>
-                            <% if (j == 10) {
-                                break;
-                            } %>
+                <div class="tab-content">
+                    <p>latest commits:</p>
+                    <% for(let i = 0;i < data.gitFeed.length;i++) { %>
+                        <% if(i == 0) { %>
+                    <div id="<%= data.gitFeed[i].id %>" class="tab-pane fade show active" role="tabpanel"
+                         aria-labelledby="<%= data.gitFeed[i].id %>-tab">
+                        <% } else { %>
+                        <div id="<%= data.gitFeed[i].id %>" class="tab-pane fade show" role="tabpanel"
+                             aria-labelledby="<%= data.gitFeed[i].id %>-tab">
+                            <% } %>
+
+                            <% for(let j = 0;j < data.gitFeed[i].feed.entry.length;j++) { %>
+                                <p><%= data.gitFeed[i].feed.entry[j].updated %> - <a
+                                            href="<%= data.gitFeed[i].feed.entry[j].link.href %>"><%= data.gitFeed[i].feed.entry[j].title %></a>
+                                </p>
+                                <% if (j == 10) {
+                                    break;
+                                } %>
+                            <% } %>
+                        </div>
                         <% } %>
                     </div>
-                    <% } %>
                 </div>
             </div>
-        </div>
 
-        <% include partials/bottom.ejs %>
+            <% include partials/bottom.ejs %>
+        </div>
 
     </div>
 

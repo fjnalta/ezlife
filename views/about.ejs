@@ -6,116 +6,117 @@
     <% include partials/topNav.ejs %>
     <% include partials/loadingSpinner.ejs %>
 
-    <!-- Container - About -->
-    <div class="container" id="main-content">
-        <br>
-        <div class="row">
-            <div class="col-12">
-                <h1 class="text-center">About</h1>
-                <!-- Logo -->
-                <div class="text-center">
-                    <img src="img/ezlife/logo_new.jpg" class="img-thumbnail img-fluid" height="10%" width="10%">
-                </div>
-                <br>
-                <!-- Fingerprint -->
-                <p class="text-center">21 71 B1 D1 1A 21 46 B2 53 B4 D9 36 97 D4 D8 ED
-                    E1 1B C0 C7 5E 67 C8 82 77 7E 05 9C 42 AD 77 1E</p>
+    <div id="main-content">
+        <!-- Container - About -->
+        <div class="container">
+            <br>
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="text-center">About</h1>
+                    <!-- Logo -->
+                    <div class="text-center">
+                        <img src="img/ezlife/logo_new.jpg" class="img-thumbnail img-fluid" height="10%" width="10%">
+                    </div>
+                    <br>
+                    <!-- Fingerprint -->
+                    <p class="text-center">21 71 B1 D1 1A 21 46 B2 53 B4 D9 36 97 D4 D8 ED
+                        E1 1B C0 C7 5E 67 C8 82 77 7E 05 9C 42 AD 77 1E</p>
 
-                <!-- Impressum -->
-                <h2 class="text-center">Impressum</h2>
-                <p class="text-center">
-                    Angaben gem&auml;&szlig; &sect; 5 TMG<br/>
-                    <br/><%= data.about.name %>
-                    <br/><%= data.about.address %>
-                    <br/><%= data.about.postalCode %> <%= data.about.town %>
-                    <br/>
-                </p>
-                <h2 class="text-center">Kontakt</h2>
-                <p class="text-center">
-                    E-Mail: <a href="mailto:<%= data.about.email %>"><%= data.about.email %></a><br/>
-                    Internetadresse: <a href="https://<%= data.about.homepage %>"
-                                        target="_blank">https://<%= data.about.homepage %></a><br/>
-                </p>
-                <h2 class="text-center">Haftungsausschluss</h2>
-                <h3 class="text-center">Haftung f&uuml;r Inhalte</h3>
-                <p class="text-justify">
-                    Die Inhalte unserer Seiten wurden mit gr&ouml;&szlig;ter Sorgfalt erstellt. F&uuml;r die
-                    Richtigkeit, Vollst&auml;ndigkeit
-                    und Aktualit&auml;t der Inhalte k&ouml;nnen wir jedoch keine Gew&auml;hr &uuml;bernehmen. Als
-                    Diensteanbieter sind wir gem&auml;&szlig; &sect; 7 Abs.1 TMG f&uuml;r eigene Inhalte auf diesen
-                    Seiten nach
-                    den allgemeinen Gesetzen verantwortlich. Nach &sect;&sect; 8 bis 10 TMG sind wir als Diensteanbieter
-                    jedoch
-                    nicht verpflichtet, &uuml;bermittelte oder gespeicherte fremde Informationen zu &uuml;berwachen oder
-                    nach
-                    Umst&auml;nden zu forschen, die auf eine rechtswidrige T&auml;tigkeit hinweisen. Verpflichtungen zur
-                    Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon
-                    unber&uuml;hrt.
-                    Eine diesbez&uuml;gliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten
-                    Rechtsverletzung m&ouml;glich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir
-                    diese
-                    Inhalte umgehend entfernen.
-                </p>
-                <h3 class="text-center">Haftung f&uuml;r Links</h3>
-                <p class="text-justify">
-                    Unser Angebot enth&auml;lt Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen
-                    Einfluss haben.
-                    Deshalb k&ouml;nnen wir f&uuml;r diese fremden Inhalte auch keine Gew&auml;hr &uuml;bernehmen. F&uuml;r
-                    die
-                    Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten
-                    verantwortlich. Die
-                    verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf m&ouml;gliche Rechtsverst&ouml;&szlig;e
-                    &uuml;berpr&uuml;ft.
-                    Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente
-                    inhaltliche
-                    Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht
-                    zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.
-                </p>
-                <h3 class="text-center">Urheberrecht</h3>
-                <p class="text-justify">
-                    Die durch die Seitenbetreiber erstellten bzw. verwendeten Inhalte und Werke auf diesen Seiten
-                    unterliegen
-                    dem deutschen Urheberrecht. Die Vervielf&auml;ltigung, Bearbeitung, Verbreitung und jede Art der
-                    Verwertung
-                    au&szlig;erhalb der Grenzen des Urheberrechtes bed&uuml;rfen der Zustimmung des jeweiligen Autors
-                    bzw.
-                    Erstellers. Downloads und Kopien dieser Seite sind nur f&uuml;r den privaten, nicht kommerziellen
-                    Gebrauch
-                    gestattet. Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die
-                    Urheberrechte
-                    Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie
-                    trotzdem auf
-                    eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei
-                    Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.
-                </p>
-                <p class="text-justify">
-                    Soweit auf unseren Seiten personenbezogene Daten (beispielsweise Name, Anschrift oder
-                    eMail-Adressen)
-                    erhoben werden, erfolgt dies, soweit möglich, stets auf freiwilliger Basis. Diese Daten werden ohne
-                    Ihre
-                    ausdrückliche Zustimmung nicht an Dritte weitergegeben.
-                </p>
-                <p class="text-justify">
-                    Wir weisen darauf hin, dass die Datenübertragung im
-                    Internet (z.B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser
-                    Schutz
-                    der
-                    Daten vor dem Zugriff durch Dritte ist nicht möglich. Der Nutzung von im Rahmen der
-                    Impressumspflicht
-                    veröffentlichten Kontaktdaten durch Dritte zur Übersendung von nicht ausdrücklich angeforderter
-                    Werbung und
-                    Informationsmaterialien wird hiermit ausdrücklich widersprochen. Die Betreiber der Seiten behalten
-                    sich
-                    ausdrücklich rechtliche Schritte im Falle der unverlangten Zusendung von Werbeinformationen, etwa
-                    durch
-                    Spam-Mails, vor.
-                </p>
+                    <!-- Impressum -->
+                    <h2 class="text-center">Impressum</h2>
+                    <p class="text-center">
+                        Angaben gem&auml;&szlig; &sect; 5 TMG<br/>
+                        <br/><%= data.about.name %>
+                        <br/><%= data.about.address %>
+                        <br/><%= data.about.postalCode %> <%= data.about.town %>
+                        <br/>
+                    </p>
+                    <h2 class="text-center">Kontakt</h2>
+                    <p class="text-center">
+                        E-Mail: <a href="mailto:<%= data.about.email %>"><%= data.about.email %></a><br/>
+                        Internetadresse: <a href="https://<%= data.about.homepage %>"
+                                            target="_blank">https://<%= data.about.homepage %></a><br/>
+                    </p>
+                    <h2 class="text-center">Haftungsausschluss</h2>
+                    <h3 class="text-center">Haftung f&uuml;r Inhalte</h3>
+                    <p class="text-justify">
+                        Die Inhalte unserer Seiten wurden mit gr&ouml;&szlig;ter Sorgfalt erstellt. F&uuml;r die
+                        Richtigkeit, Vollst&auml;ndigkeit
+                        und Aktualit&auml;t der Inhalte k&ouml;nnen wir jedoch keine Gew&auml;hr &uuml;bernehmen. Als
+                        Diensteanbieter sind wir gem&auml;&szlig; &sect; 7 Abs.1 TMG f&uuml;r eigene Inhalte auf diesen
+                        Seiten nach
+                        den allgemeinen Gesetzen verantwortlich. Nach &sect;&sect; 8 bis 10 TMG sind wir als Diensteanbieter
+                        jedoch
+                        nicht verpflichtet, &uuml;bermittelte oder gespeicherte fremde Informationen zu &uuml;berwachen oder
+                        nach
+                        Umst&auml;nden zu forschen, die auf eine rechtswidrige T&auml;tigkeit hinweisen. Verpflichtungen zur
+                        Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon
+                        unber&uuml;hrt.
+                        Eine diesbez&uuml;gliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten
+                        Rechtsverletzung m&ouml;glich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir
+                        diese
+                        Inhalte umgehend entfernen.
+                    </p>
+                    <h3 class="text-center">Haftung f&uuml;r Links</h3>
+                    <p class="text-justify">
+                        Unser Angebot enth&auml;lt Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen
+                        Einfluss haben.
+                        Deshalb k&ouml;nnen wir f&uuml;r diese fremden Inhalte auch keine Gew&auml;hr &uuml;bernehmen. F&uuml;r
+                        die
+                        Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten
+                        verantwortlich. Die
+                        verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf m&ouml;gliche Rechtsverst&ouml;&szlig;e
+                        &uuml;berpr&uuml;ft.
+                        Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente
+                        inhaltliche
+                        Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht
+                        zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.
+                    </p>
+                    <h3 class="text-center">Urheberrecht</h3>
+                    <p class="text-justify">
+                        Die durch die Seitenbetreiber erstellten bzw. verwendeten Inhalte und Werke auf diesen Seiten
+                        unterliegen
+                        dem deutschen Urheberrecht. Die Vervielf&auml;ltigung, Bearbeitung, Verbreitung und jede Art der
+                        Verwertung
+                        au&szlig;erhalb der Grenzen des Urheberrechtes bed&uuml;rfen der Zustimmung des jeweiligen Autors
+                        bzw.
+                        Erstellers. Downloads und Kopien dieser Seite sind nur f&uuml;r den privaten, nicht kommerziellen
+                        Gebrauch
+                        gestattet. Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die
+                        Urheberrechte
+                        Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie
+                        trotzdem auf
+                        eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei
+                        Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.
+                    </p>
+                    <p class="text-justify">
+                        Soweit auf unseren Seiten personenbezogene Daten (beispielsweise Name, Anschrift oder
+                        eMail-Adressen)
+                        erhoben werden, erfolgt dies, soweit möglich, stets auf freiwilliger Basis. Diese Daten werden ohne
+                        Ihre
+                        ausdrückliche Zustimmung nicht an Dritte weitergegeben.
+                    </p>
+                    <p class="text-justify">
+                        Wir weisen darauf hin, dass die Datenübertragung im
+                        Internet (z.B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser
+                        Schutz
+                        der
+                        Daten vor dem Zugriff durch Dritte ist nicht möglich. Der Nutzung von im Rahmen der
+                        Impressumspflicht
+                        veröffentlichten Kontaktdaten durch Dritte zur Übersendung von nicht ausdrücklich angeforderter
+                        Werbung und
+                        Informationsmaterialien wird hiermit ausdrücklich widersprochen. Die Betreiber der Seiten behalten
+                        sich
+                        ausdrücklich rechtliche Schritte im Falle der unverlangten Zusendung von Werbeinformationen, etwa
+                        durch
+                        Spam-Mails, vor.
+                    </p>
+                </div>
             </div>
         </div>
+
+        <% include partials/bottom.ejs %>
     </div>
-
-    <% include partials/bottom.ejs %>
-
 </div>
 
 <% include partials/footer.ejs %>
