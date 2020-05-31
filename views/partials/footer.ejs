@@ -1,5 +1,23 @@
 <!-- End Sidebar -->
 </div>
+
+<!-- Include cookiealert script -->
+<script src="/js/handleCookies.js"></script>
+
+<!-- Show Ads only if cookies are accepted -->
+<script>
+    $(document).ready(function () {
+        if (getCookie("acceptCookies")) {
+            // Load Ads after page is fully faded in and all divs are visible
+            console.log('Loading Ads');
+            [].forEach.call(document.querySelectorAll('.adsbygoogle'), function () {
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            });
+        }
+    });
+</script>
+
+
 <!-- End Body -->
 </body>
 <!-- End HTML -->
