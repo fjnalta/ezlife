@@ -57,7 +57,9 @@
         $(document).ready(function () {
             if (getCookie("acceptCookies")) {
                 // Load Ads after page is fully faded in and all divs are visible
-                setTimeout(function(){ (adsbygoogle = window.adsbygoogle || []).push({}); }, 1000);
+                setTimeout(function(){
+                    console.log('Loading Ads');
+                    (adsbygoogle = window.adsbygoogle || []).push({}); }, 1000);
             }
         });
     </script>
