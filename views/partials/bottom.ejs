@@ -21,14 +21,15 @@
                 <br><img src="img/ezlife/logo_new.jpg" class="img-responsive img-thumbnail img-fluid" height="35%"
                          width="35%">
                 <p>
-                    ezlife.eu, <%= data.about.postalCode%> <%= data.about.town %><br>
+                    ezlife.eu, <%= data.about.postalCode %> <%= data.about.town %><br>
                     <%= data.about.country %>
                 </p>
             </div>
             <div class="col-sm-6 text-right">
                 <div id="footer-right">
                     <br>
-                    <p><img src="img/ezlife/textmark1.svg" class="img-responsive img-thumbnail img-fluid" width="35%"></p>
+                    <p><img src="img/ezlife/textmark1.svg" class="img-responsive img-thumbnail img-fluid" width="35%">
+                    </p>
                 </div>
             </div>
         </div>
@@ -57,9 +58,12 @@
         $(document).ready(function () {
             if (getCookie("acceptCookies")) {
                 // Load Ads after page is fully faded in and all divs are visible
-                setTimeout(function(){
+                setTimeout(function () {
                     console.log('Loading Ads');
-                    (adsbygoogle = window.adsbygoogle || []).push({}); }, 1000);
+                    [].forEach.call(document.querySelectorAll('.adsbygoogle'), function () {
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    });
+                }, 1000);
             }
         });
     </script>
