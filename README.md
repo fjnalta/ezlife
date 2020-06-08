@@ -16,6 +16,7 @@ Execute `node app.js` to start the Application.
 *
 
 <h3>Snippets</h3>
+
 * Compile CSS: sass scss/style.scss public/css/style.css
 
 <h3>X-Frame-Options/Content-Security-Policy for all Services</h3>
