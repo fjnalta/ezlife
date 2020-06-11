@@ -110,6 +110,24 @@
                 "ico" : "/img/ezlife/ezmonitoring_logo_v4.svg",
                 "description" : "Monitoring Service",
                 "sponsor" : "prometheus - grafana"
+            },
+            {
+                "name" : "ezJira",
+                "uri" : "/jira",
+                "url" : "https://jira.ezlife.eu",
+                "img" : "/img/ezlife/logo_with_textmark.svg",
+                "ico" : "/img/ezlife/logo.svg",
+                "description" : "Software Development",
+                "sponsor" : "Atlassian Jira"
+            },
+            {
+                "name" : "ezWiki",
+                "uri" : "/wiki",
+                "url" : "https://wiki.ezlife.eu",
+                "img" : "/img/ezlife/logo_with_textmark.svg",
+                "ico" : "/img/ezlife/logo.svg",
+                "description" : "Collaboration",
+                "sponsor" : "Atlassian Confluence"
             }
         ],
 
