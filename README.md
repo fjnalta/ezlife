@@ -60,3 +60,4 @@ JVM_SUPPORT_RECOMMENDED_ARGS="-Dcom.atlassian.jira.clickjacking.protection.disab
 ```bash
 CATALINA_OPTS="-Dconfluence.clickjacking.protection.disable=true ${CATALINA_OPTS}"
 ```
+
