@@ -168,7 +168,7 @@
                 "online" : false
             },
             {
-                "name" : "Borgreon",
+                "name" : "geenez1",
                 "game" : "n/a",
                 "img" : "/img/twitch/stream_offline.png",
                 "description" : "offline",
@@ -176,6 +176,13 @@
             },
             {
                 "name" : "fjnalta",
+                "game" : "n/a",
+                "img" : "/img/twitch/stream_offline.png",
+                "description" : "offline",
+                "online" : false
+            },
+            {
+                "name" : "Borgreon",
                 "game" : "n/a",
                 "img" : "/img/twitch/stream_offline.png",
                 "description" : "offline",
