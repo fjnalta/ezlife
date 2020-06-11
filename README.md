@@ -16,8 +16,19 @@ Execute `node app.js` to start the Application.
 *
 
 <h3>Snippets</h3>
+<h4>Compile CSS</h4>
+ 
+* sass scss/style.scss public/css/style.css
 
-* Compile CSS: sass scss/style.scss public/css/style.css
+<h4>Automatically close Jira Issues</h4>
+
+  * use these trigger words to close Jira issues directly through git commits
+
+```
+* Resolves PROJECT-1
+* Closes PROJECT-1
+* Fixes PROJECT-1
+```
 
 <h3>X-Frame-Options/Content-Security-Policy for all Services</h3>
 
