@@ -50,3 +50,13 @@ proxy_hide_header X-Frame-Options;
 $config['x_frame_options'] = 'Allow-From https://ezlife.eu';
 ```
 
+* Jira - edit /opt/atlassian/jira/bin/setenv.sh
+
+```bash
+JVM_SUPPORT_RECOMMENDED_ARGS="-Dcom.atlassian.jira.clickjacking.protection.disabled=true"
+```
+
+* Confluence - edit /opt/atlassian/confluence/bin/setenv.sh
+```bash
+CATALINA_OPTS="-Dconfluence.clickjacking.protection.disable=true ${CATALINA_OPTS}"
+```
