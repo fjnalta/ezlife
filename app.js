@@ -1,4 +1,3 @@
-const http = require('https');
 const express = require('express');
 const session = require('express-session');
 const memoryStore = new session.MemoryStore();
@@ -40,6 +39,9 @@ app.use(express.static(path.join(__dirname, config.env.webContentDir)));
 // use EJS as view engine
 app.set('view engine','ejs');
 app.set('views',path.join(__dirname, 'views'));
+
+// reverse proxy configuration
+app.set('trust proxy', '127.0.0.1');
 
 // setup static path
 app.use('/node_modules', express.static('node_modules'));
