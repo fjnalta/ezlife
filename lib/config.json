@@ -72,7 +72,7 @@
                 "url" : "https://cloud.ezlife.eu",
                 "img" : "/img/ezlife/ezcloud_logo_with_textmark_dark_outline_v2.svg",
                 "ico" : "/img/ezlife/ezcloud_logo_rose_v4.svg",
-                "description" : "Cloud Storage System",
+                "description" : "Cloud Storage",
                 "sponsor" : "nextcloud"
             },
             {
@@ -81,7 +81,7 @@
                 "url" : "https://cooking.ezlife.eu",
                 "img" : "/img/ezlife/ezcooking_logo_with_textmark_dark_outline.svg",
                 "ico" : "/img/ezlife/ezcooking_logo.svg",
-                "description" : "Cookbook Web Application",
+                "description" : "Cookbook",
                 "sponsor" : "ezlife.eu"
             },
             {
@@ -90,7 +90,7 @@
                 "url" : "https://gitlab.ezlife.eu",
                 "img" : "/img/ezlife/ezgit_logo_with_textmark_dark_outline_v3.svg",
                 "ico" : "/img/ezlife/ezgit_logo_v4.svg",
-                "description" : "Version Management System",
+                "description" : "Software Version Management",
                 "sponsor" : "gitlab"
             },
             {
@@ -126,7 +126,7 @@
                 "url" : "https://wiki.ezlife.eu",
                 "img" : "/img/ezlife/logo_with_textmark.svg",
                 "ico" : "/img/ezlife/logo.svg",
-                "description" : "Collaboration",
+                "description" : "Team Collaboration",
                 "sponsor" : "Atlassian Confluence"
             }
         ],
