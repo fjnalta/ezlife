@@ -1,10 +1,35 @@
 const express = require('express');
-const http = require('https');
+const session = require('express-session');
+const memoryStore = new session.MemoryStore();
+const Keycloak = require('keycloak-connect');
+
+//const http = require('https');
 const bodyParser = require('body-parser');
 const path = require('path');
+
 const config = require('./lib/config');
-const router = require('./lib/api/router.js');
+
+const router = require('./lib/api/router');
+
+// setup keycloak
+const keycloak = new Keycloak({store: memoryStore}, config.env.keycloak);
+
+// setup authentication middleware
+const authenticationMiddleware = new (require('./lib/middleware/authenticationMiddleware'))();
+
+// reference express app
 const app = express();
+
+// setup express session
+app.use(session({
+    secret: config.env.sessionSecret,
+    resave: false,
+    saveUninitialized: true,
+    store: memoryStore
+}));
+
+// setup keycloak middleware
+app.use(keycloak.middleware());
 
 // configure webserver
 app.use(bodyParser.json());
@@ -15,10 +40,13 @@ app.use(express.static(path.join(__dirname, config.env.webContentDir)));
 app.set('view engine','ejs');
 app.set('views',path.join(__dirname, 'views'));
 
-// set static path
+// setup static path
 app.use('/node_modules', express.static('node_modules'));
 
-// set public router
+// setup keycloak to always check for session
+app.use('/', keycloak.checkSso(), authenticationMiddleware.checkLogin);
+
+// setup public router
 app.use('/', router);
 
 // start server

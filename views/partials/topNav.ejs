@@ -8,8 +8,15 @@
                 </li>
             <% } %>
         </ul>
+        <!-- Toggle Sidebar Button -->
         <button type="button" class="btn btn-light btn-sm" id="sidebarCollapse">Toggle Sidebar</button>
-        <a class="nav-link btn-sm nav-btn ezlife-link" href="/login">Sign in</a>
+        <!-- TODO - link this to user panel -->
+        <!-- Show User Data if logged in -->
+        <% if(session) { %>
+            <p class="nav-btn"><%= session.preferred_username %></p>
+        <% } else { %>
+            <a class="nav-link btn-sm nav-btn ezlife-link" href="/login">Sign in</a>
+        <% } %>
     </div>
     <!-- Toggle Button -->
     <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

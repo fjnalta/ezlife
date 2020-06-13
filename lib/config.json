@@ -4,8 +4,19 @@
         "webContentDir" : "public",
         "port" : 3000,
         "recaptcha" : "6Lc-tM4UAAAAAN4BMkMix0QM92nh7xodC87vx39p",
+        "sessionSecret" : "8]=CnVyZqJg1xjCXeF%A",
         "twitchClientID" : "mc7zidc56j8y2ebjeab5mexeyz3drw",
-        "twitchSecret" : "rtgmqbwga84sex51vxd0nouotva3fa"
+        "twitchSecret" : "rtgmqbwga84sex51vxd0nouotva3fa",
+        "keycloak" : {
+            "realm": "ezlife",
+            "auth-server-url": "https://kc.ezlife.eu/auth/",
+            "ssl-required": "external",
+            "resource": "ezlife.eu",
+            "credentials": {
+                "secret": "efd83e13-8b95-48a1-bd51-56f3c319095f"
+            },
+            "confidential-port": 0
+        }
     },
 
     "runtime" : {

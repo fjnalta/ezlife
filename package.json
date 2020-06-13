@@ -17,10 +17,13 @@
     "bootstrap": "^4.4.1",
     "ejs": "^2.7.4",
     "express": "^4.16.2",
+    "express-session": "^1.17.1",
     "jquery": "3.5.1",
+    "keycloak-connect": "^10.0.2",
     "popper.js": "^1.16.0",
     "r2": "^2.0.1",
     "request": "^2.88.0",
+    "shelljs": "^0.8.4",
     "tether": "^1.4.7",
     "xml2json": "^0.12.0"
   }
