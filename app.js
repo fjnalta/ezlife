@@ -41,7 +41,6 @@ app.set('view engine','ejs');
 app.set('views',path.join(__dirname, 'views'));
 
 // reverse proxy configuration
-app.set('trust proxy', true);
 app.set('trust proxy', '127.0.0.1');
 
 // setup static path
