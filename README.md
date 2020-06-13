@@ -24,9 +24,9 @@ Execute `node app.js` to start the Application.
   * use these trigger words to close Jira issues directly through git commits
 
 ```
-* Resolves PROJECT-1
-* Closes PROJECT-1
-* Fixes PROJECT-1
+* Resolves EZLIFE-1
+* Closes EZLIFE-1
+* Fixes EZLIFE-1
 ```
 
 ### X-Frame-Options/Content-Security-Policy for all Services
