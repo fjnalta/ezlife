@@ -1,26 +1,25 @@
-<h1>ezlife.eu</h1>
+# ezlife.eu
 
-<h2>Installation</h2>
+## Installation
 
-You need `nodeJs` to run the Application. 
+You need `nodeJs` to run the Application.
+
+Install required modules via `npm install --save`.
 
 Execute `node app.js` to start the Application.
 
-<h2>Todo</h2>
+## Project Documentaion
 
-*
-*
-*
-*
-*
-*
+* Project Documentation : [EZLIFE Wiki](https://wiki.ezlife.eu/display/EZLIFE/ezlife+Home)
+* Tasks & Issues : [EZLIFE Jira](https://jira.ezlife.eu/browse/EZLIFE)
 
-<h3>Snippets</h3>
-<h4>Compile CSS</h4>
+## Snippets
+
+### Compile CSS
  
 * sass scss/style.scss public/css/style.css
 
-<h4>Automatically close Jira Issues</h4>
+### Automatically close Jira Issues
 
   * use these trigger words to close Jira issues directly through git commits
 
@@ -30,7 +29,7 @@ Execute `node app.js` to start the Application.
 * Fixes PROJECT-1
 ```
 
-<h3>X-Frame-Options/Content-Security-Policy for all Services</h3>
+### X-Frame-Options/Content-Security-Policy for all Services
 
 * NGINX - edit /etc/nginx/conf-available/headers.conf
 
