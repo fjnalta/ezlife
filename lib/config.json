@@ -126,7 +126,7 @@
                 "name" : "ezJira",
                 "uri" : "/jira",
                 "url" : "https://jira.ezlife.eu",
-                "img" : "/img/ezlife/logo_with_textmark.svg",
+                "img" : "/img/ezlife/ezjira_logo_with_textmark_dark_outline.svg",
                 "ico" : "/img/ezlife/logo.svg",
                 "description" : "Software Development",
                 "sponsor" : "Atlassian Jira"
