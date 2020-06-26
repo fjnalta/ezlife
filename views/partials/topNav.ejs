@@ -13,9 +13,9 @@
         <!-- TODO - link this to user panel -->
         <!-- Show User Data if logged in -->
         <% if(session) { %>
-            <p class="nav-btn"><%= session.preferred_username %></p>
+            <a class="nav-link btn-sm nav-btn ezlife-link" href="/settings"><%= session.preferred_username %></a>
         <% } else { %>
-            <a class="nav-link btn-sm nav-btn ezlife-link" href="/login">Sign in</a>
+            <a class="nav-link btn-sm nav-btn ezlife-link" href="/settings">Sign in</a>
         <% } %>
     </div>
     <!-- Toggle Button -->

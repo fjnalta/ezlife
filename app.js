@@ -49,6 +49,9 @@ app.use('/node_modules', express.static('node_modules'));
 // setup keycloak to always check for session
 app.use('/', keycloak.checkSso(), authenticationMiddleware.checkLogin);
 
+// setup keycloak protected url's
+app.use('/settings', keycloak.protect());
+
 // setup public router
 app.use('/', router);
 
@@ -56,3 +59,5 @@ app.use('/', router);
 app.listen(config.env.port, function () {
     console.log('Server started at Port 3000');
 });
+
+exports.keycloak = keycloak;
