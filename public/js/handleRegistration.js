@@ -116,7 +116,7 @@ function registerUser() {
                     $("#registrationStatus").css('color', 'green');
                     disableFields();
                     setTimeout(function(){
-                        location.href('https://ezlife.eu');
+                        window.location.href('https://ezlife.eu');
                     }, 1000)
                 },
                 error: function() {
