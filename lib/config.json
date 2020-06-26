@@ -105,6 +105,15 @@
                 "sponsor" : "gitlab"
             },
             {
+                "name" : "ezJira",
+                "uri" : "/jira",
+                "url" : "https://jira.ezlife.eu",
+                "img" : "/img/ezlife/ezjira_logo_with_textmark_dark_outline.svg",
+                "ico" : "/img/ezlife/ezjira_logo.svg",
+                "description" : "Software Development",
+                "sponsor" : "Atlassian Jira"
+            },
+            {
                 "name" : "ezMail",
                 "uri" : "/mail",
                 "url" : "https://mail.ezlife.eu",
@@ -121,15 +130,6 @@
                 "ico" : "/img/ezlife/ezmonitoring_logo_v4.svg",
                 "description" : "Monitoring Service",
                 "sponsor" : "prometheus - grafana"
-            },
-            {
-                "name" : "ezJira",
-                "uri" : "/jira",
-                "url" : "https://jira.ezlife.eu",
-                "img" : "/img/ezlife/ezjira_logo_with_textmark_dark_outline.svg",
-                "ico" : "/img/ezlife/ezjira_logo.svg",
-                "description" : "Software Development",
-                "sponsor" : "Atlassian Jira"
             },
             {
                 "name" : "ezWiki",
