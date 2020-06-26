@@ -17,6 +17,17 @@ const keycloak = new Keycloak({store: memoryStore}, config.env.keycloak);
 // setup authentication middleware
 const authenticationMiddleware = new (require('./lib/middleware/authenticationMiddleware'))();
 
+let unless = function(path, middleware) {
+    return function(req, res, next) {
+        console.log(req.baseUrl);
+        if (path === req.baseUrl) {
+            return next();
+        } else {
+            return middleware(req, res, next);
+        }
+    };
+};
+
 // reference express app
 const app = express();
 
@@ -46,14 +57,14 @@ app.set('trust proxy', '127.0.0.1');
 // setup static path
 app.use('/node_modules', express.static('node_modules'));
 
-// setup keycloak to always check for session
-app.use(keycloak.checkSso(), authenticationMiddleware.checkLogin);
-
 // setup keycloak protected url's
 app.use('/settings', keycloak.protect());
 
 // setup public router
 app.use('/', router);
+
+// setup keycloak to always check for session except on registration
+app.use(unless('/register', keycloak.checkSso()), authenticationMiddleware.checkLogin);
 
 // start server
 app.listen(config.env.port, function () {
