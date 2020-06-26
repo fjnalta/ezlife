@@ -5,7 +5,6 @@ function sendMail() {
 
     grecaptcha.ready(function() {
         grecaptcha.execute('6Lc-tM4UAAAAAOFYBVnOVuClRjQN5qq0fXylRS6O', {action: 'homepage'}).then(function(token) {
-
             $.ajax({
                 type: 'POST',
                 url: '/contact',
