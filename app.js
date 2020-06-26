@@ -60,11 +60,11 @@ app.use('/node_modules', express.static('node_modules'));
 // setup keycloak protected url's
 app.use('/settings', keycloak.protect());
 
-// setup public router
-app.use('/', router);
-
 // setup keycloak to always check for session except on registration
 app.use(unless('/register', keycloak.checkSso()), authenticationMiddleware.checkLogin);
+
+// setup public router
+app.use('/', router);
 
 // start server
 app.listen(config.env.port, function () {
