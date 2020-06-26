@@ -116,8 +116,8 @@ function registerUser() {
                     $("#registrationStatus").css('color', 'green');
                     disableFields();
                     setTimeout(function(){
-                        window.location.href('https://ezlife.eu');
-                    }, 1000)
+                        window.location = 'https://ezlife.eu';
+                        }, 1000)
                 },
                 error: function() {
                     $("#registrationStatus").text("Registrierung fehlgeschlagen! - Bitte versuchen Sie einen anderen Benutzernamen");
