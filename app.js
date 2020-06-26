@@ -19,8 +19,7 @@ const authenticationMiddleware = new (require('./lib/middleware/authenticationMi
 
 let unless = function(path, middleware) {
     return function(req, res, next) {
-        console.log(req.baseUrl);
-        if (path === req.baseUrl) {
+        if (path === req.path) {
             return next();
         } else {
             return middleware(req, res, next);
