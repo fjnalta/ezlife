@@ -47,7 +47,7 @@ app.set('trust proxy', '127.0.0.1');
 app.use('/node_modules', express.static('node_modules'));
 
 // setup keycloak to always check for session
-app.use('/', keycloak.checkSso(), authenticationMiddleware.checkLogin);
+app.use(keycloak.checkSso(), authenticationMiddleware.checkLogin);
 
 // setup keycloak protected url's
 app.use('/settings', keycloak.protect());
