@@ -24,7 +24,7 @@ function loadClip(clip) {
     $("#current-video").empty();
     $("#current-video-heading").empty();
     $("#current-video-heading").append("<h2><img src=\"img/logos/stream/twitch.png\" id=\"currentVideo\" style=\"max-height: 50px\">Current Video</h2>");
-    $("#current-video").append('<div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="' + clip + '" allowfullscreen></iframe></div>');
+    $("#current-video").append('<div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="' + clip + '&parent=ezlife.eu' +'" allowfullscreen></iframe></div>');
 }
 
 function removeVideo() {

@@ -31,7 +31,7 @@ function loadStreamChat(stream) {
     $("#current-stream-chat").append("<iframe frameborder=\"0\"\n" +
         "scrolling=\"no\"\n" +
         "id=\"chat_embed\"\n" +
-        "src=\"https://www.twitch.tv/embed/" + stream + "/chat\"\n" +
+        "src=\"https://www.twitch.tv/embed/" + stream + "/chat?parent=ezlife.eu\"\n" +
         "height=\"500\"\n" +
         "width=\"100%\">\n" +
         "</iframe>");
