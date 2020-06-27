@@ -1,6 +1,9 @@
 <% include partials/header.ejs %>
 <% include partials/sidebar.ejs %>
 
+<!-- Handle Contact Scripts -->
+<script src="/js/handleSettings.js"></script>
+
 <!-- Start Page Content -->
 <div id="content">
 
@@ -12,12 +15,19 @@
         <div class="container text-center">
             <br>
             <h1>Settings</h1>
+
+            <!-- Account Settings -->
             <h2>Account Information</h2>
             <p>Username: <%= session.preferred_username %></p>
             <p>Name: <%= session.given_name %></p>
             <p>Surname: <%= session.family_name %></p>
             <p>E-Mail: <%= session.email %></p>
 
+            <form>
+                <% include modals/passwordModal.ejs %>
+            </form>
+
+            <!-- Email Configuration -->
             <h2>Email Settings</h2>
             <h3>Outgoing E-Mails (SMTP)</h3>
             <p><strong>Host:</strong> ezlife.eu </p>
