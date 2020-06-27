@@ -9,16 +9,24 @@
     <% include partials/loadingSpinner.ejs %>
 
     <div id="main-content">
-        <div class="container">
+        <div class="container text-center">
             <br>
-            <div class="row">
-                <!-- Content -->
-                <div class="col-12">
+            <h1>Settings</h1>
+            <h2>Account Information</h2>
+            <p>Username: <%= session.preferred_username %></p>
+            <p>Name: <%= session.given_name %></p>
+            <p>Surname: <%= session.family_name %></p>
+            <p>E-Mail: <%= session.email %></p>
 
-
-                </div>
-            </div>
-            <br>
+            <h2>Email Settings</h2>
+            <h3>Outgoing E-Mails (SMTP)</h3>
+            <p><strong>Host:</strong> ezlife.eu </p>
+            <p><strong>Port:</strong> 587</p>
+            <p>Transport encryption: Auto</p>
+            <h3>Incoming E-Mails (IMAP)</h3>
+            <p><strong>Host:</strong> ezlife.eu </p>
+            <p><strong>Port:</strong> 993</p>
+            <p>Transport encryption: SSL/TLS</p>
         </div>
 
         <!-- Include Bottom Content -->
