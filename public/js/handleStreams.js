@@ -1,14 +1,12 @@
 function streamButtonClicked(stream) {
     loadStream(stream);
     loadStreamChat(stream);
-
     scrollTo("#currentStream");
 }
 
 function scrollTo(element){
     $('html,body').animate({scrollTop: ($(element).offset().top)},'slow');
 }
-
 
 function loadStream(stream) {
     $("#current-stream").empty();
@@ -26,13 +24,11 @@ function loadStream(stream) {
 
 function loadStreamChat(stream) {
     $("#current-stream-chat").empty();
-    //$("#current-stream-heading").empty();
-    //$("#current-stream-heading").append("<h2><img src=\"img/logos/stream/twitch.png\" id=\"currentStream\" style=\"max-height: 50px\"> Stream - " + stream + "</h2>");
     $("#current-stream-chat").append("<iframe frameborder=\"0\"\n" +
         "scrolling=\"no\"\n" +
         "id=\"chat_embed\"\n" +
         "src=\"https://www.twitch.tv/embed/" + stream + "/chat?parent=ezlife.eu\"\n" +
-        "height=\"500\"\n" +
+        "height=\"100%\"\n" +
         "width=\"100%\">\n" +
         "</iframe>");
 }
