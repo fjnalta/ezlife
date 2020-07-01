@@ -21,7 +21,7 @@
             <div class="list-group">
                 <div class="row">
                     <% for(let i = 0; i < data.twitchStreams.length; i++) { %>
-                        <div class="col-sm-12 col-md-6">
+                        <div class="col-sm-12 col-md-4">
                             <br>
                             <a href="#currentStream" onclick="streamButtonClicked('<%= data.twitchStreams[i].name %>')"
                                class="list-group-item list-group-item-action">
@@ -36,7 +36,6 @@
                                         <% } else { %>
                                             <span class="badge badge-danger float-right">Offline</span>
                                         <% } %>
-                                        <br>
                                         <small class="text-muted">streaming: <%= data.twitchStreams[i].game %></small>
                                         <div class="dropdown-divider"></div>
                                         <%= data.twitchStreams[i].description %>
@@ -76,15 +75,11 @@
             <br>
             <!-- handle dynamic content - stream + chat -->
             <div class="row">
-                <div class="col-12">
-                    <div id="current-stream-heading"></div>
+                <div id="current-stream-heading"></div>
+                <div class="col-sm-12 col-md-9">
                     <div id="current-stream"></div>
                 </div>
-            </div>
-            <br>
-            <div class="row">
-                <div class="col-12">
-                    <div id="current-stream-chat-heading"></div>
+                <div class="col-sm-12 col-md-3">
                     <div id="current-stream-chat"></div>
                 </div>
             </div>

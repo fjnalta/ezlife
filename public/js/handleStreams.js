@@ -26,8 +26,8 @@ function loadStream(stream) {
 
 function loadStreamChat(stream) {
     $("#current-stream-chat").empty();
-    $("#current-stream-heading").empty();
-    $("#current-stream-heading").append("<h2><img src=\"img/logos/stream/twitch.png\" id=\"currentStream\" style=\"max-height: 50px\"> Stream - " + stream + "</h2>");
+    //$("#current-stream-heading").empty();
+    //$("#current-stream-heading").append("<h2><img src=\"img/logos/stream/twitch.png\" id=\"currentStream\" style=\"max-height: 50px\"> Stream - " + stream + "</h2>");
     $("#current-stream-chat").append("<iframe frameborder=\"0\"\n" +
         "scrolling=\"no\"\n" +
         "id=\"chat_embed\"\n" +
