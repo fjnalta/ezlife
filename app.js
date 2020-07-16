@@ -62,7 +62,10 @@ app.use('/node_modules', express.static('node_modules'));
 app.use('/settings', keycloak.protect());
 
 // setup keycloak to always check for session except on registration
-app.use(unless(['/register','/ads.txt', '/'], keycloak.checkSso()), unless(['/register','/ads.txt', '/'], authenticationMiddleware.checkLogin));
+//app.use(unless(['/register'], keycloak.checkSso()), authenticationMiddleware.checkLogin);
+// TODO - improve SSO implementation / currently disabled
+app.use(authenticationMiddleware.checkLogin);
+
 
 // setup public router
 app.use('/', router);
