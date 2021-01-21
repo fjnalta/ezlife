@@ -17,3 +17,4 @@ jobs:
           script: |
             cd /home/${{ secrets.SSH_USERNAME }}
             touch test
+          debug: true
