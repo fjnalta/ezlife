@@ -15,6 +15,7 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           passphrase: ${{ secrets.SSH_PASS }}
+          debug: true
           script: |
             cd /home/${{ secrets.SSH_USERNAME }}
             touch test
