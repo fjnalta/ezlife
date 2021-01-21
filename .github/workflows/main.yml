@@ -9,12 +9,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Deploy ezlife.eu changes
-        uses: appleboy/ssh-action@v0.1.4
+        uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USERNAME }}
-          key:  ${{ secrets.SSH_PRIVATE_KEY }}
-          passphrase:  ${{ secrets.SSH_PASS }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          passphrase: ${{ secrets.SSH_PASS }}
           script: |
             cd /home/${{ secrets.SSH_USERNAME }}
             touch test
