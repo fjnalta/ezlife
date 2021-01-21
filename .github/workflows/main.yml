@@ -15,7 +15,6 @@ jobs:
         host: ${{ secrets.SSH_HOST }}
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.KEY }}
-        passphrase: ${{ secrets.PASS }}
         script: |
           whoami
           ls -lah
