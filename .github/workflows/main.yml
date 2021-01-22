@@ -9,7 +9,7 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-    - name: SSH Login
+    - name: Deploy commits
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.SSH_HOST }}
@@ -17,4 +17,11 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         passphrase: ${{ secrets.SSH_PASSPHRASE }}
         script: |
-          touch 123
+          echo "Clone Git Repository"
+          git clone https://github.com/fjnalta/ezlife.git
+          echo "Change working directory"
+          cd ezlife
+          echo "Install node modules"
+          npm install --save
+          echo "(Re)Start node app"
+          pm2 restart app.js
