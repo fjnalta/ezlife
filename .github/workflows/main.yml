@@ -17,10 +17,10 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         passphrase: ${{ secrets.SSH_PASSPHRASE }}
         script: |
-          echo "Clone Git Repository"
-          git clone https://github.com/fjnalta/ezlife.git
           echo "Change working directory"
           cd ezlife
+          echo "Update repository files"
+          git pull origin master
           echo "Install node modules"
           npm install --save
           echo "(Re)Start node app"
