@@ -20,17 +20,7 @@
                 <div class="col-12">
                     <!-- Services -->
                     <div class="row">
-                        <% fortatus = async (req, res, next) => {
-                            this.resetStreamStatus();
-                            let streamResponse;
-                            // build URI from config
-                            let uri = '';
-                            for (let i = 0; i < config.runtime.twitchStreams.length; i++) {
-                                if (i !== 0) {
-                                    uri += '&';
-                                }
-                                uri += 'user_login=' + config.runtime.twitchStreams[i].name;
-                            } (let i = 0; i < data.services.length; i++) { %>
+                        <% for (let i = 0; i < data.services.length; i++) { %>
                             <div class="col-sm-12 col-md-6">
                                 <a href="<%= data.services[i].uri %>">
                                     <div class="list-group-item list-group-item-action">
