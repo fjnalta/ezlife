@@ -60,6 +60,11 @@
                 "url" : "/stream"
             },
             {
+                "id" : "voice",
+                "name" : "Voice",
+                "url" : "/voice"
+            },
+            {
                 "id" : "contact",
                 "name" : "Contact",
                 "url" : "/contact"
