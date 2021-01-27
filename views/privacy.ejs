@@ -1,10 +1,10 @@
-<% include partials/header.ejs %>
-<% include partials/sidebar.ejs %>
+<%- include ('partials/header.ejs') -%>
+<%- include ('partials/sidebar.ejs') -%>
 
 <div id="content">
     <!-- Include Navigation -->
-    <% include partials/topNav.ejs %>
-    <% include partials/loadingSpinner.ejs %>
+    <%- include ('partials/topNav.ejs') -%>
+    <%- include ('partials/loadingSpinner.ejs') -%>
 
     <div id="main-content">
         <!-- Container - About -->
@@ -758,10 +758,10 @@
 
         </div>
 
-        <% include partials/bottom.ejs %>
+        <%- include ('partials/bottom.ejs') -%>
     </div>
 
 
 </div>
 
-<% include partials/footer.ejs %>
+<%- include ('partials/footer.ejs') -%>

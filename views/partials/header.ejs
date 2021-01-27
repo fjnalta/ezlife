@@ -41,7 +41,7 @@
 <!-- Handle DSGVO conform cookie sH!T -->
 <% if(data.cookies) { %>
     <!-- Include CookieAlert -->
-    <% include cookieAlert.ejs %>
+    <%- include ('cookieAlert.ejs') -%>
 <% } %>
 
 <!-- Handle sidebar -->

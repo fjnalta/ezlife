@@ -1,16 +1,16 @@
-<% include partials/header.ejs %>
+<%- include ('partials/header.ejs') -%>
 
-<% include partials/streamToasts.ejs %>
+<%- include ('partials/streamToasts.ejs') -%>
 
 <!-- Include Sidebar -->
-<% include partials/sidebar.ejs %>
+<%- include ('partials/sidebar.ejs') -%>
 
 <!-- Start Page Content -->
 <div id="content">
 
     <!-- Include Navigation -->
-    <% include partials/topNav.ejs %>
-    <% include partials/loadingSpinner.ejs %>
+    <%- include ('partials/topNav.ejs') -%>
+    <%- include ('partials/loadingSpinner.ejs') -%>
 
     <div id="main-content">
         <div class="container">
@@ -20,7 +20,17 @@
                 <div class="col-12">
                     <!-- Services -->
                     <div class="row">
-                        <% for(let i = 0; i < data.services.length; i++) { %>
+                        <% fortatus = async (req, res, next) => {
+                            this.resetStreamStatus();
+                            let streamResponse;
+                            // build URI from config
+                            let uri = '';
+                            for (let i = 0; i < config.runtime.twitchStreams.length; i++) {
+                                if (i !== 0) {
+                                    uri += '&';
+                                }
+                                uri += 'user_login=' + config.runtime.twitchStreams[i].name;
+                            } (let i = 0; i < data.services.length; i++) { %>
                             <div class="col-sm-12 col-md-6">
                                 <a href="<%= data.services[i].uri %>">
                                     <div class="list-group-item list-group-item-action">
@@ -61,9 +71,9 @@
         </div>
 
         <!-- Include Bottom Content -->
-        <% include partials/bottom.ejs %>
+        <%- include ('partials/bottom.ejs') -%>
 
     </div>
 </div>
 
-<% include partials/footer.ejs %>
+<%- include ('partials/footer.ejs') -%>
