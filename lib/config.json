@@ -97,12 +97,12 @@
             },
             {
                 "name" : "ezGit",
-                "uri" : "/git",
-                "url" : "https://gitlab.ezlife.eu",
+                "uri" : "https://github.com/fjnalta",
+                "url" : "https://github.com/fjnalta",
                 "img" : "/img/ezlife/ezgit_logo_with_textmark_dark_outline_v3.svg",
                 "ico" : "/img/ezlife/ezgit_logo_v4.svg",
                 "description" : "Software Version Management",
-                "sponsor" : "gitlab"
+                "sponsor" : "github"
             },
             {
                 "name" : "ezJira",
