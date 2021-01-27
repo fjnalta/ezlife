@@ -6,7 +6,7 @@
         "recaptcha" : "6Lc-tM4UAAAAAN4BMkMix0QM92nh7xodC87vx39p",
         "sessionSecret" : "8]=CnVyZqJg1xjCXeF%A",
         "twitchClientID" : "mc7zidc56j8y2ebjeab5mexeyz3drw",
-        "twitchSecret" : "rtgmqbwga84sex51vxd0nouotva3fa",
+        "twitchSecret" : "kql162kn3dfaju73473qkp2zzgqk2h",
         "keycloak" : {
             "realm": "ezlife",
             "auth-server-url": "https://kc.ezlife.eu/auth/",
@@ -237,7 +237,7 @@
             {
                 "id" : "ezlife",
                 "name" : "ezlife.eu",
-                "url" : "https://gitlab.ezlife.eu/fjnalta/ezlife-3.0/commits/master?feed_token=ZxMn5rdQeKQZbvZy55_V&format=atom",
+                "url" : "https://github.com/fjnalta/ezlife/commits/master.atom",
                 "feed" : {
                     "entry" : ""
                 }
@@ -245,7 +245,7 @@
             {
                 "id" : "ezlife-idm",
                 "name" : "ezlife-idm",
-                "url" : "https://gitlab.ezlife.eu/fjnalta/ezlife-registration-service/commits/master?feed_token=ss_6n_mqvd8qzfHMprWG&format=atom",
+                "url" : "https://github.com/fjnalta/ezlife-registration-service/commits/master.atom",
                 "feed" : {
                     "entry" : ""
                 }
@@ -253,7 +253,7 @@
             {
                 "id" : "ezcooking",
                 "name" : "ezCooking",
-                "url" : "https://gitlab.ezlife.eu/fjnalta/ezcooking/commits/master?feed_token=ZxMn5rdQeKQZbvZy55_V&format=atom",
+                "url" : "https://github.com/fjnalta/ezcooking/commits/master.atom",
                 "feed" : {
                     "entry" : ""
                 }
@@ -261,7 +261,7 @@
             {
                 "id" : "ezchat-android",
                 "name" : "ezChat Android Client",
-                "url" : "https://gitlab.ezlife.eu/fjnalta/ezchat/commits/master?feed_token=ZxMn5rdQeKQZbvZy55_V&format=atom",
+                "url" : "https://github.com/fjnalta/ezchat/commits/master.atom",
                 "feed" : {
                     "entry" : ""
                 }
@@ -269,7 +269,7 @@
             {
                 "id" : "ezchat-rest",
                 "name" : "ezChat REST Services",
-                "url" : "https://gitlab.ezlife.eu/fjnalta/ezchatpush/commits/master?feed_token=ZxMn5rdQeKQZbvZy55_V&format=atom",
+                "url" : "https://github.com/fjnalta/ezchatpush/commits/master.atom",
                 "feed" : {
                     "entry" : ""
                 }
@@ -278,7 +278,7 @@
             {
                 "id" : "ezchat-pc",
                 "name" : "ezChat PC Client",
-                "url" : "https://gitlab.ezlife.eu/fjnalta/ezlife-chat/commits/master?feed_token=ZxMn5rdQeKQZbvZy55_V&format=atom",
+                "url" : "https://github.com/fjnalta/ezlife-chat/commits/master.atom",
                 "feed" : {
                     "entry" : ""
                 }
