@@ -11,7 +11,7 @@
             "realm": "ezlife",
             "auth-server-url": "https://kc.ezlife.eu/auth/",
             "ssl-required": "external",
-            "resource": "ezlife.eu",
+            "resource": "ezlife",
             "credentials": {
                 "secret": "7f7265cb-ac4e-45fd-b5cc-27b3c4f6a71d"
             },
