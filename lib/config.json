@@ -13,7 +13,7 @@
             "ssl-required": "external",
             "resource": "ezlife.eu",
             "credentials": {
-                "secret": "efd83e13-8b95-48a1-bd51-56f3c319095f"
+                "secret": "7f7265cb-ac4e-45fd-b5cc-27b3c4f6a71d"
             },
             "confidential-port": 0
         }
