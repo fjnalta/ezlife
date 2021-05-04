@@ -93,7 +93,7 @@ function checkEverythingValid() {
 function registerUser() {
     $("#registerBtn").prop("disabled", true);
     grecaptcha.ready(function() {
-        grecaptcha.execute('6LcRJusUAAAAAPNYUKeKTunJqjeUdzDFNPsFjWnS', {action: 'homepage'}).then(function(token) {
+        grecaptcha.execute('6LcXUMYaAAAAAFWir-2W9qyyHirog_LKXx04BXQQ', {action: 'homepage'}).then(function(token) {
             $.ajax({
                 type: 'POST',
                 url: '/register',
