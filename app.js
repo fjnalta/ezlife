@@ -15,7 +15,10 @@ const router = require('./lib/api/router');
 const keycloak = new Keycloak({store: memoryStore}, config.env.keycloak);
 
 // setup authentication middleware
-const authenticationMiddleware = new (require('./lib/middleware/authenticationMiddleware'))();
+const authHandler = new (require('./lib/middleware/authHandler'))();
+
+// handle cookies - DSGVO
+const handleCookies = new (require('../services/handleCookies'))();
 
 // reference express app
 const app = express();
@@ -51,7 +54,10 @@ app.use('/settings', keycloak.protect());
 
 // setup keycloak to always check for session except on registration
 // TODO - improve SSO implementation / currently disabled
-app.use(authenticationMiddleware.checkLogin);
+app.use(authHandler.checkLogin);
+
+// handle cookies
+app.use(handleCookies.setCookieState);
 
 
 // setup public router
