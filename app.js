@@ -51,6 +51,8 @@ app.use('/node_modules', express.static('node_modules'));
 
 // setup keycloak protected url's
 app.use('/settings', keycloak.protect());
+app.use('/password', keycloak.protect());
+app.use('/delete', keycloak.protect());
 
 // setup keycloak to always check for session except on registration
 // TODO - improve SSO implementation / currently disabled
