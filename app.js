@@ -18,7 +18,7 @@ const keycloak = new Keycloak({store: memoryStore}, config.env.keycloak);
 const authHandler = new (require('./lib/middleware/authHandler'))();
 
 // handle cookies - DSGVO
-const handleCookies = new (require('../services/handleCookies'))();
+const handleCookies = new (require('./lib/services/handleCookies'))();
 
 // reference express app
 const app = express();
