@@ -20,7 +20,16 @@ jobs:
           echo "Change working directory"
           cd ezlife
           echo "Update repository files"
+          git reset --hard
           git pull origin master
+          echo "Setup Credentials"
+          cp ../scripts/ezlife-config.json lib/config.json
+          cp ../scripts/create_mail_user_OpenLDAP.sh lib/tools/
+          cp ../scripts/change_user_password_OpenLDAP.sh lib/tools/
+          cp ../scripts/delete_user_OpenLDAP.sh lib/tools/
+          chmod 764 lib/tools/create_mail_user_OpenLDAP.sh
+          chmod 764 lib/tools/change_user_password_OpenLDAP.sh
+          chmod 764 lib/tools/delete_user_OpenLDAP.sh
           echo "Install node modules"
           npm install --save
           echo "(Re)Start node app"

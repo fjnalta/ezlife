@@ -2,13 +2,22 @@
 <nav id="sidebar">
     <h1><a href="/" class="logo"><img src="img/ezlife/logo_with_textmark.svg"></a></h1>
     <ul class="list-unstyled components mb-5">
-        <!-- Separator with title -->
+        <!-- Services title -->
         <li class="sidebar-separator">
             <small>Services</small>
         </li>
         <% for (let i=0;i<data.services.length; i++) { %>
             <li>
                 <a href="<%= data.services[i].uri %>" class="sidebarButtonText ezlife-link"><img class="img-fluid sidebarButton" src="<%= data.services[i].ico %>"> <%= data.services[i].name %></a>
+            </li>
+        <% } %>
+        <!-- Resources title -->
+        <li class="sidebar-separator">
+            <small>Resources</small>
+        </li>
+        <% for (let i=0;i<data.resources.length; i++) { %>
+            <li>
+                <a href="<%= data.resources[i].uri %>" class="sidebarButtonText ezlife-link"><img class="img-fluid sidebarButton" src="<%= data.resources[i].ico %>"> <%= data.resources[i].name %></a>
             </li>
         <% } %>
     </ul>

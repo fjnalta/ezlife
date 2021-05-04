@@ -17,18 +17,6 @@ const keycloak = new Keycloak({store: memoryStore}, config.env.keycloak);
 // setup authentication middleware
 const authenticationMiddleware = new (require('./lib/middleware/authenticationMiddleware'))();
 
-let unless = function(path, middleware) {
-    return function(req, res, next) {
-        for (let i = 0; i<path.length;i++) {
-            if (path[i] === req.path) {
-                return next();
-            } else {
-                return middleware(req, res, next);
-            }
-        }
-    };
-};
-
 // reference express app
 const app = express();
 
@@ -62,7 +50,6 @@ app.use('/node_modules', express.static('node_modules'));
 app.use('/settings', keycloak.protect());
 
 // setup keycloak to always check for session except on registration
-//app.use(unless(['/register'], keycloak.checkSso()), authenticationMiddleware.checkLogin);
 // TODO - improve SSO implementation / currently disabled
 app.use(authenticationMiddleware.checkLogin);
 

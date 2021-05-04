@@ -10,12 +10,12 @@
         </ul>
         <!-- Toggle Sidebar Button -->
         <button type="button" class="btn btn-light btn-sm" id="sidebarCollapse">Toggle Sidebar</button>
-        <!-- TODO - link this to user panel -->
         <!-- Show User Data if logged in -->
         <% if(session) { %>
-            <a class="nav-link btn-sm nav-btn ezlife-link" href="/settings"><%= session.preferred_username %></a>
+            <a class="nav-link btn-sm nav-btn" href="/settings"><%= session.preferred_username %></a>
         <% } else { %>
-            <a class="nav-link btn-sm nav-btn ezlife-link" href="/settings">Sign in</a>
+            <a class="nav-link btn-sm nav-btn" href="/settings">Sign in</a>
+            <a class="nav-link btn-sm nav-btn btn-secondary" href="/register">Register</a>
         <% } %>
     </div>
     <!-- Toggle Button -->

@@ -6,8 +6,7 @@ $(document).ready(function () {
 
 function checkUserDetails() {
     $("#username").on("keyup", function () {
-        let isMatch = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))$/.test($(this).val());
-        if ($(this).val().length < 3 || !isMatch) {
+        if ($(this).val().length < 3) {
             $(this).removeClass("is-valid").addClass("is-invalid");
         } else {
             $(this).removeClass("is-invalid").addClass("is-valid");
@@ -66,16 +65,13 @@ function checkPasswords() {
 
 function checkEmail() {
     let isMatch = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test($("#email").val());
-
     if (isMatch) {
         $("#email").removeClass("is-invalid").addClass("is-valid");
 
     } else {
         $("#email").removeClass("is-valid").addClass("is-invalid");
     }
-
 }
-
 
 function checkEverythingValid() {
     $(document).on("keyup", function () {
@@ -97,7 +93,7 @@ function checkEverythingValid() {
 function registerUser() {
     $("#registerBtn").prop("disabled", true);
     grecaptcha.ready(function() {
-        grecaptcha.execute('6Lc-tM4UAAAAAOFYBVnOVuClRjQN5qq0fXylRS6O', {action: 'homepage'}).then(function(token) {
+        grecaptcha.execute('6LcRJusUAAAAAPNYUKeKTunJqjeUdzDFNPsFjWnS', {action: 'homepage'}).then(function(token) {
             $.ajax({
                 type: 'POST',
                 url: '/register',
@@ -115,15 +111,14 @@ function registerUser() {
                     $("#registrationStatus").css("font-weight","Bold");
                     $("#registrationStatus").css('color', 'green');
                     disableFields();
-                    setTimeout(function(){
-                        window.location = 'https://ezlife.eu';
-                        }, 1000)
+                    // TODO - popup
                 },
                 error: function() {
                     $("#registrationStatus").text("Registrierung fehlgeschlagen! - Bitte versuchen Sie einen anderen Benutzernamen");
                     $("#registrationStatus").css("font-weight","Bold");
                     $("#registrationStatus").css('color', 'red');
                     emptyFields();
+                    // TODO - popup
                 }
             });
         });

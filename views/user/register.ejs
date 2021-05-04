@@ -1,49 +1,49 @@
-<%- include ('partials/header.ejs') -%>
+<%- include ('../partials/header.ejs') %>
+<%- include ('../partials/sidebar.ejs') -%>
 
-<!-- Include Sidebar -->
-<%- include ('partials/sidebar.ejs') -%>
+<!-- include custom scripts -->
+<script src="/js/handleRegistrationInput.js"></script>
 
-<!-- Include Google ReCaptcha -->
-<script src="https://www.google.com/recaptcha/api.js?render=6Lc-tM4UAAAAAOFYBVnOVuClRjQN5qq0fXylRS6O"></script>
-
-<!-- Handle Google Recaptcha -->
-<script src="/js/handleRegistration.js"></script>
-
-<!-- Start Page Content -->
+<!-- start page content -->
 <div id="content">
 
     <!-- Include Navigation -->
-    <%- include ('partials/topNav.ejs') -%>
-    <%- include ('partials/loadingSpinner.ejs') -%>
+    <%- include ('../partials/topNav.ejs') -%>
+    <%- include ('../partials/loadingSpinner.ejs') -%>
 
+    <!-- main content -->
     <div id="main-content">
         <div class="container text-center">
-            <br>
             <div class="row">
                 <div class="col">
                     <h1>Account erstellen</h1>
-                    <img src="img/ezlife/logo.svg" class="img-thumbnail img-fluid" height="15%" width="15%">
+                    <img src="/img/ezlife/logo.svg" class="img-thumbnail img-fluid" height="15%" width="15%">
                     <small class="form-text text-muted">
-                        Unsere Datenschutzerklärung finden Sie unter <strong><a href="https://ezlife.eu/privacy">ezlife.eu/privacy</a></strong>
+                        Unsere Datenschutzerklärung finden Sie unter <strong><a
+                                    href="/privacy">Privacy</a></strong>
                     </small>
                 </div>
             </div>
             <br>
-            <div class="dropdown-divider"></div>
+        </div>
+
+        <div class="container text-center">
             <br>
             <div class="row">
                 <div class="col">
-
                     <form>
                         <div class="form-group">
                             <h2>Benutzername</h2>
-                            <input type="text" class="form-control" id="username" placeholder="Benutzername eingeben">
+                            <input type="text" class="form-control" id="username"
+                                   placeholder="Benutzername eingeben">
                             <small class="form-text text-muted">
-                                Der Benutzername ist für andere Nutzer öffentlich und wird verwendet, um Ihren Account den
+                                Der Benutzername ist für andere Nutzer öffentlich und wird verwendet, um Ihren Account
+                                den
                                 verschiedenen Diensten von ezlife.eu zuzuordnen.
                                 Der Benutzername kann nicht geändert werden.
                                 <br>
-                                <i><b>Hinweis: </b>Der Benutzername muss E-Mail konform sein. Das bedeutet, er darf nur aus
+                                <i><b>Hinweis: </b>Der Benutzername muss E-Mail konform sein. Das bedeutet, er darf nur
+                                    aus
                                     Buchstaben und Zahlen sowie den Zeichen ".", "-" und "_" bestehen.</i>
                             </small>
                         </div>
@@ -70,7 +70,8 @@
                                    placeholder="Passwort eingeben">
                             <small class="form-text text-muted">
                                 Bitte geben Sie Ihr Passwort ein.<br>
-                                <i><b>Hinweis: </b>Das Passwort muss den folgenden Richtlinien entprechen: min. 5 Zeichen</i>
+                                <i><b>Hinweis: </b>Das Passwort muss den folgenden Richtlinien entprechen: min. 5
+                                    Zeichen</i>
                             </small>
                         </div>
 
@@ -86,8 +87,9 @@
 
                 </div>
             </div>
-            <br>
-            <div class="dropdown-divider"></div>
+        </div>
+
+        <div class="container text-center">
             <br>
             <div class="row">
                 <div class="col">
@@ -105,10 +107,10 @@
             <br>
         </div>
 
-        <!-- Include Bottom Content -->
-        <%- include ('partials/bottom.ejs') -%>
+        <!-- include footer -->
+        <%- include ('../partials/bottom.ejs') %>
 
     </div>
 </div>
 
-<%- include ('partials/footer.ejs') -%>
+<%- include ('../partials/footer.ejs') %>

@@ -1,5 +1,5 @@
-<%- include ('partials/header.ejs') -%>
-<%- include ('partials/sidebar.ejs') -%>
+<%- include ('../partials/header.ejs') -%>
+<%- include ('../partials/sidebar.ejs') -%>
 
 <!-- Import Twitch Player -->
 <script src="https://embed.twitch.tv/embed/v1.js"></script>
@@ -8,8 +8,8 @@
 
 <div id="content">
     <!-- Include Navigation -->
-    <%- include ('partials/topNav.ejs') -%>
-    <%- include ('partials/loadingSpinner.ejs') -%>
+    <%- include ('../partials/topNav.ejs') -%>
+    <%- include ('../partials/loadingSpinner.ejs') -%>
 
     <!-- container - streams -->
     <div id="main-content">
@@ -85,13 +85,9 @@
                 </div>
             </div>
             <br>
-
         </div>
-
-        <%- include ('partials/bottom.ejs') -%>
+        <%- include ('../partials/bottom.ejs') -%>
     </div>
-
-
 </div>
 
-<%- include ('partials/footer.ejs') -%>
+<%- include ('../partials/footer.ejs') -%>
