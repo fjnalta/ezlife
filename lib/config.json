@@ -1,19 +1,19 @@
 {
     "env": {
-        "appBaseUrl" : "https://ezlife.eu",
+        "appBaseUrl" : "yourBaseURL",
         "webContentDir" : "public",
         "port" : 3000,
-        "recaptcha" : "6Lc-tM4UAAAAAN4BMkMix0QM92nh7xodC87vx39p",
-        "sessionSecret" : "8]=CnVyZqJg1xjCXeF%A",
-        "twitchClientID" : "mc7zidc56j8y2ebjeab5mexeyz3drw",
-        "twitchSecret" : "kql162kn3dfaju73473qkp2zzgqk2h",
+        "recaptcha" : "yourReCaptchaSiteKey",
+        "sessionSecret" : "yourSessionSecret",
+        "twitchClientID" : "yourTwitchClientID",
+        "twitchSecret" : "yourTwitchSecret",
         "keycloak" : {
-            "realm": "ezlife",
-            "auth-server-url": "https://kc.ezlife.eu/auth/",
+            "realm": "example realm",
+            "auth-server-url": "https://keycloak.domain.org/auth/",
             "ssl-required": "external",
-            "resource": "ezlife",
+            "resource": "example.com",
             "credentials": {
-                "secret": "7f7265cb-ac4e-45fd-b5cc-27b3c4f6a71d"
+                "secret": "keycloak-secret"
             },
             "confidential-port": 0
         }
@@ -50,11 +50,6 @@
                 "url" : "/media"
             },
             {
-                "id" : "stats",
-                "name" : "Statistics",
-                "url" : "/statistics"
-            },
-            {
                 "id" : "streams",
                 "name" : "Streams",
                 "url" : "/stream"
@@ -80,7 +75,6 @@
                 "url" : "/about"
             }
         ],
-
         "services" : [
             {
                 "name" : "ezCloud",
@@ -101,24 +95,6 @@
                 "sponsor" : "ezlife.eu"
             },
             {
-                "name" : "ezGit",
-                "uri" : "https://github.com/fjnalta",
-                "url" : "https://github.com/fjnalta",
-                "img" : "/img/ezlife/ezgit_logo_with_textmark_dark_outline_v3.svg",
-                "ico" : "/img/ezlife/ezgit_logo_v4.svg",
-                "description" : "Software Version Management",
-                "sponsor" : "github"
-            },
-            {
-                "name" : "ezJira",
-                "uri" : "/jira",
-                "url" : "https://jira.ezlife.eu",
-                "img" : "/img/ezlife/ezjira_logo_with_textmark_dark_outline.svg",
-                "ico" : "/img/ezlife/ezjira_logo.svg",
-                "description" : "Software Development",
-                "sponsor" : "Atlassian Jira"
-            },
-            {
                 "name" : "ezMail",
                 "uri" : "/mail",
                 "url" : "https://mail.ezlife.eu",
@@ -126,27 +102,19 @@
                 "ico" : "/img/ezlife/ezmail_logo.svg",
                 "description" : "Mail Service",
                 "sponsor" : "postfix - dovecot - roundcube"
-            },
-            {
-                "name" : "ezMonitor",
-                "uri" : "/monitoring",
-                "url" : "https://grafana.ezlife.eu",
-                "img" : "/img/ezlife/ezmonitoring_logo_with_textmark_dark_outline_v2.svg",
-                "ico" : "/img/ezlife/ezmonitoring_logo_v4.svg",
-                "description" : "Monitoring Service",
-                "sponsor" : "prometheus - grafana"
-            },
-            {
-                "name" : "ezWiki",
-                "uri" : "/wiki",
-                "url" : "https://wiki.ezlife.eu",
-                "img" : "/img/ezlife/logo_with_textmark.svg",
-                "ico" : "/img/ezlife/logo.svg",
-                "description" : "Team Collaboration",
-                "sponsor" : "Atlassian Confluence"
             }
         ],
-
+        "resources" : [
+            {
+                "name" : "ezGit",
+                "uri" : "https://github.com/fjnalta",
+                "url" : "https://github.com/fjnalta",
+                "img" : "/img/ezlife/ezgit_logo_with_textmark_dark_outline_v3.svg",
+                "ico" : "/img/ezlife/ezgit_logo_v4.svg",
+                "description" : "Software Version Management",
+                "sponsor" : "github"
+            }
+        ],
         "twitchStreams": [
             {
                 "name" : "ironm4n89",
@@ -224,18 +192,6 @@
                 "img" : "/img/twitch/stream_offline.png",
                 "description" : "offline",
                 "online" : false
-            }
-        ],
-        "appServices": [
-            {
-                "name" : "Teamspeak",
-                "status" : true,
-                "url" : "https://ezlife.eu/services#Teamspeak"
-            },
-            {
-                "name" : "Minecraft",
-                "status" : "true",
-                "url" : "https://ezlife.eu/services#Minecraft"
             }
         ],
         "gitFeed": [
